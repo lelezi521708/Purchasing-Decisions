@@ -1,0 +1,27 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Local runtime and database data
+data/
+mongo-data/
+node-red-data/
+*.log
+.env
+
+# Large exports and backups
+*.jsonl
+*history*.json
+*batches*.json
+backup/
+archive/
+
+# Temporary/test output
+tmp/
+dist/
+coverage/
+node_modules/
+
+# Editor/OS files
+.vscode/
+.idea/

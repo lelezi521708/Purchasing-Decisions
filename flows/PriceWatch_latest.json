@@ -1,0 +1,1900 @@
+[
+  {
+    "id": "f6f2187d.f17ca8",
+    "type": "tab",
+    "label": "Flow 1",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "2edfad9c9286b710",
+    "type": "tab",
+    "label": "商品采集与存储流程",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "b2c09448dfb8fbf4",
+    "type": "tab",
+    "label": "A_Data Collection and Price Comparison",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "25e56c2040ecf110",
+    "type": "tab",
+    "label": "B_Category Insights"
+  },
+  {
+    "id": "012ae38f59630bef",
+    "type": "tab",
+    "label": "C_Price History"
+  },
+  {
+    "id": "c8afa8ba5a79152e",
+    "type": "mongodb4-client",
+    "name": "项目数据库",
+    "protocol": "mongodb",
+    "hostname": "comp7503-mongo",
+    "port": "27017",
+    "dbName": "comp7503",
+    "appName": "",
+    "authSource": "",
+    "authMechanism": "DEFAULT",
+    "tls": false,
+    "tlsCAFile": "",
+    "tlsCertificateKeyFile": "",
+    "tlsInsecure": false,
+    "connectTimeoutMS": "30000",
+    "socketTimeoutMS": "0",
+    "minPoolSize": "0",
+    "maxPoolSize": "100",
+    "maxIdleTimeMS": "0",
+    "uri": "",
+    "advanced": "{}",
+    "uriTabActive": "tab-uri-simple"
+  },
+  {
+    "id": "c2f82ffa5dfda3e4",
+    "type": "ui-base",
+    "name": "PriceWatch",
+    "path": "/dashboard",
+    "appIcon": "",
+    "includeClientData": true,
+    "acceptsClientConfig": [
+      "ui-notification",
+      "ui-control"
+    ],
+    "showPathInSidebar": false,
+    "headerContent": "none",
+    "navigationStyle": "default",
+    "titleBarStyle": "default",
+    "showReconnectNotification": true,
+    "notificationDisplayTime": 1,
+    "showDisconnectNotification": true,
+    "allowInstall": false
+  },
+  {
+    "id": "c420cdf8e847a31e",
+    "type": "ui-theme",
+    "name": "Default Theme",
+    "colors": {
+      "surface": "#334257",
+      "primary": "#386d83",
+      "bgPage": "#f0f2f4",
+      "groupBg": "#ffffff",
+      "groupOutline": "#dae2e8"
+    },
+    "sizes": {
+      "density": "default",
+      "pagePadding": "12px",
+      "groupGap": "12px",
+      "groupBorderRadius": "4px",
+      "widgetGap": "12px"
+    }
+  },
+  {
+    "id": "200681df1411151f",
+    "type": "ui-page",
+    "name": "Current Prices",
+    "ui": "c2f82ffa5dfda3e4",
+    "path": "/prices",
+    "icon": "home",
+    "layout": "grid",
+    "theme": "c420cdf8e847a31e",
+    "breakpoints": [
+      {
+        "name": "Default",
+        "px": "0",
+        "cols": "3"
+      },
+      {
+        "name": "Tablet",
+        "px": "576",
+        "cols": "6"
+      },
+      {
+        "name": "Small Desktop",
+        "px": "768",
+        "cols": "9"
+      },
+      {
+        "name": "Desktop",
+        "px": "1024",
+        "cols": "12"
+      }
+    ],
+    "tabs": [],
+    "order": 1,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "ef88a803d95b5995",
+    "type": "ui-group",
+    "name": "Search",
+    "page": "200681df1411151f",
+    "width": "12",
+    "height": "2",
+    "order": 1,
+    "showTitle": false,
+    "className": "",
+    "visible": "true",
+    "disabled": "false",
+    "groupType": "default",
+    "tab": ""
+  },
+  {
+    "id": "fc9dfbfbb19c2e5d",
+    "type": "ui-group",
+    "name": "Products",
+    "page": "200681df1411151f",
+    "width": "4",
+    "height": "2",
+    "order": 2,
+    "showTitle": false,
+    "className": "pw-products-panel",
+    "visible": "true",
+    "disabled": "false",
+    "groupType": "default",
+    "tab": ""
+  },
+  {
+    "id": "8705c915c041d14d",
+    "type": "ui-group",
+    "name": "Comparison",
+    "page": "200681df1411151f",
+    "width": "8",
+    "height": "2",
+    "order": 3,
+    "showTitle": false,
+    "className": "pw-comparison-panel",
+    "visible": "true",
+    "disabled": "false",
+    "groupType": "default",
+    "tab": ""
+  },
+  {
+    "id": "6bca6ec70be193b4",
+    "type": "ui-page",
+    "z": "25e56c2040ecf110",
+    "name": "Category Insights",
+    "ui": "c2f82ffa5dfda3e4",
+    "path": "/categories",
+    "icon": "chart-bar",
+    "layout": "grid",
+    "theme": "c420cdf8e847a31e",
+    "breakpoints": [
+      {
+        "name": "Default",
+        "px": "0",
+        "cols": "3"
+      },
+      {
+        "name": "Tablet",
+        "px": "576",
+        "cols": "6"
+      },
+      {
+        "name": "Small Desktop",
+        "px": "768",
+        "cols": "9"
+      },
+      {
+        "name": "Desktop",
+        "px": "1024",
+        "cols": "12"
+      }
+    ],
+    "tabs": [],
+    "order": 2,
+    "className": "",
+    "visible": true,
+    "disabled": false
+  },
+  {
+    "id": "46b66a3d034e7dfb",
+    "type": "ui-group",
+    "z": "25e56c2040ecf110",
+    "name": "B Controls",
+    "page": "6bca6ec70be193b4",
+    "width": 12,
+    "height": 8,
+    "order": 1,
+    "showTitle": false,
+    "className": "",
+    "visible": "true",
+    "disabled": "false",
+    "groupType": "default",
+    "tab": ""
+  },
+  {
+    "id": "c7503historypage1",
+    "type": "ui-page",
+    "z": "012ae38f59630bef",
+    "name": "Price History",
+    "ui": "c2f82ffa5dfda3e4",
+    "path": "/history",
+    "icon": "history",
+    "layout": "grid",
+    "theme": "c420cdf8e847a31e",
+    "breakpoints": [
+      {
+        "name": "Default",
+        "px": "0",
+        "cols": "3"
+      },
+      {
+        "name": "Tablet",
+        "px": "576",
+        "cols": "6"
+      },
+      {
+        "name": "Small Desktop",
+        "px": "768",
+        "cols": "9"
+      },
+      {
+        "name": "Desktop",
+        "px": "1024",
+        "cols": "12"
+      }
+    ],
+    "tabs": [],
+    "order": 3,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "c7503historygroup",
+    "type": "ui-group",
+    "z": "012ae38f59630bef",
+    "name": "History",
+    "page": "c7503historypage1",
+    "width": "12",
+    "height": "2",
+    "order": 1,
+    "showTitle": false,
+    "className": "",
+    "visible": "true",
+    "disabled": "false",
+    "groupType": "default",
+    "tab": ""
+  },
+  {
+    "id": "3cc11d24.ff01a2",
+    "type": "comment",
+    "z": "f6f2187d.f17ca8",
+    "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+    "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+    "x": 350,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "f16ba22572db6b3f",
+    "type": "mongodb4",
+    "z": "f6f2187d.f17ca8",
+    "clientNode": "c8afa8ba5a79152e",
+    "mode": "collection",
+    "collection": "connection_test",
+    "operation": "insertOne",
+    "output": "toArray",
+    "maxTimeMS": "0",
+    "handleDocId": false,
+    "name": "测试写入",
+    "x": 320,
+    "y": 300,
+    "wires": [
+      [
+        "decd4db298e69bf8"
+      ]
+    ]
+  },
+  {
+    "id": "40a11e82d573bf63",
+    "type": "inject",
+    "z": "f6f2187d.f17ca8",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "[{\"message\":\"MongoDB连接测试\",\"source\":\"Node-RED\"}]",
+    "payloadType": "json",
+    "x": 170,
+    "y": 300,
+    "wires": [
+      [
+        "f16ba22572db6b3f"
+      ]
+    ]
+  },
+  {
+    "id": "decd4db298e69bf8",
+    "type": "debug",
+    "z": "f6f2187d.f17ca8",
+    "name": "debug 1",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 480,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "4b44fc87a30beb52",
+    "type": "inject",
+    "z": "2edfad9c9286b710",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 70,
+    "y": 280,
+    "wires": [
+      [
+        "c8a51310afc59ccd"
+      ]
+    ]
+  },
+  {
+    "id": "f051aaf4c7c4deed",
+    "type": "debug",
+    "z": "2edfad9c9286b710",
+    "name": "debug 2",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 360,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "c8a51310afc59ccd",
+    "type": "http request",
+    "z": "2edfad9c9286b710",
+    "name": "",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "https://online-price-watch.consumer.org.hk/opw/opendata/pricewatch.json",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 200,
+    "y": 280,
+    "wires": [
+      [
+        "f051aaf4c7c4deed",
+        "71606f7b14315204"
+      ]
+    ]
+  },
+  {
+    "id": "71606f7b14315204",
+    "type": "function",
+    "z": "2edfad9c9286b710",
+    "name": "function 1",
+    "func": "if (msg.statusCode !== 200 ||\n    !Array.isArray(msg.payload) ||\n    msg.payload.length === 0) {\n    node.error(\"获取商品数据失败或数据为空\", msg);\n    return null;\n}\n\nconst collectedAt = new Date();\nconst batchId = collectedAt.toISOString();\n\nconst products = msg.payload.map(product => ({\n    ...product,\n    collectedAt,\n    batchId\n}));\n\nmsg.payload = [products];\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 340,
+    "y": 360,
+    "wires": [
+      [
+        "f7c3a0e03595e858"
+      ]
+    ]
+  },
+  {
+    "id": "f7c3a0e03595e858",
+    "type": "mongodb4",
+    "z": "2edfad9c9286b710",
+    "clientNode": "c8afa8ba5a79152e",
+    "mode": "collection",
+    "collection": "pricewatch_history",
+    "operation": "insertMany",
+    "output": "toArray",
+    "maxTimeMS": "0",
+    "handleDocId": false,
+    "name": "保存商品快照",
+    "x": 500,
+    "y": 360,
+    "wires": [
+      [
+        "848291ce0b597b46"
+      ]
+    ]
+  },
+  {
+    "id": "848291ce0b597b46",
+    "type": "debug",
+    "z": "2edfad9c9286b710",
+    "name": "debug 3",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 680,
+    "y": 360,
+    "wires": []
+  },
+  {
+    "id": "3e897534326afba8",
+    "type": "http request",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Fetch Official Prices",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "https://online-price-watch.consumer.org.hk/opw/opendata/pricewatch.json",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 940,
+    "y": 260,
+    "wires": [
+      [
+        "31054cdf69e78595"
+      ]
+    ]
+  },
+  {
+    "id": "31054cdf69e78595",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Normalize Product Prices",
+    "func": "// 下载失败或内容不正确时停止处理\nif (Number(msg.statusCode) !== 200 ||\n    !Array.isArray(msg.payload) ||\n    msg.payload.length === 0) {\n    node.error(\"商品数据获取失败或为空\", msg);\n    return null;\n}\n\nconst products = msg.payload;\n\n// 保留官方商家代码，三个人统一使用\nconst merchants = [\n    \"AEON\", \"DCHFOOD\", \"JASONS\",\n    \"LUNGFUNG\", \"MANNINGS\", \"PARKNSHOP\",\n    \"SASA\", \"WATSONS\", \"WELLCOME\"\n];\n\nconst collectedAt = new Date();\nconst batchId = collectedAt.toISOString();\n\n// 优先使用繁体中文，无则使用英文\nfunction displayText(value) {\n    if (typeof value === \"string\") return value;\n    if (!value || typeof value !== \"object\") return \"\";\n    return value[\"zh-Hant\"] || value.en ||\n        value[\"zh-Hans\"] || \"\";\n}\n\nconst records = [];\nconst seenProducts = new Set();\n\nfor (const product of products) {\n    const productCode = String(product.code || \"\").trim();\n\n    if (!productCode || seenProducts.has(productCode)) {\n        node.error(\"发现缺失或重复的商品编号，停止本批处理\", msg);\n        return null;\n    }\n    seenProducts.add(productCode);\n\n    const prices = Array.isArray(product.prices)\n        ? product.prices : [];\n    const offers = Array.isArray(product.offers)\n        ? product.offers : [];\n\n    // 防止来源增加商家后被静默忽略\n    for (const entry of [...prices, ...offers]) {\n        if (!merchants.includes(entry.supermarketCode)) {\n            node.error(\"出现未知商家代码，请先更新商家清单\", msg);\n            return null;\n        }\n    }\n\n    for (const merchantCode of merchants) {\n        const quote = prices.find(\n            item => item.supermarketCode === merchantCode\n        );\n\n        // 无报价使用null，不使用0\n        let price = null;\n        if (quote && quote.price !== null &&\n            quote.price !== undefined &&\n            String(quote.price).trim() !== \"\") {\n            const value = Number(quote.price);\n            if (Number.isFinite(value) && value > 0) {\n                price = value;\n            }\n        }\n\n        const merchantOffers = offers.filter(\n            item => item.supermarketCode === merchantCode\n        );\n\n        records.push({\n            schemaVersion: 1,\n            batchId,\n            productCode,\n            merchantCode,\n            name: displayText(product.name),\n            brand: displayText(product.brand),\n            category1: displayText(product.cat1Name),\n            category2: displayText(product.cat2Name),\n            category3: displayText(product.cat3Name),\n            nameEn: product.name?.en || \"\",\n            brandEn: product.brand?.en || \"\",\n            category1En: product.cat1Name?.en || \"\",\n            category2En: product.cat2Name?.en || \"\",\n            category3En: product.cat3Name?.en || \"\",\n            offerTextEn: merchantOffers\n                .map(item => item.en || \"\")\n                .filter(Boolean)\n                .join(\"\\n\"),\n            price,\n            offerText: merchantOffers\n                .map(displayText)\n                .filter(Boolean)\n                .join(\"\\n\"),\n            // 完整保留各语言优惠原文，便于后续检查\n            offersRaw: merchantOffers,\n            collectedAt,\n            sourceUpdatedAt: null\n        });\n    }\n}\n\nmsg.batchSummary = {\n    batchId,\n    productCount: products.length,\n    merchantCount: merchants.length,\n    recordCount: records.length,\n    quotedRecordCount: records.filter(\n        item => item.price !== null\n    ).length\n};\n\nmsg.payload = records;\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: `${products.length}款商品 / ${records.length}条记录`\n});\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1180,
+    "y": 260,
+    "wires": [
+      [
+        "0c1b16c2318bea1c",
+        "ff10185fbec7f033"
+      ]
+    ]
+  },
+  {
+    "id": "0c1b16c2318bea1c",
+    "type": "debug",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Normalized Data Preview",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1580,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "ff10185fbec7f033",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Prepare Bulk Insert",
+    "func": "if (!Array.isArray(msg.payload) || msg.payload.length === 0) {\n    node.error(\"没有可写入的记录\", msg);\n    return null;\n}\n\n// mongodb4的insertMany接收参数数组\nmsg.payload = [msg.payload];\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1460,
+    "y": 380,
+    "wires": [
+      [
+        "12f6d6984b6e6a7f"
+      ]
+    ]
+  },
+  {
+    "id": "12f6d6984b6e6a7f",
+    "type": "mongodb4",
+    "z": "b2c09448dfb8fbf4",
+    "clientNode": "c8afa8ba5a79152e",
+    "mode": "collection",
+    "collection": "pricewatch_history",
+    "operation": "insertMany",
+    "output": "toArray",
+    "maxTimeMS": "0",
+    "handleDocId": false,
+    "name": "A_Save Price Records",
+    "x": 1720,
+    "y": 380,
+    "wires": [
+      [
+        "258a2a3f023f125d"
+      ]
+    ]
+  },
+  {
+    "id": "7cae1ae02acdd61a",
+    "type": "debug",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Insert Result",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2760,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "b1606f9629595213",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Build Daily Batch Query",
+    "func": "if (flow.get(\"aCollectionRun\")) {\n    node.status({\n        fill: \"yellow\",\n        shape: \"ring\",\n        text: \"Collection already running\"\n    });\n    return null;\n}\n\nmsg.aRunId = msg._msgid;\nflow.set(\"aCollectionRun\", msg.aRunId);\n// 按香港日期计算今天的起止时间\nconst now = new Date();\nconst hkOffset = 8 * 60 * 60 * 1000;\nconst hkDate = new Date(now.getTime() + hkOffset)\n    .toISOString()\n    .slice(0, 10);\n\nconst start = new Date(hkDate + \"T00:00:00+08:00\");\nconst end = new Date(start.getTime() + 24 * 60 * 60 * 1000);\n\nmsg.checkDate = hkDate;\n\n// 只查询已确认成功的当天批次\nmsg.payload = [[\n    { $match: { schemaVersion: 1, status: \"success\", collectedAt: { $gte: start, $lt: end } } },\n    { $sort: { collectedAt: -1, _id: -1 } },\n    { $limit: 1 }\n]];\nreturn msg;\n",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "flow.set(\"aCollectionRun\", null);",
+    "finalize": "",
+    "libs": [],
+    "x": 460,
+    "y": 500,
+    "wires": [
+      [
+        "0ecd1294be3e5da1"
+      ]
+    ]
+  },
+  {
+    "id": "0ecd1294be3e5da1",
+    "type": "mongodb4",
+    "z": "b2c09448dfb8fbf4",
+    "clientNode": "c8afa8ba5a79152e",
+    "mode": "collection",
+    "collection": "pricewatch_batches",
+    "operation": "aggregate",
+    "output": "toArray",
+    "maxTimeMS": "0",
+    "handleDocId": false,
+    "name": "A_Query Daily Batches",
+    "x": 770,
+    "y": 500,
+    "wires": [
+      [
+        "457ee4575d89de9e",
+        "3600c9663b3e4b56"
+      ]
+    ]
+  },
+  {
+    "id": "457ee4575d89de9e",
+    "type": "debug",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Batch Query Result",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1100,
+    "y": 500,
+    "wires": []
+  },
+  {
+    "id": "63261ba980468273",
+    "type": "inject",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Check Collection Schedule",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "21600",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "30",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 170,
+    "y": 500,
+    "wires": [
+      [
+        "b1606f9629595213"
+      ]
+    ]
+  },
+  {
+    "id": "3600c9663b3e4b56",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Check Collection Required",
+    "func": "if (!Array.isArray(msg.payload)) {\n    node.error(\"批次查询结果异常，停止采集\", msg);\n    return null;\n}\nconst batch = msg.payload[0];\nif (batch) {\n    if (batch.status !== \"success\" || batch.productCount <= 0 ||\n        batch.merchantCount !== 9 || batch.recordCount !== batch.productCount * 9) {\n        node.error(\"成功批次登记内容异常，请检查\", msg);\n        return null;\n    }\n    node.status({ fill: \"green\", shape: \"dot\", text: \"今天已有成功批次，跳过\" });\n    if (flow.get(\"aCollectionRun\") === msg.aRunId) flow.set(\"aCollectionRun\", null);\n    return null;\n}\nnode.status({ fill: \"blue\", shape: \"dot\", text: \"今天尚无成功批次，开始采集\" });\nmsg.payload = \"\";\nreturn msg;\n",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 680,
+    "y": 260,
+    "wires": [
+      [
+        "3e897534326afba8"
+      ]
+    ]
+  },
+  {
+    "id": "666157f2dc1112b4",
+    "type": "catch",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Catch Collection Errors",
+    "scope": [
+      "b1606f9629595213",
+      "3600c9663b3e4b56",
+      "3e897534326afba8",
+      "31054cdf69e78595",
+      "ff10185fbec7f033",
+      "258a2a3f023f125d",
+      "0ecd1294be3e5da1",
+      "12f6d6984b6e6a7f",
+      "56be96e21472f1bb"
+    ],
+    "uncaught": false,
+    "x": 1490,
+    "y": 480,
+    "wires": [
+      [
+        "f4e44015805a842e"
+      ]
+    ]
+  },
+  {
+    "id": "e5b5f16b893d8444",
+    "type": "debug",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Error Details",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2240,
+    "y": 480,
+    "wires": []
+  },
+  {
+    "id": "f4e44015805a842e",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Release Lock on Error",
+    "func": "if (msg.aRunId &&\n    flow.get(\"aCollectionRun\") === msg.aRunId) {\n    flow.set(\"aCollectionRun\", null);\n}\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1930,
+    "y": 480,
+    "wires": [
+      [
+        "e5b5f16b893d8444"
+      ]
+    ]
+  },
+  {
+    "id": "0b38e69006f02c25",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Release Lock on Success",
+    "func": "if (msg.aRunId &&\n    flow.get(\"aCollectionRun\") === msg.aRunId) {\n    flow.set(\"aCollectionRun\", null);\n}\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2520,
+    "y": 380,
+    "wires": [
+      [
+        "7cae1ae02acdd61a"
+      ]
+    ]
+  },
+  {
+    "id": "3e40edb53598302e",
+    "type": "inject",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Test Product Search",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "P000003983",
+    "payloadType": "str",
+    "x": 1160,
+    "y": 640,
+    "wires": [
+      [
+        "46e3b8d425298980"
+      ]
+    ]
+  },
+  {
+    "id": "46e3b8d425298980",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Build Product Search",
+    "func": "const productCode = String(msg.payload || \"\").trim();\n\nif (!productCode) {\n    node.error(\"请输入商品编号\", msg);\n    return null;\n}\n\n// 从最新成功批次读取商品；不存在时返回空数组，不退回旧批次\nmsg.payload = [[\n    { $match: { schemaVersion: 1, status: \"success\" } },\n    { $sort: { collectedAt: -1, _id: -1 } },\n    { $limit: 1 },\n    {\n        $lookup: {\n            from: \"pricewatch_history\",\n            let: { selectedBatch: \"$_id\" },\n            pipeline: [\n                {\n                    $match: {\n                        schemaVersion: 1, productCode,\n                        $expr: { $eq: [\"$batchId\", \"$$selectedBatch\"] }\n                    }\n                },\n                {\n                    $project: {\n                        _id: 0, productCode: 1, merchantCode: 1,\n                        name: 1, nameEn: 1, brand: 1, brandEn: 1,\n                        price: 1, offerText: 1, offerTextEn: 1\n                    }\n                }\n            ],\n            as: \"quotes\"\n        }\n    },\n    { $match: { \"quotes.0\": { $exists: true } } },\n    { $project: { _id: 0, batchId: \"$_id\", collectedAt: 1, quotes: 1 } }\n]];\nreturn msg;\n",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1470,
+    "y": 700,
+    "wires": [
+      [
+        "dcb9e174966accc1"
+      ]
+    ]
+  },
+  {
+    "id": "dcb9e174966accc1",
+    "type": "mongodb4",
+    "z": "b2c09448dfb8fbf4",
+    "clientNode": "c8afa8ba5a79152e",
+    "mode": "collection",
+    "collection": "pricewatch_batches",
+    "operation": "aggregate",
+    "output": "toArray",
+    "maxTimeMS": "0",
+    "handleDocId": false,
+    "name": "A_Query Product Prices",
+    "x": 1750,
+    "y": 700,
+    "wires": [
+      [
+        "a3838165683fb14d"
+      ]
+    ]
+  },
+  {
+    "id": "24343c5d397df2a1",
+    "type": "debug",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Search Result",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2550,
+    "y": 700,
+    "wires": []
+  },
+  {
+    "id": "a3838165683fb14d",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Calculate Price Comparison",
+    "func": "const batches = msg.payload;\n\n// 找不到商品时，也输出明确结果\nif (!Array.isArray(batches) || batches.length === 0) {\n    msg.payload = {\n        found: false,\n        message: \"No product found\",\n        merchants: []\n    };\n    return msg;\n}\n\nconst batch = batches[0];\nconst quotes = batch.quotes || [];\n\nif (quotes.length === 0) {\n    node.error(\"查询结果没有商家记录\", msg);\n    return null;\n}\n\n// 以分为单位比较，减少小数计算误差\nfunction priceInCents(price) {\n    return typeof price === \"number\" &&\n        Number.isFinite(price) && price > 0\n        ? Math.round(price * 100)\n        : null;\n}\n\n// 相同文字只显示一行；英文缺失也不留空行\nfunction bilingual(primary, english) {\n    const main = String(primary || \"\").trim();\n    const en = String(english || \"\").trim();\n\n    return {\n        primary: main || en,\n        secondary: main && en &&\n            main.toLowerCase() !== en.toLowerCase()\n            ? en : \"\"\n    };\n}\n\nconst valid = quotes\n    .map(q => priceInCents(q.price))\n    .filter(value => value !== null);\n\nconst minCents = valid.length ? Math.min(...valid) : null;\nconst maxCents = valid.length ? Math.max(...valid) : null;\n\nconst first = quotes[0];\n\nconst merchants = quotes.map(q => {\n    const cents = priceInCents(q.price);\n\n    return {\n        merchantCode: q.merchantCode,\n        price: cents === null ? null : cents / 100,\n        available: cents !== null,\n        isLowest: cents !== null && cents === minCents,\n        differenceFromLowest: cents === null || minCents === null\n            ? null : (cents - minCents) / 100,\n        offer: bilingual(q.offerText, q.offerTextEn)\n    };\n});\n\n// 有报价的按价格排序，无报价的放最后\nmerchants.sort((a, b) => {\n    if (a.price === null && b.price === null) {\n        return a.merchantCode.localeCompare(b.merchantCode);\n    }\n    if (a.price === null) return 1;\n    if (b.price === null) return -1;\n    return a.price - b.price ||\n        a.merchantCode.localeCompare(b.merchantCode);\n});\n\nmsg.payload = {\n    found: true,\n    productCode: first.productCode,\n    name: bilingual(first.name, first.nameEn),\n    brand: bilingual(first.brand, first.brandEn),\n    batchId: batch.batchId,\n    collectedAt: batch.collectedAt,\n    currency: \"HKD\",\n    quotedMerchantCount: valid.length,\n    lowestPrice: minCents === null ? null : minCents / 100,\n    priceSpread: minCents === null\n        ? null : (maxCents - minCents) / 100,\n    lowestMerchants: merchants\n        .filter(m => m.isLowest)\n        .map(m => m.merchantCode),\n    merchants,\n    comparisonBasis: \"Unit prices; multi-buy offers excluded\"\n};\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2070,
+    "y": 700,
+    "wires": [
+      [
+        "24343c5d397df2a1",
+        "6fbec33b8dbc6063"
+      ]
+    ]
+  },
+  {
+    "id": "50d7395fdeb57cf5",
+    "type": "ui-template",
+    "z": "b2c09448dfb8fbf4",
+    "group": "8705c915c041d14d",
+    "page": "",
+    "ui": "",
+    "name": "A_Price Comparison View",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "head": "",
+    "format": "<template>\n  <div class=\"pw-view\">\n    <div v-if=\"!msg || !msg.payload\" class=\"pw-empty\">Run a product search to view prices.</div>\n\n    <div v-else-if=\"!msg.payload.found\" class=\"pw-empty\">No product found.</div>\n\n    <div v-else>\n      <div class=\"pw-heading\">\n        <div class=\"pw-label\">SELECTED PRODUCT</div>\n        <div class=\"pw-favorite-heading\"><h2>{{ msg.payload.name.primary }}</h2>        <button type=\"button\" class=\"pw-favorite-star\" :disabled=\"!favoritesReady || !msg.payload.productCode\"\n          :aria-pressed=\"isFavorite\" :aria-label=\"isFavorite ? 'Remove from favorites' : 'Save to favorites'\" @click=\"toggleFavorite\">\n          <span aria-hidden=\"true\">{{ isFavorite ? '★' : '☆' }}</span>\n        </button>\n</div>\n        <p v-if=\"msg.payload.name.secondary\" class=\"pw-secondary\">\n          {{ msg.payload.name.secondary }}\n        </p>\n\n        <p>\n          {{ msg.payload.brand.primary }}\n          <span v-if=\"msg.payload.brand.secondary\"> / {{ msg.payload.brand.secondary }} </span>\n        </p>\n\n        <div class=\"pw-secondary\">\n          {{ msg.payload.productCode }} · Collected: {{ formatDate(msg.payload.collectedAt) }} (Hong\n          Kong)\n        </div>\n      </div>\n\n      <section class=\"pw-price-hero\">\n        <div class=\"pw-price-main\">\n          <span>Lowest listed unit price</span>\n          <strong>{{ money(msg.payload.lowestPrice) }}</strong>\n        </div>\n        <div class=\"pw-price-meta\">\n          <p>\n            <strong>{{ msg.payload.quotedMerchantCount }} / 9</strong> merchants with price data\n          </p>\n          <p>\n            Listed price range:\n            <strong>{{\n              msg.payload.quotedMerchantCount >= 2\n                ? money(msg.payload.priceSpread)\n                : \"Not enough quotes\"\n            }}</strong>\n          </p>\n        </div>\n        <p class=\"pw-lowest-merchants\" v-if=\"msg.payload.quotedMerchantCount > 0\">\n          at {{ (msg.payload.lowestMerchants || []).map(merchantName).join(\" · \") }}\n        </p>\n      </section>\n\n      <div class=\"pw-related-actions\">\n        <button\n          type=\"button\"\n          :disabled=\"!categoryPageReady\"\n          :title=\"\n            categoryPageReady\n              ? 'Explore category prices'\n              : 'Available after the category page is connected'\n          \"\n          @click=\"openCategory\"\n        >\n          Category insights <span aria-hidden=\"true\">›</span>\n        </button>\n        <button\n          type=\"button\"\n          :disabled=\"!historyPageReady\"\n          :title=\"\n            historyPageReady\n              ? 'View this product’s price history'\n              : 'Available after the history page is connected'\n          \"\n          @click=\"openHistory\"\n        >\n          View price history <span aria-hidden=\"true\">›</span>\n        </button>\n      </div>\n\n      <p v-if=\"favoriteError\" role=\"alert\">{{ favoriteError }}</p>\n      <p class=\"pw-note\">\n        Unit prices only. Multi-buy offers are not included. Missing prices do not indicate stock\n        availability.\n      </p>\n\n      <h3 class=\"pw-offers-title\">Merchant prices</h3>\n      <div class=\"pw-table-wrap\">\n        <table class=\"pw-table\">\n          <thead>\n            <tr>\n              <th>Merchant</th>\n              <th>Unit price</th>\n              <th>Above lowest</th>\n              <th>Offer details</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr v-for=\"item in msg.payload.merchants\" :key=\"item.merchantCode\"\n              :class=\"{ 'pw-lowest': item.isLowest, 'pw-no-price': item.price === null }\">\n              <td>\n                <div class=\"pw-merchant-identity\">\n                  <img\n                    v-if=\"!failedLogos[item.merchantCode]\"\n                    :src=\"'/pricewatch-assets/merchants/' + item.merchantCode + '.png'\"\n                    class=\"pw-merchant-logo\"\n                    alt=\"\"\n                    @error=\"failedLogos[item.merchantCode] = true\"\n                  />\n                  <strong>{{ merchantName(item.merchantCode) }}</strong>\n                </div>\n                <span v-if=\"item.isLowest\" class=\"pw-badge\"> Lowest listed </span>\n              </td>\n              <td>\n                {{ item.price === null ? \"No Price Data\" : money(item.price) }}\n              </td>\n              <td>\n                {{ item.differenceFromLowest === null ? \"—\" : money(item.differenceFromLowest) }}\n              </td>\n              <td class=\"pw-offer\">\n                <div>{{ item.offer.primary || \"—\" }}</div>\n                <details v-if=\"item.offer.secondary\">\n                  <summary>English offer</summary>\n                  <div>{{ item.offer.secondary }}</div>\n                </details>\n              </td>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\n  export default {\n  data() {\n    return { categoryPageReady: true, historyPageReady: true, failedLogos: {}, favorites: [], favoritesReady: false, favoriteError: \"\" };\n  },\n  computed: {\n    isFavorite() {\n      const code = String(this.msg?.payload?.productCode ?? \"\").trim().toUpperCase();\n      return this.favorites.some(item => item.productCode === code);\n    }\n  },\n  mounted() {\n    window.addEventListener(\"pricewatch:favorites-changed\", this.refreshFavorites);\n    window.addEventListener(\"storage\", this.refreshFavorites);\n    this.refreshFavorites();\n  },\n  beforeUnmount() {\n    window.removeEventListener(\"pricewatch:favorites-changed\", this.refreshFavorites);\n    window.removeEventListener(\"storage\", this.refreshFavorites);\n  },\n  methods: {\n    refreshFavorites() {\n      const api = window.PriceWatchFavorites;\n      this.favoritesReady = Boolean(api);\n      if (!api) return;\n      try {\n        this.favorites = api.list();\n        this.favoriteError = \"\";\n      } catch {\n        this.favoriteError = \"Could not read favorites.\";\n      }\n    },\n    toggleFavorite() {\n      const product = this.msg.payload;\n      try {\n        window.PriceWatchFavorites.toggle({\n          productCode: product.productCode,\n          name: product.name.primary\n        });\n      } catch {\n        this.favoriteError = \"Could not update favorites.\";\n      }\n    },\n    openCategory() {\n      const code = this.msg?.payload?.productCode;\n      if (this.categoryPageReady && code) {\n        window.location.assign('/dashboard/categories?productCode=' + encodeURIComponent(code));\n      }\n    },\n    openHistory() {\n      const code = this.msg?.payload?.productCode;\n      if (this.historyPageReady && code) {\n        window.location.assign(\"/dashboard/history?productCode=\" + encodeURIComponent(code));\n      }\n    },\n    money(value) {\n      return typeof value === \"number\" && Number.isFinite(value)\n        ? new Intl.NumberFormat(\"en-HK\", {\n            style: \"currency\",\n            currency: \"HKD\",\n            currencyDisplay: \"code\",\n          }).format(value)\n        : \"No Price Data\";\n    },\n    formatDate(value) {\n      const date = new Date(value);\n      return Number.isNaN(date.getTime())\n        ? \"Unknown\"\n        : date.toLocaleString(\"en-GB\", {\n            timeZone: \"Asia/Hong_Kong\",\n            hour12: false,\n          });\n    },\n    merchantName(code) {\n      const names = {\n        AEON: \"AEON\",\n        DCHFOOD: \"DCH Food\",\n        JASONS: \"Market Place / JASONS\",\n        LUNGFUNG: \"Lung Fung\",\n        MANNINGS: \"Mannings\",\n        PARKNSHOP: \"PARKnSHOP\",\n        SASA: \"Sa Sa\",\n        WATSONS: \"Watsons\",\n        WELLCOME: \"Wellcome\",\n      };\n      return names[code] || code;\n    },\n  },\n};\n</script>\n\n<style>\n  \n  \n  \n  \n  \n  \n  \n  \n  @media (max-width: 600px) {\n  \n  \n  \n  }\n  .pw-view {\n    padding: 8px 12px 16px;\n    color: #334257;\n  }\n\n  .pw-view .pw-heading {\n    margin-bottom: 20px;\n  }\n\n  .pw-view .pw-label {\n    font-size: 11px;\n    font-weight: 700;\n    letter-spacing: 1.2px;\n    color: #386d83;\n  }\n\n  .pw-view .pw-heading p {\n    margin: 4px 0;\n  }\n\n  .pw-view .pw-price-hero {\n    display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    gap: 6px 28px;\n    padding: 20px 0;\n    border-top: 1px solid #dae2e8;\n    border-bottom: 1px solid #dae2e8;\n  }\n\n  .pw-view .pw-price-main {\n    flex: 1 1 180px;\n  }\n\n  .pw-view .pw-price-main p {\n    margin: 0;\n    font-size: 13px;\n  }\n\n  .pw-view .pw-price-meta {\n    flex: 1 1 180px;\n    font-size: 12px;\n  }\n\n  .pw-view .pw-price-meta p {\n    margin: 6px 0;\n  }\n\n  .pw-view .pw-note {\n    margin: 14px 0 20px;\n    font-size: 11px;\n    line-height: 1.6;\n    color: #486373;\n  }\n\n  .pw-view .pw-table-wrap {\n    overflow-x: auto;\n  }\n\n  .pw-view .pw-table {\n    width: 100%;\n    min-width: 520px;\n    border-collapse: collapse;\n    font-size: 13px;\n  }\n\n  .pw-view .pw-table th,\n  .pw-view .pw-table td {\n    text-align: left;\n    vertical-align: top;\n    padding: 12px;\n    border-bottom: 1px solid #e3e9ee;\n  }\n\n  .pw-view .pw-table td {\n    font-variant-numeric: tabular-nums;\n  }\n\n  .pw-view .pw-table tr.pw-lowest {\n    background: #eaf3f7;\n  }\n\n  .pw-view .pw-offer {\n    max-width: 260px;\n    white-space: pre-line;\n    overflow-wrap: anywhere;\n    font-size: 12px;\n  }\n\n  .pw-view .pw-offer summary {\n    cursor: pointer;\n    margin-top: 5px;\n    color: #386d83;\n  }\n\n  .pw-view .pw-empty {\n    padding: 32px 12px;\n    color: #486373;\n    font-size: 14px;\n  }\n\n  .pw-view .pw-table tr.pw-no-price td,\n  .pw-view .pw-table tr.pw-no-price td strong {\n    color: #687887;\n  }\n\n  \n\n  \n\n  \n\n  \n\n  .pw-view .pw-merchant-identity {\n    display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    gap: 8px 10px;\n  }\n\n  .pw-view .pw-merchant-logo {\n    display: block;\n    width: 80px;\n    height: 28px;\n    object-fit: contain;\n    flex-shrink: 0;\n    background: white;\n    border-radius: 3px;\n    padding: 2px;\n    box-sizing: border-box;\n  }\n\n  .pw-view .pw-heading h2 {\n    margin: 8px 0;\n    font-size: 27px;\n    line-height: 1.4;\n    font-weight: 700;\n    color: #26384a;\n  }\n\n  .pw-view .pw-secondary {\n    font-size: 12px;\n    color: #627587;\n    opacity: 1;\n    line-height: 1.6;\n  }\n\n  .pw-view .pw-price-main>span {\n    display: block;\n    font-size: 13px;\n    color: #486373;\n    font-weight: 600;\n  }\n\n  .pw-view .pw-price-main>strong {\n    display: block;\n    font-size: 40px;\n    line-height: 1.3;\n    margin: 5px 0;\n    color: #286b80;\n    font-variant-numeric: tabular-nums;\n    font-weight: 750;\n  }\n\n  .pw-view .pw-lowest-merchants {\n    flex: 0 0 100%;\n    min-width: 0;\n    margin: 0;\n    font-size: 13px;\n    line-height: 1.6;\n    overflow-wrap: anywhere;\n    font-weight: 600;\n    color: #334257;\n  }\n\n  .pw-view .pw-price-meta strong {\n    font-size: 15px;\n    font-weight: 700;\n    color: #334257;\n  }\n\n  .pw-view .pw-offers-title {\n    margin: 0 0 10px;\n    font-size: 19px;\n    font-weight: 700;\n    color: #26384a;\n  }\n\n  .pw-view .pw-table th {\n    background: #f0f4f7;\n    color: #334257;\n    font-size: 12px;\n    font-weight: 700;\n  }\n\n  .pw-view .pw-table tr:not(.pw-no-price) td:nth-child(2) {\n    font-size: 15px;\n    font-weight: 650;\n    color: #334257;\n  }\n\n  .pw-view .pw-table tr.pw-lowest td:nth-child(2) {\n    font-weight: 750;\n    color: #286b80;\n  }\n\n  .pw-view .pw-table .pw-badge {\n    display: block;\n    background: transparent;\n    color: #286b80;\n    margin-top: 4px;\n    padding: 0;\n    border: 0;\n    border-radius: 0;\n    box-shadow: none;\n    font-size: 11px;\n    font-weight: 700;\n  }\n\n  @media (max-width: 600px) {\n    .pw-view .pw-heading h2 {\n      font-size: 23px;\n    }\n\n    .pw-view .pw-price-main>strong {\n      font-size: 34px;\n    }\n  }\n\n.pw-view .pw-related-actions {\n display:flex;flex-wrap:wrap;gap:20px;margin:28px 0 26px;\n}\n.pw-view .pw-related-actions button {\n display:inline-flex;align-items:center;justify-content:space-between;\n min-width:230px;min-height:52px;box-sizing:border-box;\n padding:14px 24px;gap:28px;border:1px solid #386d83;\n border-radius:8px;background:#386d83;color:#fff;\n font-family:inherit;font-size:14px;font-weight:600;line-height:1.5;\n cursor:pointer;transition:background .15s,box-shadow .15s;\n box-shadow:0 2px 5px rgb(38 56 74 / 12%);\n}\n.pw-view .pw-related-actions button:hover:not(:disabled){background:#2c586b;border-color:#2c586b;box-shadow:0 3px 8px rgb(38 56 74 / 18%)}\n.pw-view .pw-related-actions button:focus-visible{outline:2px solid #386d83;outline-offset:3px}\n.pw-view .pw-related-actions button:disabled{background:#f5f7f9;color:#687887;border-color:#dae2e8;box-shadow:none;cursor:not-allowed}\n.pw-view .pw-related-actions button span{font-size:22px;line-height:1}\n@media(max-width:600px){.pw-view .pw-related-actions{gap:12px}.pw-view .pw-related-actions button{flex:1 1 220px;min-width:0}}\n\n.pw-favorite-heading { display: flex; align-items: center; gap: 16px; }\n.pw-favorite-heading h2 { min-width: 0; margin: 0; }\n.pw-favorite-star {\n  flex: 0 0 44px;\n  height: 44px;\n  border: 0;\n  border-radius: 8px;\n  background: transparent;\n  color: #9a6800;\n  font-size: 30px;\n  line-height: 1;\n  cursor: pointer;\n}\n.pw-favorite-star[aria-pressed=\"true\"] { color: #b87900; }\n.pw-favorite-star:hover:not(:disabled) { background: #fff4d1; }\n.pw-favorite-star:focus-visible { outline: 2px solid #9a6800; }\n.pw-favorite-star:disabled { opacity: .5; cursor: default; }\n</style>\n",
+    "storeOutMessages": true,
+    "passthru": false,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 2470,
+    "y": 780,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "e98e09963c0cca6d",
+    "type": "ui-text-input",
+    "z": "b2c09448dfb8fbf4",
+    "group": "8705c915c041d14d",
+    "name": "A_Product Code Input",
+    "label": "Search by product code",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "topic": "topic",
+    "topicType": "msg",
+    "mode": "text",
+    "tooltip": "",
+    "delay": 300,
+    "passthru": false,
+    "sendOnDelay": false,
+    "sendOnBlur": false,
+    "sendOnEnter": true,
+    "className": "",
+    "clearable": false,
+    "sendOnClear": false,
+    "icon": "",
+    "iconPosition": "left",
+    "iconInnerPosition": "inside",
+    "x": 1160,
+    "y": 700,
+    "wires": [
+      [
+        "46e3b8d425298980"
+      ]
+    ]
+  },
+  {
+    "id": "a0696ed34e08d7e8",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Build Keyword Search",
+    "func": "// Treat simplified/traditional variants as equivalent; preserve literal matching.\nfunction chineseSearchPattern(text) {\n    const groups = [\"万萬\", \"与與\", \"专專\", \"业業\", \"丛叢\", \"东東\", \"丝絲\", \"丟丢\", \"两兩\", \"严嚴\", \"並併并\", \"丧喪\", \"个個箇\", \"丰豐\", \"临臨\", \"为為\", \"丽麗\", \"举舉\", \"义義\", \"乌烏\", \"乐樂\", \"乔喬\", \"习習\", \"乡鄉\", \"书書\", \"买買\", \"乱亂\", \"争爭\", \"亏虧\", \"亘亙\", \"亚亞\", \"产產\", \"亩畝\", \"亲親\", \"亵褻\", \"亿億\", \"仅僅\", \"从從\", \"仑侖崙\", \"仓倉\", \"仪儀\", \"们們\", \"价價\", \"伋汲\", \"伕夫\", \"众眾\", \"优優\", \"会會\", \"伛傴\", \"伞傘\", \"伟偉\", \"传傳\", \"伤傷\", \"伥倀\", \"伦倫\", \"伧傖\", \"伪偽\", \"伫佇\", \"佈布\", \"体體\", \"佔占\", \"佣傭\", \"佥僉\", \"佪徊\", \"來来\", \"侠俠\", \"侣侶\", \"侥僥\", \"侦偵\", \"侧側\", \"侨僑\", \"侩儈\", \"侪儕\", \"侬儂\", \"侷局挶跼\", \"俁俣\", \"係系繫\", \"俦儔\", \"俨儼\", \"俩倆\", \"俪儷\", \"俭儉\", \"倖幸\", \"仿倣\", \"债債\", \"倾傾\", \"偬傯\", \"偺咱\", \"偻僂\", \"偾僨\", \"偿償\", \"傑杰\", \"備备\", \"傢家\", \"傥儻\", \"傧儐\", \"储儲\", \"傩儺\", \"僇戮\", \"仆僕\", \"僱雇\", \"儅噹当當\", \"儘尽盡\", \"儸囉罗羅\", \"儿兒\", \"兇凶\", \"兌兑\", \"兖兗\", \"党黨\", \"內内\", \"兰蘭\", \"关關\", \"兴興\", \"兹玆茲\", \"养養\", \"兽獸\", \"冁囅\", \"冈岡\", \"冊册\", \"冑胄\", \"写寫\", \"军軍\", \"农農\", \"冪幂\", \"冯馮\", \"冲沖衝\", \"决決\", \"况況\", \"冻凍\", \"净凈淨\", \"准準\", \"凉涼\", \"减減\", \"凑湊\", \"凛凜\", \"几幾\", \"凤鳳\", \"凫鳧\", \"凭憑\", \"凯凱\", \"击擊\", \"凿鑿\", \"刍芻\", \"划劃\", \"刘劉\", \"则則\", \"刚剛\", \"创創\", \"删刪\", \"別别彆\", \"刭剄\", \"刹剎\", \"刽劊\", \"刿劌\", \"剀剴\", \"剂劑\", \"克剋\", \"剐剮\", \"剑劍\", \"剝剥\", \"剧劇\", \"剷鏟铲\", \"劝勸\", \"办辦\", \"务務\", \"劢勱\", \"动動\", \"励勵\", \"劲勁\", \"劳勞\", \"劻匡\", \"势勢\", \"勋勛\", \"勖勗\", \"勝胜\", \"勣积積\", \"剿勦\", \"勻匀\", \"匦匭\", \"匮匱\", \"匯彙汇\", \"区區\", \"医醫\", \"华華\", \"协協\", \"单單\", \"卖賣\", \"卢盧\", \"卤滷鹵\", \"卧臥\", \"卫衛\", \"却卻\", \"卹恤\", \"卺巹\", \"厂廠\", \"厅廳\", \"历曆歷\", \"厉厲\", \"压壓\", \"厌厭\", \"厍厙\", \"厕廁\", \"厢廂\", \"厣厴\", \"厦廈\", \"厨廚\", \"厩廄\", \"厮廝\", \"县縣\", \"参參\", \"双雙\", \"发發髮\", \"变變\", \"叙敘\", \"叠疊\", \"叶葉\", \"号號\", \"叹嘆歎\", \"叽嘰\", \"吋寸\", \"吓嚇\", \"吕呂\", \"吗嗎\", \"吨噸\", \"听聽\", \"启啟\", \"吳吴\", \"吶呐\", \"呎尺\", \"呒嘸\", \"呓囈\", \"呕嘔\", \"呖嚦\", \"呗唄\", \"员員\", \"呙咼\", \"呛嗆\", \"呜嗚\", \"咏詠\", \"咙嚨\", \"咛嚀\", \"响響\", \"哑啞\", \"哒噠\", \"哓嘵\", \"哔嗶\", \"哕噦\", \"哗嘩\", \"哙噲\", \"哜嚌\", \"哝噥\", \"哟喲\", \"唛嘜\", \"唠嘮\", \"唢嗩\", \"唤喚\", \"唸念\", \"問问\", \"啣衔銜\", \"啧嘖\", \"啬嗇\", \"啭囀\", \"啮嚙齧\", \"啸嘯\", \"吃喫\", \"喷噴\", \"喽嘍\", \"喾嚳\", \"嗫囁\", \"嗳噯\", \"嘗尝\", \"嘘噓\", \"嘤嚶\", \"嘱囑\", \"噁恶惡\", \"噜嚕\", \"嚣囂\", \"咽嚥\", \"向嚮\", \"囌甦苏蘇\", \"团團糰\", \"囪囱\", \"园園\", \"围圍\", \"囵圇\", \"国國\", \"图圖\", \"圆圓\", \"圹壙\", \"场場\", \"坏壞\", \"块塊\", \"坚堅\", \"坛壇罈\", \"坜壢\", \"坝壩\", \"坞塢\", \"坟墳\", \"坠墜\", \"坰垧\", \"垄壟\", \"垆壚\", \"垒壘\", \"垦墾\", \"垩堊\", \"垫墊\", \"垭埡\", \"垲塏\", \"埘塒\", \"埙塤壎\", \"埚堝\", \"執执\", \"堑塹\", \"堕墮\", \"堯尧\", \"報报\", \"堿碱\", \"塋茔\", \"塗涂\", \"塵尘\", \"墑墒\", \"墙墻牆\", \"壮壯\", \"声聲\", \"壳殼\", \"壶壺\", \"壽寿\", \"处處\", \"复復複\", \"够夠\", \"夢梦\", \"头頭\", \"夹夾\", \"夺奪\", \"奁奩\", \"奂奐\", \"奋奮\", \"奖獎\", \"奥奧\", \"妆妝\", \"妇婦\", \"妈媽\", \"妩嫵\", \"妪嫗\", \"妫媯\", \"你妳\", \"姍姗\", \"奸姦\", \"侄姪\", \"娄婁\", \"娅婭\", \"娆嬈\", \"娇嬌\", \"娈孌\", \"娛娱\", \"娲媧\", \"娴嫻\", \"婴嬰\", \"婵嬋\", \"婶嬸\", \"媪媼\", \"嫒嬡\", \"嫔嬪\", \"嫱嬙\", \"嬝袅裊\", \"嬤嬷\", \"娘孃\", \"孙孫\", \"学學\", \"孪孿\", \"宁寧\", \"宝寶\", \"实實\", \"宠寵\", \"审審\", \"宪憲\", \"宫宮\", \"宽寬\", \"宾賓\", \"寝寢\", \"对對\", \"寻尋\", \"导導\", \"将將\", \"尔爾\", \"尴尷\", \"层層\", \"屆届\", \"屉屜\", \"屝扉\", \"属屬\", \"屡屢\", \"屦屨\", \"屿嶼\", \"岁歲\", \"岂豈\", \"岖嶇\", \"岗崗\", \"岘峴\", \"岚嵐\", \"岛島\", \"岧迢\", \"岩嵒巖\", \"岭嶺\", \"岽崠\", \"岿巋\", \"峄嶧\", \"峡峽\", \"峤嶠\", \"峥崢\", \"峦巒\", \"崂嶗\", \"崃崍\", \"崭嶄\", \"崳嵛\", \"嵘嶸\", \"嵝嶁\", \"岳嶽\", \"巅巔\", \"巑漓灕\", \"巩鞏\", \"巯巰\", \"币幣\", \"帅帥\", \"师師\", \"帏幃\", \"帐帳\", \"帘簾\", \"帜幟\", \"带帶\", \"帧幀\", \"帮幫\", \"帱幬\", \"帻幘\", \"帼幗\", \"广廣\", \"仄庂\", \"庄莊\", \"庆慶\", \"庐廬\", \"庑廡\", \"库庫\", \"应應\", \"庙廟\", \"庞龐\", \"废廢\", \"廩廪\", \"廱痈癰\", \"开開\", \"异異\", \"弃棄\", \"弑弒\", \"吊弔\", \"张張\", \"弥彌瀰\", \"弪弳\", \"弯彎\", \"強强彊\", \"弹彈\", \"归歸\", \"录錄\", \"彥彦\", \"彫雕\", \"彻徹\", \"佛彿\", \"径徑\", \"徕徠\", \"徬旁\", \"忆憶\", \"忏懺\", \"忧憂\", \"忾愾\", \"怀懷\", \"态態\", \"怂慫\", \"怃憮\", \"怄慪\", \"怅悵\", \"怆愴\", \"怜憐\", \"总總\", \"怼懟\", \"怿懌\", \"恆恒\", \"恋戀\", \"恥耻\", \"恳懇\", \"恸慟\", \"恹懨\", \"恺愷\", \"恻惻\", \"恼惱\", \"恽惲\", \"悅悦\", \"悫愨\", \"悬懸\", \"悭慳\", \"悯憫\", \"悶闷\", \"凄悽淒\", \"惊驚\", \"惧懼\", \"惨慘\", \"惩懲\", \"惫憊\", \"惬愜\", \"惭慚\", \"惮憚\", \"惯慣\", \"愛爱\", \"愠慍\", \"愤憤\", \"愦憒\", \"慄栗\", \"慇殷\", \"慑懾\", \"慮虑\", \"慼戚\", \"懍檁檩\", \"懑懣\", \"懒懶\", \"懞濛矇蒙\", \"戆戇\", \"戉鉞钺\", \"戋戔\", \"戏戲\", \"戗戧\", \"战戰\", \"戩戬\", \"戶户\", \"仂扐\", \"扑撲\", \"扞捍\", \"叉扠\", \"扢扦\", \"扩擴\", \"扪捫\", \"扫掃\", \"扬揚颺\", \"扰擾\", \"扺抵牴\", \"抃拚\", \"抆擦\", \"抎殒殞\", \"抚撫\", \"抛拋\", \"抟摶\", \"抠摳\", \"抡掄\", \"抢搶\", \"护護\", \"抴曳\", \"担擔\", \"拟擬\", \"拢攏\", \"拣揀\", \"拥擁\", \"拦攔\", \"拧擰\", \"拨撥\", \"择擇\", \"挂掛\", \"挚摯\", \"挛攣\", \"挝撾\", \"挞撻\", \"挟挾\", \"挠撓\", \"挡擋\", \"挢撟\", \"挣掙\", \"挤擠\", \"挥揮\", \"捞撈\", \"损損\", \"捡撿\", \"换換\", \"捣搗擣\", \"捨舍\", \"据據\", \"卷捲\", \"採采\", \"掳擄\", \"掴摑\", \"掷擲\", \"掸撢撣\", \"掺摻\", \"掼摜\", \"揹背\", \"揽攬\", \"揿撳\", \"搀攙\", \"搁擱\", \"搂摟\", \"搅攪\", \"搆构構\", \"搖摇\", \"搟擀\", \"携攜\", \"摄攝\", \"摅攄\", \"摆擺襬\", \"摈擯\", \"摊攤\", \"撄攖\", \"撐撑\", \"捻撚\", \"撵攆\", \"撷擷\", \"撸擼\", \"撺攛\", \"擞擻\", \"攒攢\", \"攷考\", \"敌敵\", \"敗败\", \"敛斂\", \"数數\", \"斃毙\", \"斋齋\", \"斓斕\", \"斩斬\", \"断斷\", \"旂旗\", \"无無\", \"旧舊\", \"时時\", \"旷曠\", \"昙曇\", \"昼晝\", \"显顯\", \"晉晋\", \"晒曬\", \"晓曉\", \"晔曄\", \"晕暈\", \"晖暉\", \"晞曦\", \"暂暫\", \"暘阳陽\", \"暢畅\", \"暧曖\", \"昵暱\", \"了暸瞭\", \"朧矓胧\", \"朮术術\", \"朴樸\", \"机機\", \"杀殺\", \"杂雜\", \"权權\", \"杆桿\", \"圬杇\", \"条條\", \"杨楊\", \"杩榪\", \"极極\", \"枙栀梔\", \"枞樅\", \"枢樞\", \"枣棗\", \"枥櫪\", \"枨棖\", \"枪槍鎗\", \"枫楓\", \"枭梟\", \"拐枴\", \"柠檸\", \"柵栅\", \"柽檉\", \"标標\", \"栈棧\", \"栉櫛\", \"栊櫳\", \"栋棟\", \"栌櫨\", \"栎櫟\", \"栏欄\", \"树樹\", \"栖棲\", \"样樣\", \"栾欒\", \"桠椏\", \"桡橈\", \"桢楨\", \"档檔\", \"桤榿\", \"桥橋\", \"桦樺\", \"桧檜\", \"桨槳\", \"桩樁\", \"检檢\", \"棂櫺欞\", \"椁槨\", \"椟櫝\", \"椠槧\", \"椤欏\", \"椭橢\", \"楼樓\", \"榄欖\", \"榇櫬\", \"榈櫚\", \"榉櫸\", \"榮荣\", \"槃盘盤\", \"杠槓\", \"槛檻\", \"槟檳\", \"槠櫧\", \"梁樑\", \"横橫\", \"樯檣\", \"樱櫻\", \"橱櫥\", \"橹櫓艣\", \"橼櫞\", \"柜櫃\", \"欢歡\", \"欤歟\", \"欧歐\", \"欽钦\", \"歼殲\", \"歿殁\", \"殇殤\", \"残殘\", \"殓殮\", \"殚殫\", \"殡殯\", \"殴毆\", \"毀毁燬\", \"毂轂\", \"毋毌\", \"毕畢\", \"毡氈\", \"毬球\", \"毵毿\", \"氇氌\", \"气氣\", \"氢氫\", \"氩氬\", \"氲氳\", \"氾汎泛\", \"汉漢\", \"丸汍\", \"汙污\", \"汤湯\", \"汹洶\", \"沒没\", \"沟溝\", \"沣灃\", \"沤漚\", \"沥瀝\", \"沦淪\", \"沧滄\", \"沩溈\", \"沪滬\", \"泞濘\", \"泪淚\", \"泶澩\", \"泷瀧\", \"泸瀘\", \"泺濼\", \"泻潟瀉\", \"泼潑\", \"泽澤\", \"泾涇\", \"洁潔\", \"洒灑\", \"泄洩\", \"浃浹\", \"浅淺\", \"浆漿\", \"浇澆\", \"浈湞\", \"浊濁\", \"测測\", \"浍澮\", \"济濟\", \"浏瀏\", \"浑渾\", \"浒滸\", \"浓濃\", \"浔潯\", \"涛濤\", \"涝澇\", \"涞淶\", \"涟漣\", \"涠潿\", \"涡渦\", \"涣渙\", \"涤滌\", \"润潤\", \"涧澗\", \"涨漲\", \"涩澀\", \"淥渌\", \"淵渊\", \"渍漬\", \"渎瀆\", \"渐漸\", \"渑澠\", \"渔漁\", \"渖瀋\", \"渗滲\", \"温溫\", \"涌湧\", \"湾灣\", \"湿溼濕\", \"溃潰\", \"溅濺\", \"滅灭\", \"滎荥\", \"滗潷\", \"滚滾\", \"滞滯\", \"滠灄\", \"满滿\", \"滢瀅\", \"滤濾\", \"滥濫\", \"滦灤\", \"滨濱\", \"滩灘\", \"潁颍\", \"潆瀠\", \"潇瀟\", \"潋瀲\", \"潍濰\", \"潛潜\", \"澜瀾\", \"淀澱\", \"濑瀨\", \"濒瀕\", \"灏灝\", \"灯燈\", \"灵靈\", \"災灾\", \"灿燦\", \"炀煬\", \"炉爐\", \"炖燉\", \"炜煒\", \"炝熗\", \"点點\", \"炼煉\", \"炽熾\", \"烁爍\", \"烂爛\", \"烃烴\", \"烛燭\", \"烟煙\", \"烦煩\", \"烧燒\", \"烨燁\", \"烩燴\", \"烫燙\", \"烬燼\", \"热熱\", \"焕煥\", \"焖燜\", \"焘燾\", \"煢茕\", \"熒荧\", \"焰燄\", \"燐磷\", \"營营\", \"爷爺\", \"牍牘\", \"牪瘪癟\", \"牵牽\", \"牺犧\", \"犊犢\", \"犖荦\", \"犁犛\", \"状狀\", \"犷獷\", \"犹猶\", \"狈狽\", \"狞獰\", \"独獨\", \"狭狹\", \"狮獅\", \"狯獪\", \"狰猙\", \"狱獄\", \"狲猻\", \"狸貍\", \"猃獫\", \"猎獵\", \"猕獮獼\", \"猡玀\", \"猪豬\", \"猫貓\", \"献獻\", \"獭獺\", \"獲穫获\", \"玑璣\", \"玛瑪\", \"玨珏\", \"玮瑋\", \"环環\", \"现現\", \"玺璽\", \"珐琺\", \"珑瓏\", \"佩珮\", \"珲琿\", \"琅瑯\", \"琏璉\", \"琐瑣\", \"琼瓊\", \"瑤瑶\", \"瑩莹\", \"瑷璦\", \"璎瓔\", \"瓒瓚\", \"瓖鑲镶\", \"瓮甕\", \"瓯甌\", \"电電\", \"画畫\", \"畬畲\", \"畴疇\", \"疖癤\", \"疗療\", \"疟瘧\", \"疠癘\", \"疡瘍\", \"疮瘡\", \"疯瘋\", \"疱皰\", \"疿痱\", \"症癥\", \"痉痙\", \"痒癢\", \"痠酸\", \"痨癆\", \"痪瘓\", \"痫癇\", \"痲痳麻\", \"痴癡\", \"痹痺\", \"瘅癉\", \"瘗瘞\", \"瘘瘺\", \"瘫癱\", \"瘾癮\", \"瘿癭\", \"癞癩\", \"癣癬\", \"癫癲\", \"皑皚\", \"皱皺\", \"皲皸\", \"皻隳\", \"盏盞\", \"盐鹽\", \"监監鑑\", \"盖蓋\", \"盗盜\", \"盪荡蕩\", \"眥眦\", \"眯瞇\", \"着著\", \"睁睜\", \"睃脧\", \"困睏\", \"睐睞\", \"睑瞼\", \"睪睾\", \"瞒瞞\", \"瞩矚\", \"矫矯\", \"矶磯\", \"矾礬\", \"矿礦\", \"砀碭\", \"码碼\", \"砖磚\", \"砗硨\", \"砚硯\", \"炮砲\", \"砺礪\", \"砻礱\", \"砾礫\", \"础礎\", \"朱硃\", \"硕碩\", \"硖硤\", \"硗磽\", \"确確\", \"硷鹼\", \"碍礙\", \"碛磧\", \"碜磣\", \"礼禮\", \"祅祆\", \"只祇衹隻\", \"佑祐\", \"祕秘\", \"祢禰\", \"祯禎\", \"祷禱\", \"祸禍\", \"祿禄\", \"禀稟\", \"禅禪\", \"御禦\", \"离離\", \"禿秃\", \"秆稈\", \"秈籼\", \"种種\", \"称稱\", \"秽穢\", \"稅税\", \"棱稜\", \"稣穌\", \"稳穩\", \"穀谷\", \"穎颖\", \"穑穡\", \"穷窮\", \"窃竊\", \"窍竅\", \"窑窯\", \"窜竄\", \"窝窩\", \"窥窺\", \"窦竇\", \"洼窪\", \"窭窶\", \"竖豎\", \"竞競\", \"笃篤\", \"笋筍\", \"笔筆\", \"笕筧\", \"笺箋\", \"笻筇\", \"笼籠\", \"笾籩\", \"筚篳\", \"筛篩\", \"筝箏\", \"筹籌\", \"签簽籤\", \"简簡\", \"箄箅\", \"箦簀\", \"箧篋\", \"箨籜\", \"箩籮\", \"箪簞\", \"箫簫\", \"節节\", \"範范\", \"筑築\", \"篑簣\", \"篓簍\", \"筱篠\", \"篮籃\", \"篱籬\", \"簑蓑\", \"簖籪\", \"檐簷\", \"籁籟\", \"籐藤\", \"籥龠\", \"吁籲\", \"籴糴\", \"类類\", \"粜糶\", \"粝糲\", \"粤粵\", \"粪糞\", \"粮糧\", \"糁糝\", \"糢饃馍\", \"糾纠\", \"紀纪\", \"紂纣\", \"約约\", \"紅红\", \"紆纡\", \"紇纥\", \"紈纨\", \"紉纫\", \"紋纹\", \"納纳\", \"紐纽\", \"紓纾\", \"純纯\", \"紕纰\", \"紗纱\", \"紙纸\", \"級级\", \"紛纷\", \"紜纭\", \"紡纺\", \"紧緊\", \"細细\", \"紱绂\", \"紲绁\", \"紳绅\", \"紹绍\", \"紺绀\", \"紼绋\", \"紿绐\", \"絀绌\", \"終终\", \"弦絃\", \"組组\", \"絆绊\", \"絎绗\", \"結结\", \"絕绝\", \"絛絳縚绛绦\", \"絞绞\", \"絡络\", \"絢绚\", \"給给\", \"絨绒\", \"統统\", \"絷縶\", \"絹绢\", \"綁绑\", \"綃绡\", \"綆绠\", \"綈绨\", \"綏绥\", \"經经\", \"綜综\", \"綞缍\", \"綠绿\", \"綢绸\", \"綣绻\", \"綬绶\", \"維维\", \"綰绾\", \"綱纲\", \"網网\", \"綴缀\", \"彩綵\", \"綸纶\", \"綹绺\", \"綺绮\", \"綻绽\", \"綽绰\", \"綾绫\", \"綿绵\", \"緄绲\", \"緇缁\", \"緋绯\", \"緒绪\", \"緗缃\", \"緘缄\", \"緙缂\", \"線线\", \"緝缉\", \"緞缎\", \"締缔\", \"緡缗\", \"緣缘\", \"緦缌\", \"編编\", \"緩缓\", \"緬缅\", \"緯纬\", \"緱缑\", \"緲缈\", \"練练\", \"緶缏\", \"緹缇\", \"緻致\", \"縈萦\", \"縉缙\", \"縊缢\", \"縋缒\", \"縐绉\", \"縑缣\", \"縛縳缚\", \"縝缜\", \"縞缟\", \"縟缛\", \"縫缝\", \"縭缡\", \"縮缩\", \"演縯\", \"縱纵\", \"縲缧\", \"縴纖纤\", \"縵缦\", \"縷缕\", \"縹缥\", \"績绩\", \"繃绷\", \"繅缫\", \"繆缪\", \"繈襁\", \"繒缯\", \"織织\", \"繕缮\", \"繚缭\", \"繞绕\", \"繡绣\", \"繢缋\", \"繩绳\", \"繪绘\", \"繭茧\", \"繯缳\", \"繰缲\", \"繳缴\", \"繹绎\", \"繼继\", \"繽缤\", \"繾缱\", \"纈缬\", \"纊纩\", \"續续\", \"累纍\", \"纏缠\", \"纓缨\", \"才纔\", \"纘缵\", \"纜缆\", \"缰韁\", \"缽钵\", \"罂罌\", \"罚罰\", \"罢罷\", \"罴羆\", \"罵骂\", \"羁羈\", \"羋芈\", \"羟羥\", \"羡羨\", \"翘翹\", \"端耑\", \"耧耬\", \"耸聳\", \"聂聶\", \"聋聾\", \"职職\", \"聍聹\", \"联聯\", \"圣聖\", \"聞闻\", \"聩聵\", \"聪聰\", \"肃肅\", \"肠腸\", \"肤膚\", \"肮骯\", \"肾腎\", \"肿腫\", \"胀脹\", \"胁脅\", \"胆膽\", \"胪臚\", \"胫脛\", \"胶膠\", \"脈脉\", \"脍膾\", \"脏臟髒\", \"脐臍\", \"脑腦\", \"脓膿\", \"脔臠\", \"脚腳\", \"唇脣\", \"修脩\", \"脫脱\", \"脶腡\", \"脸臉\", \"腊臘\", \"腻膩\", \"腼靦\", \"腽膃\", \"腾騰\", \"膑臏\", \"舆輿\", \"舣艤\", \"舰艦\", \"舱艙\", \"舻艫\", \"艰艱\", \"艳艷豔\", \"艸艹\", \"艺藝\", \"芐苄\", \"芗薌\", \"芜蕪\", \"芦蘆\", \"芸蕓\", \"苁蓯\", \"苇葦\", \"苈藶\", \"苋莧\", \"苌萇\", \"苍蒼\", \"苎苧\", \"苟茍\", \"苹蘋\", \"茎莖\", \"茏蘢\", \"茑蔦\", \"荆荊\", \"荐薦\", \"荚莢\", \"荛蕘\", \"荜蓽\", \"荞蕎\", \"荟薈\", \"荠薺\", \"荤葷\", \"荨蕁\", \"荩藎\", \"荪蓀\", \"荫蔭\", \"荭葒\", \"药葯藥\", \"莅蒞\", \"莱萊\", \"莲蓮\", \"莳蒔\", \"莴萵\", \"莶薟\", \"莸蕕\", \"莺鶯\", \"庵菴\", \"萝蘿\", \"萤螢\", \"萧蕭\", \"萨薩\", \"葱蔥\", \"蒇蕆\", \"蒉蕢\", \"蒋蔣\", \"蒌蔞\", \"蓝藍\", \"蓟薊\", \"蓠蘺\", \"蓣蕷\", \"蓥鎣\", \"蓦驀\", \"菱蔆\", \"卜蔔\", \"蔷薔\", \"蔹蘞\", \"蔺藺\", \"蔼藹\", \"蕲蘄\", \"蕴蘊\", \"姜薑\", \"槁薧\", \"薮藪\", \"藓蘚\", \"薯藷\", \"蘖蘗\", \"虏虜\", \"虚虛\", \"虫蟲\", \"虮蟣\", \"虽雖\", \"虾蝦\", \"虿蠆\", \"蚀蝕\", \"蚁蟻\", \"蚂螞\", \"蚕蠶\", \"蚝蠔\", \"蚬蜆\", \"蛊蠱\", \"蛎蠣\", \"蛏蟶\", \"蛮蠻\", \"蛰蟄\", \"蛱蛺\", \"蛲蟯\", \"蛳螄\", \"蛴蠐\", \"蛻蜕\", \"蜗蝸\", \"蜡蠟\", \"蝇蠅\", \"蝈蟈\", \"蝉蟬\", \"蝼螻\", \"蝾蠑\", \"衅釁\", \"蔑衊\", \"补補\", \"衬襯\", \"衮袞\", \"袄襖\", \"袜襪\", \"袭襲\", \"装裝\", \"裆襠\", \"裢褳\", \"裣襝\", \"裤褲\", \"制製\", \"褛褸\", \"褴襤\", \"核覈\", \"見见\", \"規规\", \"覓觅\", \"視视\", \"覘觇\", \"覡觋\", \"覦觎\", \"覬觊\", \"覯觏\", \"覲觐\", \"覷觑\", \"覺觉\", \"覽览\", \"覿觌\", \"觀观\", \"筋觔\", \"觞觴\", \"触觸\", \"觯觶\", \"訂订\", \"訃讣\", \"計计\", \"訊讯\", \"訌讧\", \"討讨\", \"訐讦\", \"訓训\", \"訕讪\", \"訖讫\", \"托託\", \"記记\", \"訛讹\", \"訝讶\", \"訟讼\", \"欣訢\", \"訣诀\", \"訥讷\", \"訪访\", \"設设\", \"許许\", \"訴诉\", \"訶诃\", \"診诊\", \"注註\", \"証證证\", \"詁诂\", \"詆诋\", \"詎讵\", \"詐诈\", \"詒诒\", \"詔诏\", \"評评\", \"詘诎\", \"詛诅\", \"詞词\", \"詡诩\", \"詢询\", \"詣诣\", \"試试\", \"詩诗\", \"詫诧\", \"詬诟\", \"詭诡\", \"詮诠\", \"詰诘\", \"話话\", \"該该\", \"詳详\", \"詵诜\", \"詼诙\", \"詿诖\", \"誄诔\", \"誅诛\", \"誆诓\", \"夸誇\", \"誉譽\", \"誊謄\", \"志誌\", \"認认\", \"誑诳\", \"誒诶\", \"誕诞\", \"誘诱\", \"誚诮\", \"語语\", \"誠诚\", \"誡诫\", \"誣诬\", \"誤误\", \"誥诰\", \"誦诵\", \"誨诲\", \"說说\", \"誰谁\", \"課课\", \"誶谇\", \"誹诽\", \"誼谊\", \"調调\", \"諂谄\", \"諄谆\", \"談谈\", \"諉诿\", \"請请\", \"諍诤\", \"諏诹\", \"諑诼\", \"諒谅\", \"論论\", \"諗谂\", \"諛谀\", \"諜谍\", \"諞谝\", \"諢诨\", \"諤谔\", \"諦谛\", \"諧谐\", \"諫谏\", \"諭谕\", \"諮谘\", \"諱讳\", \"諳谙\", \"諶谌\", \"諷讽\", \"諸诸\", \"諺谚\", \"諼谖\", \"諾诺\", \"謀谋\", \"謁谒\", \"謂谓\", \"謅诌\", \"謊谎\", \"謎谜\", \"謐谧\", \"謔谑\", \"謖谡\", \"謗谤\", \"謙谦\", \"謚谥\", \"講讲\", \"謝谢\", \"謠谣\", \"謨谟\", \"謫谪\", \"謬谬\", \"謳讴\", \"謹谨\", \"謾谩\", \"譎谲\", \"譏讥\", \"譖谮\", \"識识\", \"譙谯\", \"譚谭\", \"譜谱\", \"噪譟\", \"譫谵\", \"譯译\", \"議议\", \"譴谴\", \"讀读\", \"讎雠\", \"讒谗\", \"讓让\", \"讕谰\", \"讖谶\", \"讚贊赞\", \"讜谠\", \"讞谳\", \"貝贝\", \"貞贞\", \"負负\", \"財财\", \"貢贡\", \"貧贫\", \"貨货\", \"販贩\", \"貪贪\", \"貫贯\", \"責责\", \"貯贮\", \"貰贳\", \"貲赀\", \"貳贰\", \"貴贵\", \"貶贬\", \"貸贷\", \"貺贶\", \"費费\", \"貼贴\", \"貽贻\", \"貿贸\", \"賀贺\", \"賁贲\", \"賂赂\", \"賃赁\", \"賄贿\", \"賅赅\", \"資资\", \"賈贾\", \"賊贼\", \"賑赈\", \"賒赊\", \"賕赇\", \"賚赉\", \"賜赐\", \"賞赏\", \"賠赔\", \"賡赓\", \"賢贤\", \"賤贱\", \"賦赋\", \"賧赕\", \"質质\", \"賬账\", \"賭赌\", \"賴赖\", \"賺赚\", \"賻赙\", \"購购\", \"賽赛\", \"賾赜\", \"贄贽\", \"贅赘\", \"贈赠\", \"贍赡\", \"贏赢\", \"贐赆\", \"贓赃\", \"贖赎\", \"贗赝\", \"贛赣\", \"赵趙\", \"赶趕\", \"趋趨\", \"趱趲\", \"趸躉\", \"跃躍\", \"跄蹌\", \"跞躒\", \"跡迹\", \"践踐\", \"跷蹺\", \"跸蹕\", \"跹躚\", \"跻躋\", \"踊踴\", \"踌躊\", \"蜷踡\", \"踪蹤\", \"碰踫\", \"踬躓\", \"踯躑\", \"蹑躡\", \"蹒蹣\", \"跖蹠\", \"蹰躕\", \"蹿躥\", \"躏躪\", \"躜躦\", \"躯軀\", \"車车\", \"軋轧\", \"軌轨\", \"軒轩\", \"軔轫\", \"軛轭\", \"軟软\", \"軫轸\", \"軸轴\", \"軹轵\", \"軺轺\", \"軻轲\", \"軼轶\", \"軾轼\", \"較较\", \"輅辂\", \"輇辁\", \"載载\", \"輊轾\", \"輒辄\", \"挽輓\", \"輔辅\", \"輕轻\", \"輛辆\", \"輜辎\", \"輝辉\", \"輞辋\", \"輟辍\", \"輥辊\", \"輦辇\", \"輩辈\", \"輪轮\", \"輯辑\", \"輳辏\", \"輸输\", \"輻辐\", \"輾辗\", \"轄辖\", \"轅辕\", \"轆辘\", \"轉转\", \"轍辙\", \"轎轿\", \"轔辚\", \"轟轰\", \"轡辔\", \"轢轹\", \"轤轳\", \"辞辭\", \"辩辯\", \"辫辮\", \"边邊\", \"辽遼\", \"达達\", \"迁遷\", \"迆迤\", \"过過\", \"迈邁\", \"运運\", \"还還\", \"这這\", \"进進\", \"远遠\", \"违違\", \"连連\", \"迟遲\", \"迩邇\", \"迳逕\", \"回迴\", \"乃迺\", \"适適\", \"选選\", \"逊遜\", \"递遞\", \"逦邐\", \"周週\", \"逻邏\", \"游遊\", \"遗遺\", \"遙遥\", \"邓鄧\", \"邝鄺\", \"邬鄔\", \"邮郵\", \"邹鄒\", \"邺鄴\", \"邻鄰\", \"合郃閤\", \"郏郟\", \"郐鄶\", \"郑鄭\", \"郓鄆\", \"郦酈\", \"郧鄖\", \"郸鄲\", \"酝醞\", \"酱醬\", \"酽釅\", \"酾釃\", \"酿釀\", \"腌醃\", \"丑醜\", \"释釋\", \"厘釐\", \"釓钆\", \"釔钇\", \"釕钌\", \"釗钊\", \"釘钉\", \"釙钋\", \"針针\", \"釣钓\", \"釤钐\", \"扣釦\", \"釧钏\", \"釩钒\", \"釬钎\", \"釵钗\", \"釷钍\", \"釹钕\", \"鈀钯\", \"鈁钫\", \"鈄钭\", \"鈉钠\", \"鈍钝\", \"鈐钤\", \"鈑钣\", \"鈔钞\", \"鈕钮\", \"鈞钧\", \"鈣钙\", \"鈥钬\", \"鈦钛\", \"鈧钪\", \"鈮铌\", \"鈰铈\", \"鈳钶\", \"鈴铃\", \"鈷钴\", \"鈸钹\", \"鈹铍\", \"鈺钰\", \"鈽钸\", \"鈾铀\", \"鈿钿\", \"鉀钾\", \"鉅钜\", \"鉆鑽钻\", \"鉈铊\", \"鉉铉\", \"刨鉋鑤\", \"鉍铋\", \"鉑铂\", \"鉗钳\", \"鉚铆\", \"鉛铅\", \"鉤钩\", \"鉦钲\", \"鉬钼\", \"鉭鐽钽\", \"鉴鑒\", \"鉸铰\", \"鉺铒\", \"鉻铬\", \"鉿铪\", \"銀银\", \"銃铳\", \"銅铜\", \"銑鐉铣\", \"銓铨\", \"銖铢\", \"銘铭\", \"銚铫\", \"銠铑\", \"銣铷\", \"銥铱\", \"銦铟\", \"銨铵\", \"銩铥\", \"銪铕\", \"銫铯\", \"銬铐\", \"銮鑾\", \"焊銲\", \"銳锐\", \"銷销\", \"銹鏽锈\", \"銻锑\", \"銼锉\", \"鋁铝\", \"鋃锒\", \"鋅锌\", \"鋇钡\", \"鋌铤\", \"鋏铗\", \"鋒锋\", \"鋝锊\", \"鋟锓\", \"鋤锄\", \"鋦锔\", \"鋨锇\", \"鋪铺\", \"鋮铖\", \"鋯锆\", \"鋰锂\", \"鋱铽\", \"鋸锯\", \"鋼钢\", \"錁锞\", \"錆锖\", \"錈锩\", \"錐锥\", \"錒锕\", \"錕锟\", \"錘锤\", \"錙锱\", \"錚铮\", \"錛锛\", \"錟锬\", \"錠锭\", \"錢钱\", \"錦锦\", \"錨锚\", \"錫锡\", \"錮锢\", \"錯错\", \"錳锰\", \"表錶\", \"錸铼\", \"錾鏨\", \"鍆钔\", \"鍇锴\", \"鍊鏈链\", \"鍋锅\", \"鍍镀\", \"鍔锷\", \"鍘铡\", \"鍛锻\", \"鍤锸\", \"鍥锲\", \"鍬锹\", \"鍰锾\", \"鍵键\", \"鍶锶\", \"鍺锗\", \"鍾锺\", \"鎂镁\", \"鎊镑\", \"熔鎔\", \"鎖锁\", \"鎘镉\", \"鎢钨\", \"鎦镏\", \"鎧铠\", \"鎩铩\", \"鎪锼\", \"鎬镐\", \"鎮镇\", \"鎰镒\", \"鎳镍\", \"鎵镓\", \"鏃镞\", \"鏇镟\", \"鏌镆\", \"鏍镙\", \"鏑镝\", \"鏗铿\", \"鏘锵\", \"鏜镗\", \"鏝镘\", \"鏞镛\", \"鏡镜\", \"鏢镖\", \"鏤镂\", \"鏵铧\", \"鏷镤\", \"鏹镪\", \"鐃铙\", \"鐋铴\", \"鐐镣\", \"鐒铹\", \"鐓镦\", \"鐔镡\", \"鐘钟\", \"鐙镫\", \"鐠镨\", \"鐨镄\", \"鐫镌\", \"鐮镰\", \"鐲镯\", \"鐳镭\", \"鐵铁\", \"鐸铎\", \"鐺铛\", \"鐿镱\", \"鑄铸\", \"鑊镬\", \"鑌镔\", \"鑠铄\", \"鑣镳\", \"鑭镧\", \"鑰钥\", \"鑷镊\", \"鑼锣\", \"長长\", \"門门\", \"閂闩\", \"閃闪\", \"閆闫\", \"閉闭\", \"閌闶\", \"閎闳\", \"閏闰\", \"閑閒闲\", \"間间\", \"閔闵\", \"閘闸\", \"閡阂\", \"閣阁\", \"閥阀\", \"閨闺\", \"閩闽\", \"閫阃\", \"閬阆\", \"閭闾\", \"閱阅\", \"閶阊\", \"閹阉\", \"閻阎\", \"閼阏\", \"閽阍\", \"閾阈\", \"閿阌\", \"闃阒\", \"板闆\", \"闈闱\", \"闊阔\", \"闋阕\", \"闌阑\", \"闐阗\", \"闔阖\", \"闕阙\", \"闖闯\", \"闞阚\", \"闡阐\", \"辟闢\", \"闥闼\", \"闹鬧\", \"阄鬮\", \"阋鬩\", \"队隊\", \"厄阨\", \"址阯\", \"阴陰\", \"阵陣\", \"阶階\", \"际際\", \"陆陸\", \"陇隴\", \"陈陳\", \"陉陘\", \"陕陜陝\", \"陧隉\", \"陨隕\", \"险險\", \"堤隄\", \"随隨\", \"隐隱\", \"隶隸\", \"隽雋\", \"难難\", \"雏雛\", \"雞鸡\", \"云雲\", \"雳靂\", \"雾霧\", \"霁霽\", \"沾霑\", \"溜霤\", \"霭靄\", \"靓靚\", \"静靜\", \"靥靨\", \"鞑韃\", \"秋鞦\", \"鞯韉\", \"千韆\", \"韋韦\", \"韌韧\", \"韓韩\", \"韙韪\", \"韜韬\", \"韞韫\", \"韵韻\", \"頁页\", \"頂顶\", \"頃顷\", \"項项\", \"順顺\", \"頇顸\", \"須须鬚\", \"頊顼\", \"頌颂\", \"頎颀\", \"頏颃\", \"預预\", \"頑顽\", \"頒颁\", \"頓顿\", \"頗颇\", \"領领\", \"頜颌\", \"頡颉\", \"頤颐\", \"頦颏\", \"頰颊\", \"頷颔\", \"頸颈\", \"頹颓\", \"頻频\", \"顆颗\", \"題题\", \"額额\", \"顎颚\", \"顏颜\", \"顓颛\", \"愿願\", \"顙颡\", \"顛颠\", \"顢颟\", \"顥颢\", \"顧顾\", \"顫颤\", \"顰颦\", \"顱颅\", \"顳颞\", \"顴颧\", \"風风\", \"颮飑\", \"颯飒\", \"刮颳\", \"颶飓\", \"颼飕\", \"飄飘\", \"飆飙\", \"飛飞\", \"飢饑饥\", \"飨饗\", \"飩饨\", \"飪饪\", \"飫饫\", \"飭饬\", \"飯饭\", \"飲饮\", \"飴饴\", \"飼饲\", \"飽饱\", \"飾饰\", \"餃饺\", \"餅饼\", \"餉饷\", \"餌饵\", \"餍饜\", \"餑饽\", \"餒馁\", \"餓饿\", \"余餘\", \"肴餚\", \"餛馄\", \"餞饯\", \"餡馅\", \"館馆\", \"餳饧\", \"喂餵\", \"餼饩\", \"餽饋馈\", \"餾馏\", \"餿馊\", \"饅馒\", \"饈馐\", \"饉馑\", \"饌馔\", \"饒饶\", \"饞馋\", \"馬马\", \"馭驭\", \"馱驮\", \"馳驰\", \"馴驯\", \"駁驳\", \"駐驻\", \"駑驽\", \"駒驹\", \"駔驵\", \"駕驾\", \"駘骀\", \"駙驸\", \"駛驶\", \"駝驼\", \"駟驷\", \"駢骈\", \"駭骇\", \"駱骆\", \"駿骏\", \"騁骋\", \"騅骓\", \"騍骒\", \"騎骑\", \"騏骐\", \"騖骛\", \"騙骗\", \"騫骞鶱\", \"騭骘\", \"騮骝\", \"騶驺\", \"騷骚\", \"騸骟\", \"騾骡\", \"驁骜\", \"驂骖\", \"驃骠\", \"驄骢\", \"驅驱\", \"驊骅\", \"驍骁\", \"驏骣\", \"驕骄\", \"驗验\", \"驛驿\", \"驟骤\", \"驢驴\", \"驤骧\", \"驥骥\", \"驪骊\", \"髅髏\", \"髋髖\", \"髌髕\", \"松鬆\", \"胡鬍\", \"鬓鬢\", \"斗鬥\", \"哄鬨\", \"郁鬱\", \"魇魘\", \"魉魎\", \"魚鱼\", \"魯鲁\", \"魴鲂\", \"魷鱿\", \"鮐鲐\", \"鮑鲍\", \"鮒鲋\", \"鮚鲒\", \"鮞鲕\", \"鮪鲔\", \"鮫鲛\", \"鮭鲑\", \"鮮鲜\", \"鯀鲧\", \"鯁鲠\", \"鯇鲩\", \"鯉鲤\", \"鯊鲨\", \"鯔鲻\", \"鯖鲭\", \"鯛鲷\", \"鯡鲱\", \"鯢鲵\", \"鯤鲲\", \"鯧鲳\", \"鯨鲸\", \"鯪鲮\", \"鯫鲰\", \"鯰鲶\", \"鯽鲫\", \"鰈鲽\", \"鰉鳇\", \"鰍鳅\", \"鰒鳆\", \"鰓鳃\", \"鰣鲥\", \"鰥鳏\", \"鰨鳎\", \"鰩鳐\", \"鰭鳍\", \"鰱鲢\", \"鰲鳌鼇\", \"鰳鳓\", \"鰷鲦\", \"鰹鲣\", \"鰻鳗\", \"鰾鳔\", \"鱈鳕\", \"鱉鳖\", \"鱒鳟\", \"鱔鳝\", \"鱖鳜\", \"鱗鳞\", \"鱘鲟\", \"鱟鲎\", \"鱧鳢\", \"鱭鲚\", \"鱷鳄\", \"鱸鲈\", \"鱺鲡\", \"鳥鸟\", \"鳩鸠\", \"鳴鸣\", \"鳶鸢\", \"鴆鸩\", \"鴇鸨\", \"鴉鸦\", \"鴕鸵\", \"鴛鸳\", \"鴝鸲\", \"鴟鸱\", \"鴣鸪\", \"鴦鸯\", \"鴨鸭\", \"鴯鸸\", \"鴰鸹\", \"鴻鸿\", \"鴿鸽\", \"鵂鸺\", \"鵑鹃\", \"鵒鹆\", \"鵓鹁\", \"鵜鹈\", \"鵝鹅\", \"鵠鹄\", \"鵡鹉\", \"鵪鹌\", \"鵬鹏\", \"鵯鹎\", \"鵲鹊\", \"鶇鸫\", \"鶉鹑\", \"鶘鹕\", \"鶚鹗\", \"鶩鹜\", \"鶴鹤\", \"鶻鹘\", \"鶼鹣\", \"鶿鹚\", \"鷂鹞\", \"鷓鹧\", \"鷗鸥\", \"鷙鸷\", \"鷚鹨\", \"鷥鸶\", \"鷦鹪\", \"鷯鹩\", \"鷲鹫\", \"鷳鷴鹇\", \"鷸鹬\", \"鷹鹰\", \"鷺鹭\", \"鸕鸬\", \"鸚鹦\", \"鸛鹳\", \"鸝鹂\", \"鸞鸾\", \"咸鹹\", \"鹺鹾\", \"麥麦\", \"麩麸\", \"麼麽\", \"黃黄\", \"黉黌\", \"黩黷\", \"黪黲\", \"霉黴\", \"黽黾\", \"黿鼋\", \"鼉鼍\", \"冬鼕\", \"鼴鼹\", \"齊齐\", \"齏齑\", \"齒齿\", \"齔龀\", \"齙龅\", \"齜龇\", \"齟龃\", \"齠龆\", \"齡龄\", \"出齣\", \"齦龈\", \"齪龊\", \"齬龉\", \"齲龋\", \"齷龌\", \"龍龙\", \"龔龚\", \"龕龛\", \"龜龟\", \"乾干幹榦\", \"面麵\", \"台檯臺颱\", \"浬裏裡里\"];\n    const variants = new Map();\n    for (const group of groups) for (const ch of group) variants.set(ch, group);\n    const escape = s => s.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');\n    return Array.from(text, ch => variants.has(ch) ? '[' + variants.get(ch) + ']' : escape(ch)).join('');\n}\n\nconst input = msg.payload;\nconst page = Number.isSafeInteger(input?.page) && input.page > 0 && input.page <= 100000 ? input.page : 1;\nconst pageSize = 20;\n\nconst keyword = String(\n    typeof input === \"object\" && input !== null\n        ? input.keyword || \"\"\n        : input || \"\"\n).trim();\n\nconst category = typeof input === \"object\" && input !== null\n    ? String(input.category || \"\")\n    : \"\";\n\nif (keyword.length > 80) {\n    node.warn(\"关键词最多80个字符\");\n    return null;\n}\n\n// 将输入作为普通文字，避免特殊符号被解释为正则表达式\nconst escaped = chineseSearchPattern(keyword);\nconst condition = { $regex: escaped, $options: \"i\" };\n\nmsg.searchKeyword = keyword;\n\nmsg.payload = [[\n    // 先确定最新成功采集批次\n    { $match: { schemaVersion: 1, status: \"success\" } },\n    { $sort: { collectedAt: -1, _id: -1 } },\n    { $limit: 1 },\n    {\n        $lookup: {\n            from: \"pricewatch_history\",\n            let: { selectedBatch: \"$_id\" },\n            pipeline: [\n                {\n                    $match: {\n                        schemaVersion: 1,\n                        ...(category ? { category1: category } : {}),\n                        $expr: {\n                            $eq: [\"$batchId\", \"$$selectedBatch\"]\n                        },\n                        $or: [\n                            { name: condition },\n                            { nameEn: condition },\n                            { brand: condition },\n                            { brandEn: condition },\n                            { productCode: condition }\n                        ]\n                    }\n                },\n                // 同款商品的9家记录合并为一个搜索结果\n                {\n                    $group: {\n                        _id: \"$productCode\",\n                        name: { $first: \"$name\" },\n                        nameEn: { $first: \"$nameEn\" },\n                        brand: { $first: \"$brand\" },\n                        brandEn: { $first: \"$brandEn\" }\n                    }\n                },\n                {\n                    $facet: {\n                        count: [{ $count: \"total\" }],\n                        items: [\n                            { $sort: { name: 1, _id: 1 } },\n                            { $skip: (page - 1) * pageSize },\n                            { $limit: pageSize },\n                            { $project: { _id: 0, productCode: \"$_id\", name: 1, nameEn: 1, brand: 1, brandEn: 1 } }\n                        ]\n                    }\n                }\n\n            ],\n            as: \"searchData\"\n        }\n    },\n    {\n        $project: {\n            _id: 0,\n            batchId: \"$_id\",\n            collectedAt: 1,\n            keyword: { $literal: keyword },\n            category: { $literal: category },\n            page: { $literal: page },\n            pageSize: { $literal: pageSize },\n            searchData: { $arrayElemAt: [\"$searchData\", 0] }\n\n        }\n    },\n    {\n        $project: {\n            batchId: 1, collectedAt: 1, keyword: 1, category: 1, page: 1, pageSize: 1,\n            results: { $ifNull: [\"$searchData.items\", []] },\n            total: { $ifNull: [{ $arrayElemAt: [\"$searchData.count.total\", 0] }, 0] }\n        }\n    }\n]];\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1550,
+    "y": 900,
+    "wires": [
+      [
+        "c3b2fd7907737994"
+      ]
+    ]
+  },
+  {
+    "id": "c3b2fd7907737994",
+    "type": "mongodb4",
+    "z": "b2c09448dfb8fbf4",
+    "clientNode": "c8afa8ba5a79152e",
+    "mode": "collection",
+    "collection": "pricewatch_batches",
+    "operation": "aggregate",
+    "output": "toArray",
+    "maxTimeMS": "0",
+    "handleDocId": false,
+    "name": "A_Query Search Results",
+    "x": 1810,
+    "y": 900,
+    "wires": [
+      [
+        "8092a9a099bb92cf",
+        "ea566658e9c9d117"
+      ]
+    ]
+  },
+  {
+    "id": "8092a9a099bb92cf",
+    "type": "debug",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Keyword Results",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2050,
+    "y": 900,
+    "wires": []
+  },
+  {
+    "id": "f1d3270f1e06a41f",
+    "type": "ui-template",
+    "z": "b2c09448dfb8fbf4",
+    "group": "fc9dfbfbb19c2e5d",
+    "page": "",
+    "ui": "",
+    "name": "A_Product Search Results",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "head": "",
+    "format": "<template>\n  <div class=\"pw-results\" ref=\"resultsRoot\" :style=\"panelHeight ? {height: panelHeight + 'px'} : {}\">\n    <div v-if=\"showWelcome\" class=\"pw-search-start\">\n      <img class=\"pw-welcome-photo\" src=\"/pricewatch-assets/groceries.jpg\" alt=\"A paper shopping bag filled with fruit\" />\n      <h3>Find a product</h3>\n      <p>Search by product name or brand above, then select a result to compare prices.</p>\n      <a class=\"pw-photo-credit\"\n        href=\"https://www.pexels.com/photo/photograph-of-a-person-s-arm-near-a-paper-bag-with-fruits-9228132/\"\n        target=\"_blank\" rel=\"noopener noreferrer\">Photo: DS stories / Pexels</a>\n    </div>\n\n    <template v-if=\"!showWelcome && msg && Array.isArray(msg.payload)\">\n      <h3>Search results</h3>\n\n      <p v-if=\"!items.length\">No matching products found.</p>\n\n      <template v-else>\n        <p class=\"pw-result-note\">\n          Showing {{ (page - 1) * 20 + 1 }}–{{ (page - 1) * 20 + items.length }} of {{ total }} products.\n\n        </p>\n\n        <div class=\"pw-result-list\">\n          <button\n            v-for=\"item in items\"\n            :key=\"item.productCode\"\n            type=\"button\"\n            class=\"pw-result-item\"\n            :class=\"{ 'pw-selected': selectedCode === item.productCode }\"\n            :aria-pressed=\"selectedCode === item.productCode\"\n            @click=\"selectProduct(item)\"\n          >\n            <strong>{{ item.name || item.nameEn }}</strong>\n\n            <span v-if=\"different(item.name, item.nameEn)\">\n              {{ item.nameEn }}\n            </span>\n\n            <small>\n              {{ item.brand || item.brandEn }}\n              · {{ item.productCode }}\n            </small>\n          </button>\n        </div>\n        <div class=\"pw-pagination\">\n          <button type=\"button\"\n                  aria-label=\"Previous page\"\n                  title=\"Previous page\"\n                  :disabled=\"page <= 1\"\n                  @click=\"go(page - 1)\">‹</button>\n        \n          <span>Page {{ page }} of {{ pages }}</span>\n        \n          <button type=\"button\"\n                  aria-label=\"Next page\"\n                  title=\"Next page\"\n                  :disabled=\"page >= pages\"\n                  @click=\"go(page + 1)\">›</button>\n        </div>\n      </template>\n    </template>\n  </div>\n</template>\n\n<script>\n  export default {\n  data() {\n    return {\n     selectedCode: \"\", panelHeight: null\n  };\n  },\n  watch: {\n    msg() {\n      this.selectedCode = \"\";\n      this.$nextTick(() => this.syncPanelHeight());\n  }\n  },\n  mounted() {\n    this.$nextTick(() => {\n      const panel = document.querySelector('.pw-comparison-panel');\n      this._rightCard = panel?.matches('.v-card') ? panel : panel?.querySelector('.v-card');\n      this._syncHeight = () => this.syncPanelHeight();\n      if (this._rightCard) {\n        this._heightObserver = new ResizeObserver(this._syncHeight);\n        this._heightObserver.observe(this._rightCard);\n      }\n      window.addEventListener('resize', this._syncHeight);\n      this.syncPanelHeight();\n    });\n  },\n  unmounted() {\n    this._heightObserver?.disconnect();\n    window.removeEventListener('resize', this._syncHeight);\n  },\n  computed: {\n    showWelcome() {\n      const data = this.msg?.payload;\n      if (!Array.isArray(data)) return true;\n      const result = data[0];\n      if (!result) return false;\n      return !String(result.keyword || '').trim() && !String(result.category || '').trim();\n    },\n    result() { return this.msg?.payload?.[0] || {} },\n    page() { return this.result.page || 1 },\n    total() { return this.result.total || 0 },\n    pages() { return Math.max(1, Math.ceil(this.total / 20)) },\n    items() {\n      const data = this.msg?.payload;\n      return Array.isArray(data) && data[0]\n        ? (data[0].results || [])\n        : [];\n    }\n  },\n  methods: {\n    syncPanelHeight() {\n      const root = this.$refs.resultsRoot;\n      if (!root || !this._rightCard) return;\n      const leftPanel = root.closest('.pw-products-panel');\n      const right = this._rightCard.getBoundingClientRect();\n      const left = leftPanel?.getBoundingClientRect();\n      // 窄屏上下排列时，不再强制等高。\n      if (!left || Math.abs(left.top - right.top) > 40) {\n        this.panelHeight = null;\n        return;\n      }\n      const target = Math.max(560, Math.floor(right.bottom - root.getBoundingClientRect().top - 16));\n      if (this.panelHeight !== target) this.panelHeight = target;\n    },\n    selectProduct(item) {\n    this.selectedCode = item.productCode;\n    this.send({\n      topic: \"product\",\n      payload: item.productCode\n    });\n    },\n    go(page) {\n      if (page < 1 || page > this.pages) return;\n      this.send({topic: 'page', payload: {\n        keyword: this.result.keyword || '', category: this.result.category || '', page\n      }});\n    },\n    different(primary, english) {\n      const a = String(primary || \"\").trim().toLowerCase();\n      const b = String(english || \"\").trim().toLowerCase();\n      return Boolean(a && b && a !== b);\n    }\n  }\n};\n</script>\n\n<style>\n  .pw-results {\n    padding: 8px 4px;\n    display: flex;\n    flex-direction: column;\n    box-sizing: border-box;\n    color: #334257;\n    \n  }\n\n  .pw-results h3 {\n    font-size: 17px;\n    margin: 0 0 6px;\n  }\n\n  .pw-results .pw-result-note {\n    font-size: 11px;\n    color: #486373;\n    margin: 0 0 12px;\n  }\n\n  .pw-results .pw-result-list {\n    max-height: none;\n    flex: 1 1 0;\n    min-height: 120px;\n    overflow-y: auto;\n    scrollbar-gutter: stable;\n  }\n\n  .pw-results .pw-result-item {\n    display: block;\n    width: 100%;\n    padding: 12px;\n    margin: 0;\n    border: 0;\n    border-bottom: 1px solid #e3e9ee;\n    border-radius: 0;\n    background: white;\n    color: #334257;\n    text-align: left;\n    cursor: pointer;\n  }\n\n  .pw-results .pw-result-item strong,\n  .pw-results .pw-result-item span,\n  .pw-results .pw-result-item small {\n    display: block;\n  }\n\n  .pw-results .pw-result-item strong {\n    font-size: 13px;\n    line-height: 1.5;\n  }\n\n  .pw-results .pw-result-item span {\n    margin-top: 4px;\n    font-size: 12px;\n    line-height: 1.5;\n    color: #486373;\n  }\n\n  .pw-results .pw-result-item small {\n    margin-top: 6px;\n    font-size: 10px;\n    color: #486373;\n  }\n\n  .pw-results .pw-result-item:hover {\n    background: #f4f7fa;\n  }\n\n  .pw-results .pw-result-item.pw-selected {\n    background: #eaf3f7;\n    box-shadow: inset 3px 0 #386d83;\n  }\n\n  .pw-results .pw-result-item:focus-visible {\n    outline: 2px solid #386d83;\n    outline-offset: -2px;\n  }\n\n  .pw-results .pw-pagination {\n    display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    gap: 8px;\n    margin-top: auto;\n    padding-top: 14px;\n    flex-shrink: 0;\n    font-size: 11px;\n    justify-content: center;\n  }\n\n  .pw-results .pw-pagination button {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  width: 36px;\n  height: 36px;\n  padding: 0;\n  border: 0;\n  border-radius: 6px;\n  background: #386d83;\n  color: white;\n  font-size: 26px;\n  line-height: 1;\n  cursor: pointer;\n  }\n\n  .pw-results .pw-pagination button:disabled {\n    opacity: .4;\n    cursor: default;\n  }\n\n  .pw-results .pw-search-start {\n    padding: 8px;\n  }\n\n  .pw-results .pw-welcome-photo {\n    display: block;\n    width: 100%;\n    max-width: 320px;\n    height: auto;\n    max-height: 480px;\n    object-fit: contain;\n    margin: 0 auto 20px;\n    border-radius: 4px;\n  }\n\n  .pw-results .pw-search-start h3 {\n    margin: 0 0 8px;\n    font-size: 17px;\n  }\n\n  .pw-results .pw-search-start p {\n    margin: 0;\n    font-size: 13px;\n    line-height: 1.7;\n    color: #486373;\n  }\n\n  .pw-results .pw-photo-credit {\n    display: inline-block;\n    margin-top: 12px;\n    font-size: 10px;\n    color: #486373;\n  }\n</style>",
+    "storeOutMessages": true,
+    "passthru": false,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "pw-search-results-widget",
+    "x": 980,
+    "y": 780,
+    "wires": [
+      [
+        "c342c8c622b6a3bf"
+      ]
+    ]
+  },
+  {
+    "id": "186a50286cb27ec6",
+    "type": "inject",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Load Categories",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "3",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 210,
+    "y": 960,
+    "wires": [
+      [
+        "70f51edae489410b"
+      ]
+    ]
+  },
+  {
+    "id": "70f51edae489410b",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Build Category Query",
+    "func": "msg.payload = [[\n    { $match: { schemaVersion: 1, status: \"success\" } },\n    { $sort: { collectedAt: -1, _id: -1 } },\n    { $limit: 1 },\n    {\n        $lookup: {\n            from: \"pricewatch_history\",\n            let: { selectedBatch: \"$_id\" },\n            pipeline: [\n                {\n                    $match: {\n                        schemaVersion: 1,\n                        $expr: {\n                            $eq: [\"$batchId\", \"$$selectedBatch\"]\n                        }\n                    }\n                },\n                {\n                    $group: {\n                        _id: \"$category1\",\n                        englishNames: {\n                            $addToSet: \"$category1En\"\n                        }\n                    }\n                },\n                { $match: { _id: { $nin: [null, \"\"] } } },\n                { $sort: { _id: 1 } },\n                {\n                    $project: {\n                        _id: 0,\n                        value: \"$_id\",\n                        englishNames: 1\n                    }\n                }\n            ],\n            as: \"categories\"\n        }\n    },\n    {\n        $project: {\n            _id: 0,\n            batchId: \"$_id\",\n            categories: 1\n        }\n    }\n]];\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 510,
+    "y": 960,
+    "wires": [
+      [
+        "5b1f4ddab3f2bd61"
+      ]
+    ]
+  },
+  {
+    "id": "5b1f4ddab3f2bd61",
+    "type": "mongodb4",
+    "z": "b2c09448dfb8fbf4",
+    "clientNode": "c8afa8ba5a79152e",
+    "mode": "collection",
+    "collection": "pricewatch_batches",
+    "operation": "aggregate",
+    "output": "toArray",
+    "maxTimeMS": "0",
+    "handleDocId": false,
+    "name": "A_Query Categories",
+    "x": 800,
+    "y": 960,
+    "wires": [
+      [
+        "a5ae5664b43854f7",
+        "9933040bafdd4020"
+      ]
+    ]
+  },
+  {
+    "id": "a5ae5664b43854f7",
+    "type": "debug",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Category Results",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1140,
+    "y": 960,
+    "wires": []
+  },
+  {
+    "id": "9933040bafdd4020",
+    "type": "ui-template",
+    "z": "b2c09448dfb8fbf4",
+    "group": "ef88a803d95b5995",
+    "page": "",
+    "ui": "",
+    "name": "A_Search Filters",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "head": "",
+    "format": "<template>\n  <form class=\"pw-filters\" @submit.prevent=\"search\">\n    <label class=\"pw-category-field\">\n      Category\n      <select v-model=\"category\">\n        <option value=\"\">All categories</option>\n        <option v-for=\"item in categories\" :key=\"item.value\" :value=\"item.value\">\n          {{ categoryLabel(item) }}\n        </option>\n      </select>\n    </label>\n    <label class=\"pw-keyword-field\">\n      <span class=\"pw-sr-only\">Product name or brand</span>\n      <span class=\"pw-search-shell\">\n        <svg viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\">\n          <circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\" />\n          <path d=\"m15.5 15.5 5 5\" />\n        </svg>\n        <input v-model=\"keyword\" type=\"search\" maxlength=\"80\"\n          placeholder=\"Search for a product or brand\" />\n      </span>\n    </label>\n    <button type=\"submit\">Search</button>\n  </form>\n</template>\n<script>\n  export default {\n  data() {\n    return {\n      keyword: \"\",\n      category: \"\",\n      categoryOptions: []\n    };\n  },\n  computed: {\n    categories() {\n      return this.categoryOptions;\n    }\n  },\n  watch: {\n    msg: { immediate: true, deep: true, handler(message) {\n      const rows = message?.payload?.[0]?.categories;\n      if (Array.isArray(rows)) this.categoryOptions = rows;\n    }}\n  },\n  mounted() {\n    this.send({topic: \"pw:load-categories\"});\n  },\n  methods: {\n    categoryLabel(item) {\n      const en = (item.englishNames || [])\n        .find(value => typeof value === \"string\" && value.trim());\n      return en && en.trim().toLowerCase() !==\n        item.value.trim().toLowerCase()\n        ? `${item.value} / ${en}`\n        : item.value;\n    },\n    search() {\n      this.send({\n        payload: {\n          keyword: this.keyword.trim(),\n          category: this.category\n        }\n      });\n    }\n  }\n};\n</script>\n<style>\n  .pw-filters {\n    display: flex;\n    flex-wrap: wrap;\n    align-items: flex-end;\n    gap: 12px;\n    padding: 16px;\n    margin: 0;\n    color: #334257;\n  }\n\n  .pw-filters .pw-category-field {\n    display: flex;\n    flex-direction: column;\n    gap: 8px;\n    flex: 1 1 240px;\n    min-width: 0;\n    font-size: 14px;\n  }\n\n  .pw-filters .pw-category-field select {\n    width: 100%;\n    height: 46px;\n    padding: 10px 12px;\n    border: 1px solid #dae2e8;\n    border-radius: 6px;\n    background: white;\n    color: #334257;\n    font: inherit;\n    font-weight: 400;\n  }\n\n  .pw-filters .pw-keyword-field {\n    flex: 1.4 1 300px;\n    min-width: 0;\n  }\n\n  .pw-filters .pw-search-shell {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    width: 100%;\n    min-height: 46px;\n    padding: 0 18px;\n    box-sizing: border-box;\n    border: 1px solid transparent;\n    border-radius: 999px;\n    background: #f0f2f4;\n  }\n\n  .pw-filters .pw-search-shell svg {\n    width: 22px;\n    height: 22px;\n    flex-shrink: 0;\n    stroke: #334257;\n    stroke-width: 1.8;\n    stroke-linecap: round;\n  }\n\n  .pw-filters .pw-search-shell input {\n    flex: 1;\n    min-width: 0;\n    width: 100%;\n    height: 46px;\n    padding: 0 !important;\n    border: 0 !important;\n    border-radius: 0 !important;\n    background: transparent !important;\n    box-shadow: none !important;\n    outline: none;\n    color: #334257;\n    font: inherit;\n    font-size: 14px;\n    font-weight: 400;\n  }\n\n  .pw-filters .pw-search-shell input::placeholder {\n    color: #687887;\n    opacity: 1;\n  }\n\n  .pw-filters .pw-search-shell:focus-within {\n    outline: 2px solid #386d83;\n    outline-offset: 2px;\n  }\n\n  .pw-filters button[type=\"submit\"] {\n    height: 46px;\n    padding: 0 24px;\n    border: 0;\n    border-radius: 6px;\n    background: #386d83;\n    color: white;\n    font: inherit;\n    cursor: pointer;\n  }\n\n  .pw-filters button:focus-visible {\n    outline: 2px solid #386d83;\n    outline-offset: 2px;\n  }\n\n  .pw-filters .pw-sr-only {\n    position: absolute;\n    width: 1px;\n    height: 1px;\n    padding: 0;\n    margin: -1px;\n    overflow: hidden;\n    clip: rect(0, 0, 0, 0);\n    white-space: nowrap;\n    border: 0;\n  }\n\n  @media(max-width:600px) {\n    .pw-filters .pw-category-field {\n      flex-basis: 100%;\n    }\n\n    .pw-filters .pw-keyword-field {\n      flex: 1 1 180px;\n    }\n\n    .pw-filters button[type=\"submit\"] {\n      padding: 0 18px;\n    }\n  }\n</style>",
+    "storeOutMessages": true,
+    "passthru": false,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1040,
+    "y": 860,
+    "wires": [
+      [
+        "766f8194e44b4884"
+      ]
+    ]
+  },
+  {
+    "id": "c342c8c622b6a3bf",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Route Search Actions",
+    "func": "if (msg.topic === \"page\") return [null, msg];\nif (msg.topic === \"product\" && typeof msg.payload === \"string\") {\n    return [msg, null];\n}\nreturn null;",
+    "outputs": 2,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1290,
+    "y": 780,
+    "wires": [
+      [
+        "46e3b8d425298980",
+        "e98e09963c0cca6d"
+      ],
+      [
+        "a0696ed34e08d7e8"
+      ]
+    ]
+  },
+  {
+    "id": "258a2a3f023f125d",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Prepare Successful Batch",
+    "func": "const summary = msg.batchSummary;\nconst result = msg.payload;\n\nif (\n    !summary ||\n    !Number.isInteger(summary.productCount) ||\n    summary.productCount <= 0 ||\n    summary.merchantCount !== 9 ||\n    summary.recordCount !== summary.productCount * 9 ||\n    result?.acknowledged !== true ||\n    result.insertedCount !== summary.recordCount\n) {\n    node.error(\"写入结果与预期不一致，不标记成功批次\", msg);\n    return null;\n}\n\nconst collectedAt = new Date(summary.batchId);\n\nif (!Number.isFinite(collectedAt.getTime())) {\n    node.error(\"批次时间无效\", msg);\n    return null;\n}\n\n// 使用批次编号作为_id，同一批次重复确认不会新增记录\nmsg.payload = [\n    { _id: summary.batchId },\n    {\n        $setOnInsert: {\n            schemaVersion: 1,\n            batchId: summary.batchId,\n            status: \"success\",\n            collectedAt,\n            completedAt: new Date(),\n            productCount: summary.productCount,\n            merchantCount: summary.merchantCount,\n            recordCount: summary.recordCount,\n            quotedRecordCount: summary.quotedRecordCount\n        }\n    },\n    { upsert: true }\n];\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1980,
+    "y": 380,
+    "wires": [
+      [
+        "56be96e21472f1bb"
+      ]
+    ]
+  },
+  {
+    "id": "56be96e21472f1bb",
+    "type": "mongodb4",
+    "z": "b2c09448dfb8fbf4",
+    "clientNode": "c8afa8ba5a79152e",
+    "mode": "collection",
+    "collection": "pricewatch_batches",
+    "operation": "updateOne",
+    "output": "toArray",
+    "maxTimeMS": "0",
+    "handleDocId": false,
+    "name": "A_Save Successful Batch",
+    "x": 2250,
+    "y": 380,
+    "wires": [
+      [
+        "0b38e69006f02c25"
+      ]
+    ]
+  },
+  {
+    "id": "ea566658e9c9d117",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Handle Search Results",
+    "func": "const result = msg.payload?.[0];\n\n// 新搜索（第1页）清除之前选择；翻页保留当前比价\nif (!result || result.page === 1) {\n    return [\n        msg,\n        { ...msg, payload: null },\n        { ...msg, payload: \"\" }\n    ];\n}\n\nreturn [msg, null, null];",
+    "outputs": 3,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1690,
+    "y": 820,
+    "wires": [
+      [
+        "7142065d9f75642e"
+      ],
+      [
+        "50d7395fdeb57cf5"
+      ],
+      [
+        "e98e09963c0cca6d"
+      ]
+    ]
+  },
+  {
+    "id": "2d20d29e739fa52d",
+    "type": "http in",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Groceries Image Request",
+    "url": "/pricewatch-assets/groceries.jpg",
+    "method": "get",
+    "upload": false,
+    "skipBodyParsing": false,
+    "swaggerDoc": "",
+    "x": 360,
+    "y": 1120,
+    "wires": [
+      [
+        "fd7fb01f0e34a885"
+      ]
+    ]
+  },
+  {
+    "id": "fd7fb01f0e34a885",
+    "type": "file in",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Read Groceries Image",
+    "filename": "/data/pricewatch-groceries.jpg",
+    "filenameType": "str",
+    "format": "",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "none",
+    "allProps": false,
+    "x": 730,
+    "y": 1120,
+    "wires": [
+      [
+        "6cd2ab2cb75f8d60"
+      ]
+    ]
+  },
+  {
+    "id": "6cd2ab2cb75f8d60",
+    "type": "http response",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Send Groceries Image",
+    "statusCode": "200",
+    "headers": {
+      "content-type": "image/jpeg"
+    },
+    "x": 1070,
+    "y": 1120,
+    "wires": []
+  },
+  {
+    "id": "e0c24bed852baf7a",
+    "type": "ui-template",
+    "z": "b2c09448dfb8fbf4",
+    "group": "",
+    "page": "200681df1411151f",
+    "ui": "",
+    "name": "A_Layout Styles",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "head": "",
+    "format": "/* 只保留外框等高；内部高度由列表模板同步右侧 */\n.pw-products-panel, .pw-comparison-panel { align-self:stretch !important; }\n.pw-products-panel > .v-card, .pw-comparison-panel > .v-card { height:100%; box-sizing:border-box; }\n/* 搜索框统一蓝灰色 */\n.pw-filters { color:#334257; }\n.pw-filters button { background:#386d83; color:#fff; border:0; border-radius:4px; }\n.pw-filters button:hover { background:#2c5668; }\n.pw-filters input, .pw-filters select { border-color:#c7d4de; border-radius:4px; }\n",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "page:style",
+    "className": "",
+    "x": 860,
+    "y": 1280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f8d05ad65b7951fb",
+    "type": "http in",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Merchant Logo Request",
+    "url": "/pricewatch-assets/merchants/:file",
+    "method": "get",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 310,
+    "y": 1400,
+    "wires": [
+      [
+        "894c9ab8b280f47d"
+      ]
+    ]
+  },
+  {
+    "id": "894c9ab8b280f47d",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Resolve Merchant Logo",
+    "func": "const allowed = new Set(['AEON.png','DCHFOOD.png','JASONS.png','LUNGFUNG.png','MANNINGS.png','PARKNSHOP.png','SASA.png','WATSONS.png','WELLCOME.png']);\nconst file = msg.req.params.file;\nif (!allowed.has(file)) {\n  msg.statusCode = 404;\n  msg.payload = 'Not found';\n  return [null, msg];\n}\nmsg.filename = '/data/pricewatch-merchant-logos/' + file;\nmsg.headers = {'Content-Type':'image/png','Cache-Control':'public, max-age=3600'};\nreturn [msg, null];",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 620,
+    "y": 1400,
+    "wires": [
+      [
+        "5d158e22964cb365"
+      ],
+      [
+        "54d6744315e9bf86"
+      ]
+    ]
+  },
+  {
+    "id": "5d158e22964cb365",
+    "type": "file in",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Read Merchant Logo",
+    "filename": "filename",
+    "filenameType": "msg",
+    "format": "",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "none",
+    "allProps": false,
+    "x": 950,
+    "y": 1400,
+    "wires": [
+      [
+        "54d6744315e9bf86"
+      ]
+    ]
+  },
+  {
+    "id": "54d6744315e9bf86",
+    "type": "http response",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Send Merchant Logo",
+    "statusCode": "",
+    "headers": {},
+    "x": 1250,
+    "y": 1400,
+    "wires": []
+  },
+  {
+    "id": "31c04fa1697b5b70",
+    "type": "ui-template",
+    "z": "b2c09448dfb8fbf4",
+    "group": "",
+    "page": "",
+    "ui": "c2f82ffa5dfda3e4",
+    "name": "A_PriceWatch Header",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "head": "",
+    "format": "<template>\n  <Teleport v-if=\"ready\" to=\"#app-bar-title\">\n    <a class=\"pw-brand\" href=\"/dashboard/prices\" aria-label=\"PriceWatch home\">\n      <svg aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" fill=\"none\">\n<rect width=\"48\" height=\"48\" rx=\"13\" fill=\"#386d83\"/>\n<path d=\"M11 17h23l2 21H9l2-21Z\" stroke=\"white\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/>\n<path d=\"M17 18v-5a6 6 0 0 1 12 0v5\" stroke=\"white\" stroke-width=\"2.4\" stroke-linecap=\"round\"/>\n<circle cx=\"29\" cy=\"29\" r=\"7\" fill=\"#386d83\" stroke=\"#bde7de\" stroke-width=\"2.8\"/>\n<path d=\"m34 34 6 6\" stroke=\"#bde7de\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n</svg>\n      <span>Price<span class=\"pw-brand-watch\">Watch</span></span>\n    </a>\n  </Teleport>\n</template>\n<script>\nexport default {\n  data() { return { ready:false }; },\n  mounted() { this.ready = true; }\n};\n</script>\n<style>\n.pw-brand { display:inline-flex; align-items:center; gap:10px; vertical-align:middle; color:#fff!important; text-decoration:none!important; font-family:Arial,\"Microsoft YaHei\",sans-serif; font-size:24px; font-weight:700; line-height:1.2; letter-spacing:-.5px; }\n.pw-brand > svg { width:38px; height:38px; flex-shrink:0; }\n.pw-brand .pw-brand-watch { color:#bde7de; }\n.pw-brand:focus-visible { outline:2px solid #bde7de; outline-offset:5px; border-radius:4px; }\n@media(max-width:600px) { .pw-brand { font-size:21px; gap:8px; } .pw-brand > svg { width:32px; height:32px; } }\n</style>\n",
+    "storeOutMessages": false,
+    "passthru": false,
+    "resendOnRefresh": false,
+    "templateScope": "widget:ui",
+    "className": "",
+    "x": 600,
+    "y": 1280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "7ff60396967f088c",
+    "type": "ui-template",
+    "z": "b2c09448dfb8fbf4",
+    "group": "",
+    "page": "",
+    "ui": "c2f82ffa5dfda3e4",
+    "name": "A_Favorites Shared",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "head": "",
+    "format": "<script>\n(() => {\n  if (window.PriceWatchFavorites) return;\n  const key = 'pricewatch:favorites:v1';\n  const notify = () => window.dispatchEvent(new Event('pricewatch:favorites-changed'));\n  const normalize = value => String(value ?? '').trim().toUpperCase();\n  const list = () => {\n    const raw = window.localStorage.getItem(key);\n    if (raw === null) return [];\n    const items = JSON.parse(raw);\n    if (!Array.isArray(items)) throw new Error('Invalid favorites data');\n    return items;\n  };\n  const save = items => {\n    window.localStorage.setItem(key, JSON.stringify(items));\n    notify();\n  };\n  window.PriceWatchFavorites = {\n    list,\n    has(code) {\n      return list().some(item => item.productCode === normalize(code));\n    },\n    toggle({ productCode, name }) {\n      const code = normalize(productCode);\n      if (!code) throw new Error('Missing product code');\n      const items = list();\n      const exists = items.some(item => item.productCode === code);\n      save(exists ? items.filter(item => item.productCode !== code) :\n        [...items, { productCode: code, name: String(name || code) }]);\n      return !exists;\n    },\n    remove(code) {\n      save(list().filter(item => item.productCode !== normalize(code)));\n    }\n  };\n  notify();\n})();\n</script>\n",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "widget:ui",
+    "className": "",
+    "x": 300,
+    "y": 1500,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "766f8194e44b4884",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Route Category Reload",
+    "func": "// Set this Function node to TWO outputs.\n// Output 1: existing A_Build Keyword Search.\n// Output 2: existing A_Build Category Query.\nif (msg.topic === \"pw:load-categories\") return [null, msg];\nreturn [msg, null];\n",
+    "outputs": 2,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1270,
+    "y": 860,
+    "wires": [
+      [
+        "a0696ed34e08d7e8"
+      ],
+      [
+        "70f51edae489410b"
+      ]
+    ]
+  },
+  {
+    "id": "7142065d9f75642e",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Format Search Display",
+    "func": "// Display-only formatter; original database records are unchanged.\nfunction text(value) {\n    return typeof value === \"string\" ? value.trim() : \"\";\n}\nfunction generic(value) {\n    return /^(?:\\(\\s*(?:每個|每个|每件|每包|each\\s*pc|each|per\\s*pc)\\s*\\)|（\\s*(?:每個|每个|每件|每包)\\s*）)/i.test(text(value));\n}\nfunction join(name, brand) {\n    name = text(name); brand = text(brand);\n    return generic(name) && brand && !name.includes(brand) ? brand + \" \" + name : name;\n}\nfunction format(item) {\n    if (!item || typeof item !== \"object\") return;\n    if (typeof item.name === \"string\") {\n        item.name = join(item.name, item.brand);\n        item.nameEn = join(item.nameEn, item.brandEn);\n    } else if (item.name && typeof item.name === \"object\") {\n        item.name.primary = join(item.name.primary, item.brand?.primary);\n        item.name.secondary = join(item.name.secondary, item.brand?.secondary || item.brand?.primary);\n    }\n}\nif (Array.isArray(msg.payload)) {\n    for (const report of msg.payload) {\n        if (Array.isArray(report?.results)) report.results.forEach(format);\n    }\n} else {\n    format(msg.payload);\n}\nreturn msg;\n",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1990,
+    "y": 780,
+    "wires": [
+      [
+        "f1d3270f1e06a41f"
+      ]
+    ]
+  },
+  {
+    "id": "6fbec33b8dbc6063",
+    "type": "function",
+    "z": "b2c09448dfb8fbf4",
+    "name": "A_Format Comparison Display",
+    "func": "// Display-only formatter; original database records are unchanged.\nfunction text(value) {\n    return typeof value === \"string\" ? value.trim() : \"\";\n}\nfunction generic(value) {\n    return /^(?:\\(\\s*(?:每個|每个|每件|每包|each\\s*pc|each|per\\s*pc)\\s*\\)|（\\s*(?:每個|每个|每件|每包)\\s*）)/i.test(text(value));\n}\nfunction join(name, brand) {\n    name = text(name); brand = text(brand);\n    return generic(name) && brand && !name.includes(brand) ? brand + \" \" + name : name;\n}\nfunction format(item) {\n    if (!item || typeof item !== \"object\") return;\n    if (typeof item.name === \"string\") {\n        item.name = join(item.name, item.brand);\n        item.nameEn = join(item.nameEn, item.brandEn);\n    } else if (item.name && typeof item.name === \"object\") {\n        item.name.primary = join(item.name.primary, item.brand?.primary);\n        item.name.secondary = join(item.name.secondary, item.brand?.secondary || item.brand?.primary);\n    }\n}\nif (Array.isArray(msg.payload)) {\n    for (const report of msg.payload) {\n        if (Array.isArray(report?.results)) report.results.forEach(format);\n    }\n} else {\n    format(msg.payload);\n}\nreturn msg;\n",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2250,
+    "y": 620,
+    "wires": [
+      [
+        "50d7395fdeb57cf5"
+      ]
+    ]
+  },
+  {
+    "id": "e2a011e8a2a41eb8",
+    "type": "ui-dropdown",
+    "z": "25e56c2040ecf110",
+    "group": "46b66a3d034e7dfb",
+    "name": "B_Category Selector",
+    "label": "Category",
+    "tooltip": "",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "multiple": false,
+    "chips": false,
+    "clearable": false,
+    "options": [],
+    "payload": "",
+    "topic": "topic",
+    "topicType": "msg",
+    "className": "",
+    "typeIsComboBox": true,
+    "msgTrigger": "onChange",
+    "x": 160,
+    "y": 200,
+    "wires": [
+      [
+        "b1c001a1a1a1a1a"
+      ]
+    ]
+  },
+  {
+    "id": "b1c001a1a1a1a1a",
+    "type": "function",
+    "z": "25e56c2040ecf110",
+    "name": "B_Build Category Stats Query",
+    "func": "const input = msg.payload;\nconst code = typeof input === 'object' && input ? String(input.productCode || '').trim() : '';\nconst category = code ? '' : String(input?.value ?? input ?? '').trim();\nif (!code && !category) return null;\n/** @type {any[]} */\nconst pipeline = [\n  { $match: { schemaVersion: 1, status: 'success' } },\n  { $sort: { collectedAt: -1, _id: -1 } },\n  { $limit: 1 }\n];\nif (code) {\n  pipeline.push({\n    $lookup: {\n      from: 'pricewatch_history', let: { selectedBatch: '$_id' },\n      pipeline: [\n        {\n          $match: {\n            $expr: {\n              $and: [\n                { $eq: ['$batchId', '$$selectedBatch'] },\n                { $eq: ['$productCode', code] }\n              ]\n            }\n          }\n        },\n        { $limit: 1 },\n        { $project: { _id: 0, productCode: 1, name: 1, nameEn: 1, brand: 1, brandEn: 1, category1: 1 } }\n      ], as: 'entryProduct'\n    }\n  });\n  pipeline.push({ $set: { selectedCategory: { $ifNull: [{ $arrayElemAt: ['$entryProduct.category1', 0] }, ''] } } });\n} else {\n  pipeline.push({ $set: { selectedCategory: { $literal: category } } });\n}\npipeline.push({\n  $lookup: {\n    from: 'pricewatch_history', let: { selectedBatch: '$_id', selectedCategory: '$selectedCategory' },\n    pipeline: [\n      {\n        $match: {\n          $expr: {\n            $and: [\n              { $eq: ['$batchId', '$$selectedBatch'] },\n              { $ne: ['$$selectedCategory', ''] },\n              { $eq: ['$category1', '$$selectedCategory'] }\n            ]\n          }\n        }\n      },\n      { $project: { _id: 0, productCode: 1, merchantCode: 1, name: 1, nameEn: 1, brand: 1, brandEn: 1, category2: 1, category2En: 1, category3: 1, category3En: 1, price: 1, offerText: 1, offerTextEn: 1, offersRaw: 1 } }\n    ], as: 'records'\n  }\n});\npipeline.push({\n  $project: {\n    _id: 0,\n    batchId: '$_id',\n    collectedAt: 1,\n    category: '$selectedCategory',\n    requestedProductCode: { $literal: code },\n    selectedProduct: { $ifNull: [{ $arrayElemAt: ['$entryProduct', 0] }, null] },\n    records: 1\n  }\n});\nmsg.payload = [pipeline];\nreturn msg;\n",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 650,
+    "y": 140,
+    "wires": [
+      [
+        "b1c002b2b2b2b2b"
+      ]
+    ]
+  },
+  {
+    "id": "b1c002b2b2b2b2b",
+    "type": "mongodb4",
+    "z": "25e56c2040ecf110",
+    "clientNode": "c8afa8ba5a79152e",
+    "mode": "collection",
+    "collection": "pricewatch_batches",
+    "operation": "aggregate",
+    "output": "toArray",
+    "maxTimeMS": "0",
+    "handleDocId": false,
+    "name": "B_Query Category Stats",
+    "x": 700,
+    "y": 300,
+    "wires": [
+      [
+        "b1c003c3c3c3c3c"
+      ]
+    ]
+  },
+  {
+    "id": "b1c003c3c3c3c3c",
+    "type": "function",
+    "z": "25e56c2040ecf110",
+    "name": "B_Format Category Insights",
+    "func": "const row = Array.isArray(msg.payload) ? msg.payload[0] : null;\nif (!row) { msg.payload = []; return [msg, null]; }\nconst rows = row.records || [];\nconst products = new Map();\nconst merchants = new Set();\nconst offers = [];\nconst clean = value => typeof value === 'string' ? value.trim() : '';\nconst genericName = value => /^(?:\\(\\s*(?:每個|每个|每件|每包|each\\s*pc|each|per\\s*pc)\\s*\\)|（\\s*(?:每個|每个|每件|每包)\\s*）)/i.test(clean(value));\nconst completeName = (name, brand, fallback = '') => {\n  name = clean(name);\n  brand = clean(brand);\n  if (genericName(name) && brand && !name.includes(brand)) return brand + ' ' + name;\n  return name || brand || clean(fallback);\n};\nconst normalizeProduct = item => item && typeof item === 'object' ? {\n  ...item,\n  name: completeName(item.name, item.brand, item.nameEn || item.productCode),\n  nameEn: completeName(item.nameEn, item.brandEn, item.name || item.productCode)\n} : null;\nconst label = (zh, en) => en && en.trim() && en.trim().toLowerCase() !== String(zh || '').trim().toLowerCase() ? String(zh || '') + ' / ' + en.trim() : String(zh || en || '');\nconst parseOffer = r => {\n  const text = String(r.offerText || r.offerTextEn || '').trim();\n  if (!text) return null;\n  const productName = completeName(r.name, r.brand, r.nameEn || r.productCode);\n  const base = { merchantCode: r.merchantCode, productCode: r.productCode, productName, productNameEn: completeName(r.nameEn, r.brandEn, productName), category2: r.category2 || '', category3: r.category3 || '', originalUnitPrice: r.price == null ? null : Number(r.price), rule: text, supported: false, buyN: null, offerTotal: null };\n  if (base.originalUnitPrice == null || base.originalUnitPrice <= 0) return base;\n  let m = text.match(/^(?:buy|买|買)\\s*(\\d+)\\s*(?:件)?\\s*(?:save|慳|悭)\\s*\\$\\s*([0-9]+(?:\\.[0-9]+)?)\\s*$/i);\n  if (m) { const n = Number(m[1]), total = base.originalUnitPrice * n - Number(m[2]); if (n > 0 && total > 0) return { ...base, supported: true, buyN: n, offerTotal: Number(total.toFixed(2)) }; }\n  m = text.match(/^[买買]\\s*(\\d+)\\s*件\\s*(?:共|只需|售)?\\s*(?:HKD|HK\\$|\\$)\\s*([0-9]+(?:\\.[0-9]+)?)\\s*(?:元)?\\s*$/i);\n  if (!m) m = text.match(/^[买買]\\s*(\\d+)\\s*件\\s*(?:共|只需|售)?\\s*([0-9]+(?:\\.[0-9]+)?)\\s*元\\s*$/i);\n  if (!m) m = text.match(/^(?:buy\\s*)?(\\d+)\\s*(?:at|for)\\s*\\$\\s*([0-9]+(?:\\.[0-9]+)?)\\s*$/i);\n  if (m) { const n = Number(m[1]), total = Number(m[2]); if (n > 0 && total > 0) return { ...base, supported: true, buyN: n, offerTotal: total }; }\n  return base;\n};\nfor (const r of rows) {\n  merchants.add(r.merchantCode);\n  if (!products.has(r.productCode)) products.set(r.productCode, {\n    productCode: r.productCode,\n    name: completeName(r.name, r.brand, r.nameEn || r.productCode),\n    nameEn: completeName(r.nameEn, r.brandEn, r.name || r.productCode),\n    category2: r.category2 || '',\n    category2Label: label(r.category2, r.category2En),\n    category3: r.category3 || '',\n    category3Label: label(r.category3, r.category3En),\n    prices: {}\n  });\n  if (r.price != null && Number(r.price) > 0) products.get(r.productCode).prices[r.merchantCode] = Number(r.price);\n  const offer = parseOffer(r); if (offer) offers.push(offer);\n}\nmsg.payload = [{\n  category: row.category,\n  batchId: row.batchId,\n  collectedAt: row.collectedAt,\n  requestedProductCode: String(row.requestedProductCode || '').trim(),\n  selectedProduct: normalizeProduct(row.selectedProduct),\n  merchantCodes: [...merchants].sort(),\n  products: [...products.values()],\n  offers\n}];\nreturn [msg, row.category ? { payload: row.category, _client: msg._client } : null];\n",
+    "outputs": 2,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 980,
+    "y": 300,
+    "wires": [
+      [
+        "b1c004d4d4d4d4d"
+      ],
+      [
+        "e2a011e8a2a41eb8"
+      ]
+    ]
+  },
+  {
+    "id": "b1c004d4d4d4d4d",
+    "type": "ui-template",
+    "z": "25e56c2040ecf110",
+    "group": "46b66a3d034e7dfb",
+    "page": "",
+    "ui": "",
+    "name": "B_Category Insights View",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "head": "",
+    "format": "<template>\n  <section class=\"pw-b-insights\" v-if=\"report\">\n    <header class=\"pw-b-header\">\n      <p class=\"pw-b-eyebrow\">PRICEWATCH ANALYTICS</p>\n      <h1>Category Insights</h1>\n      <p class=\"pw-b-subtitle\">Compare like-for-like product prices and review simple multi-buy offers.</p>\n    </header>\n    <div v-if=\"report.requestedProductCode && report.selectedProduct\" class=\"pw-b-product-context\">\n      <strong>Selected product: {{selectedProductName}}</strong>\n      <span>{{report.selectedProduct.productCode}}</span>\n      <p>The results below compare products in this product's category, not only the selected product.</p>\n    </div>\n    <p v-else-if=\"report.requestedProductCode\" class=\"pw-b-warning\">Product {{report.requestedProductCode}} was not found in the latest successful batch. No unrelated category has been selected.</p>\n    <h2>Category advantage comparison</h2>\n    <p class=\"pw-b-meta\">Category: <strong>{{ report.category }}</strong> · Latest successful batch: {{\n      formatDate(report.collectedAt) }}</p>\n    <div class=\"pw-b-controls\">\n      <label>Category level 2<select v-model=\"category2\"><option value=\"\">All level-2 categories</option><option v-for=\"x in category2Options\" :key=\"x.value\" :value=\"x.value\">{{x.label}}</option></select></label>\n      <label>Category level 3<select v-model=\"category3\"><option value=\"\">All level-3 categories</option><option v-for=\"x in category3Options\" :key=\"x.value\" :value=\"x.value\">{{x.label}}</option></select></label>\n      <label>Merchant A<select v-model=\"merchantA\"><option v-for=\"x in merchantOptions\" :key=\"x\" :value=\"x\" :disabled=\"x===merchantB\">{{x}}</option></select></label>\n      <label>Merchant B<select v-model=\"merchantB\"><option v-for=\"x in merchantOptions\" :key=\"x\" :value=\"x\" :disabled=\"x===merchantA\">{{x}}</option></select></label>\n    </div>\n    <p class=\"pw-b-note\">Comparing <strong>{{summary.common}}</strong> products with valid prices from both merchants. Ties are shown separately; missing prices are not treated as zero.</p>\n    <details class=\"pw-b-method\">\n      <summary>Comparison method</summary>\n      <p>Products are matched by the same product code. All percentages use the current common valid-price sample as the denominator. Results describe this sample only, not either merchant's entire store.</p>\n    </details>\n    <p v-if=\"summary.common===0\" class=\"pw-b-warning\">No common valid-price products for this selection. Choose another\n      category or merchant pair.</p>\n    <p v-else-if=\"summary.common<10\" class=\"pw-b-warning\">Small comparison sample ({{summary.common}} products).\n      Interpret the percentages cautiously.</p>\n    <div class=\"pw-b-cards\">\n      <div>\n        <span class=\"pw-b-logo-line\"><img v-if=\"showLogo(merchantA)\" :src=\"logoUrl(merchantA)\" :alt=\"merchantA+' logo'\" @error=\"logoError(merchantA)\"><strong>{{merchantA}}</strong></span><span>Lower on {{summary.aLower}} products</span><b>{{pct(summary.aLower)}}</b>\n      </div>\n      <div><strong>Tie</strong><span>{{summary.tie}} products</span><b>{{pct(summary.tie)}}</b></div>\n      <div>\n        <span class=\"pw-b-logo-line\"><img v-if=\"showLogo(merchantB)\" :src=\"logoUrl(merchantB)\" :alt=\"merchantB+' logo'\" @error=\"logoError(merchantB)\"><strong>{{merchantB}}</strong></span><span>Lower on {{summary.bLower}} products</span><b>{{pct(summary.bLower)}}</b>\n      </div>\n    </div>\n    <h3>Price-difference distribution</h3>\n    <div class=\"pw-b-table-wrap\">\n      <table class=\"pw-b-small\">\n        <thead>\n          <tr>\n            <th>Absolute difference</th>\n            <th>Products</th>\n            <th>Share of common sample</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr v-for=\"b in distribution\" :key=\"b.label\">\n            <td>{{b.label}}</td>\n            <td>{{b.count}}</td>\n            <td>{{summary.common ? (b.count/summary.common*100).toFixed(1)+'%' : 'N/A'}}</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n    <h3>Common product details</h3>\n    <p class=\"pw-b-muted\">Savings percentage = absolute price gap ÷ higher listed price. Use the minimum-gap filter to\n      focus on meaningful savings.</p>\n    <p v-if=\"favoriteError\" class=\"pw-b-warning\" role=\"alert\">{{favoriteError}}</p>\n    <div class=\"pw-b-filter\">\n      <input v-model.trim=\"search\" placeholder=\"Filter product name or code\"/><select v-model=\"resultFilter\"><option value=\"all\">All results</option><option value=\"a\">Merchant A lower</option><option value=\"tie\">Same price</option><option value=\"b\">Merchant B lower</option></select><select v-model=\"sortMode\"><option value=\"gapHkd\">Largest HKD gap</option><option value=\"gapPct\">Largest savings %</option><option value=\"code\">Product code</option></select><label>Minimum gap (HKD)<input v-model.number=\"minGap\" type=\"number\" min=\"0\" step=\"0.1\"></label>\n    </div>\n    <div class=\"pw-b-table-wrap\">\n      <table>\n        <thead>\n          <tr>\n            <th>Product</th>\n            <th>\n              <span class=\"pw-b-logo-line\"><img v-if=\"showLogo(merchantA)\" :src=\"logoUrl(merchantA)\" :alt=\"merchantA+' logo'\" @error=\"logoError(merchantA)\">{{merchantA}}</span>\n            </th>\n            <th>\n              <span class=\"pw-b-logo-line\"><img v-if=\"showLogo(merchantB)\" :src=\"logoUrl(merchantB)\" :alt=\"merchantB+' logo'\" @error=\"logoError(merchantB)\">{{merchantB}}</span>\n            </th>\n            <th>Difference (A - B)</th>\n            <th>Savings vs higher price</th>\n            <th>Result</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr v-for=\"p in detailRows\" :key=\"p.productCode\" :class=\"{'pw-best-saving': isBestSaving(p)}\">\n            <td><div class=\"pw-b-product-cell\"><div><strong>{{p.productCode}}</strong><br>{{p.name}}</div><button type=\"button\" class=\"pw-b-fav-star\" :disabled=\"!favoriteReady\" :aria-pressed=\"isFavorite(p.productCode)\" :aria-label=\"(isFavorite(p.productCode) ? 'Remove from favorites: ' : 'Save to favorites: ') + (p.name || p.productCode)\" @click=\"toggleFavorite(p)\">{{isFavorite(p.productCode) ? '★' : '☆'}}</button></div></td>\n            <td>{{money(p.priceA)}}</td>\n            <td>{{money(p.priceB)}}</td>\n            <td>{{signedMoney(p.diff)}}</td>\n            <td>{{p.gapPct.toFixed(1)}}% <span v-if=\"isBestSaving(p)\" class=\"pw-best-badge\">Largest savings %</span></td>\n            <td>{{p.resultLabel}}</td>\n          </tr>\n        </tbody>\n      </table>\n      <p v-if=\"comparisons.length>200\" class=\"pw-b-muted\">Showing the first 200 matching products. Use the filters to\n        narrow the list.</p>\n    </div>\n    <h3>Simple multi-buy offers</h3>\n    <label class=\"pw-b-quantity\">Quantity to buy <input v-model.number=\"quantity\" type=\"number\" min=\"1\" max=\"99\" step=\"1\" /></label>\n    <p v-if=\"quantityError\" class=\"pw-b-warning\">{{quantityError}}</p>\n    <p class=\"pw-b-note\">Single-unit prices and quantity promotions are shown separately. A promotion is calculated only\n      at its exact stated threshold. For quantities above the threshold, repeated use and remainder pricing are not\n      assumed unless the original rule states them.</p>\n    <div class=\"pw-b-table-wrap\">\n      <table>\n        <thead>\n          <tr>\n            <th>Merchant</th>\n            <th>Product</th>\n            <th>Original unit</th>\n            <th>Original offer text</th>\n            <th>Applicable quantity</th>\n            <th>Status</th>\n            <th>Total</th>\n            <th>Average unit</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr v-for=\"o in offerRows\" :key=\"o.merchantCode+o.productCode+o.rule\">\n            <td>\n              <span class=\"pw-b-logo-line\"><img v-if=\"showLogo(o.merchantCode)\" :src=\"logoUrl(o.merchantCode)\" :alt=\"o.merchantCode+' logo'\" @error=\"logoError(o.merchantCode)\">{{o.merchantCode}}</span>\n            </td>\n            <td>{{o.productName}}</td>\n            <td>{{money(o.originalUnitPrice)}}</td>\n            <td>{{o.rule}}</td>\n            <td>{{o.buyN || 'Not reliably parsed'}}</td>\n            <td>{{o.status}}</td>\n            <td>{{money(o.calculatedTotal)}}</td>\n            <td>{{money(o.averageUnit)}}</td>\n          </tr>\n        </tbody>\n      </table>\n      <p v-if=\"!offerRows.length\" class=\"pw-b-muted\">No offer records for the selected merchants and filters.</p>\n    </div>\n  </section>\n  <p v-else class=\"pw-b-muted\">Loading category data...</p>\n</template>\n<script>\n  export default {\n data(){return{merchantA:'PARKNSHOP',merchantB:'WELLCOME',category2:'',category3:'',quantity:2,search:'',resultFilter:'all',sortMode:'gapHkd',minGap:0,failedLogos:{},urlProductCode:'',urlCheckTimer:null,favoriteReady:false,favoriteCodes:[],favoriteError:''}},\n mounted(){\n  window.addEventListener('pricewatch:favorites-changed',this.syncFavorites);\n  window.addEventListener('storage',this.syncFavorites);\n  this.syncFavorites();\n  const readCode=()=>String(new URLSearchParams(window.location.search).get('productCode')||'').trim();\n  const sendCurrent=()=>{const code=readCode();this.urlProductCode=code;if(code)this.send({payload:{productCode:code}});else{const category=this.currentCategory();if(category)this.send({payload:{value:category}})}};\n  window.setTimeout(sendCurrent,0);\n  this.urlCheckTimer=window.setInterval(()=>{const code=readCode();if(code===this.urlProductCode)return;this.urlProductCode=code;if(code)this.send({payload:{productCode:code}});else{const category=this.currentCategory();if(category)this.send({payload:{value:category}})}},250);\n },\n unmounted(){if(this.urlCheckTimer)window.clearInterval(this.urlCheckTimer);window.removeEventListener('pricewatch:favorites-changed',this.syncFavorites);window.removeEventListener('storage',this.syncFavorites)},\n computed:{\n  report(){return this.msg?.payload?.[0]||null}, merchantOptions(){return this.report?.merchantCodes||[]},\n  selectedProductName(){const p=this.report?.selectedProduct;if(!p)return'';return String(p.nameEn||p.name||p.productCode||'').trim()},\n  quantityError(){const q=Number(this.quantity);return Number.isInteger(q)&&q>=1&&q<=99?'':'Enter a whole-number quantity from 1 to 99. Totals are not calculated for an invalid quantity.'},\n  category2Options(){const m=new Map();(this.report?.products||[]).forEach(p=>{if(p.category2)m.set(p.category2,p.category2Label||p.category2)});return [...m].map(([value,label])=>({value,label})).sort((a,b)=>a.label.localeCompare(b.label))},\n  category3Options(){const m=new Map();(this.report?.products||[]).filter(p=>!this.category2||p.category2===this.category2).forEach(p=>{if(p.category3)m.set(p.category3,p.category3Label||p.category3)});return [...m].map(([value,label])=>({value,label})).sort((a,b)=>a.label.localeCompare(b.label))},\n  filteredProducts(){return (this.report?.products||[]).filter(p=>(!this.category2||p.category2===this.category2)&&(!this.category3||p.category3===this.category3))},\n  comparisons(){return this.filteredProducts.flatMap(p=>{const a=p.prices[this.merchantA],b=p.prices[this.merchantB];if(a==null||b==null)return[];const ca=Math.round(a*100),cb=Math.round(b*100),diff=(ca-cb)/100,absDiff=Math.abs(diff),gapPct=Math.max(a,b)>0?absDiff/Math.max(a,b)*100:0,result=ca<cb?'a':ca>cb?'b':'tie';return[{...p,priceA:a,priceB:b,diff,absDiff,gapPct,result,resultLabel:result==='a'?this.merchantA+' lower':result==='b'?this.merchantB+' lower':'Same price'}]})},\n  summary(){const x={common:this.comparisons.length,aLower:0,bLower:0,tie:0};this.comparisons.forEach(p=>p.result==='a'?x.aLower++:p.result==='b'?x.bLower++:x.tie++);return x},\n  distribution(){const bins=[{label:'Same price',min:0,max:0,count:0},{label:'HKD 0.01–0.99',min:.01,max:.99,count:0},{label:'HKD 1.00–4.99',min:1,max:4.99,count:0},{label:'HKD 5.00–9.99',min:5,max:9.99,count:0},{label:'HKD 10.00 or more',min:10,max:Infinity,count:0}];this.comparisons.forEach(p=>{const d=Math.abs(p.diff);const b=bins.find(x=>d>=x.min&&d<=x.max);if(b)b.count++});return bins},\n  detailRows(){const q=this.search.toLowerCase(),min=Math.max(0,Number(this.minGap)||0);const rows=this.comparisons.filter(p=>(this.resultFilter==='all'||p.result===this.resultFilter)&&p.absDiff>=min&&(!q||p.productCode.toLowerCase().includes(q)||p.name.toLowerCase().includes(q)));rows.sort((a,b)=>this.sortMode==='gapPct'?b.gapPct-a.gapPct||b.absDiff-a.absDiff:this.sortMode==='code'?a.productCode.localeCompare(b.productCode):b.absDiff-a.absDiff||b.gapPct-a.gapPct);return rows.slice(0,200)},\n  offerRows(){const q=Number(this.quantity);return (this.report?.offers||[]).filter(o=>(o.merchantCode===this.merchantA||o.merchantCode===this.merchantB)&&(!this.category2||o.category2===this.category2)&&(!this.category3||o.category3===this.category3)).slice(0,100).map(o=>{if(this.quantityError)return{...o,status:'Invalid quantity',calculatedTotal:null,averageUnit:null};if(!o.supported)return{...o,status:'Needs offer terms',calculatedTotal:null,averageUnit:null};if(q<o.buyN){const t=q*o.originalUnitPrice;return{...o,status:'Offer not triggered',calculatedTotal:t,averageUnit:o.originalUnitPrice}}if(q===o.buyN)return{...o,status:'Offer applied',calculatedTotal:o.offerTotal,averageUnit:o.offerTotal/q};return{...o,status:'Needs repeat/remainder terms',calculatedTotal:null,averageUnit:null}})}\n },\n watch:{category2(){this.category3=''},merchantA(v){if(v&&v===this.merchantB)this.merchantB=this.merchantOptions.find(x=>x!==v)||''},merchantB(v){if(v&&v===this.merchantA)this.merchantA=this.merchantOptions.find(x=>x!==v)||''},report:{immediate:true,handler(r){if(!r)return;if(r.category){try{window.localStorage.setItem('pricewatch-b-category',String(r.category))}catch(e){}}const m=r.merchantCodes||[];if(!m.includes(this.merchantA))this.merchantA=m[0]||'';if(!m.includes(this.merchantB)||this.merchantB===this.merchantA)this.merchantB=m.find(x=>x!==this.merchantA)||'';this.category2='';this.category3=''}}},\n methods:{\n syncFavorites(){this.favoriteReady=Boolean(window.PriceWatchFavorites);if(!this.favoriteReady)return;try{this.favoriteCodes=window.PriceWatchFavorites.list().map(item=>String(item?.productCode||'').trim().toUpperCase()).filter(Boolean);this.favoriteError=''}catch(error){this.favoriteReady=false;this.favoriteError='Favorites could not be read. Check browser storage and retry.'}},\n isFavorite(code){return this.favoriteCodes.includes(String(code||'').trim().toUpperCase())},\n toggleFavorite(product){if(!this.favoriteReady||!product?.productCode)return;try{window.PriceWatchFavorites.toggle({productCode:product.productCode,name:product.name||product.nameEn||product.productCode});this.syncFavorites()}catch(error){this.favoriteError='Could not save favorites. Your previous selection has been kept.'}},\n isBestSaving(p){const rows=this.detailRows;return p.gapPct>0 && rows.length>0 && Math.abs(p.gapPct-Math.max(...rows.map(x=>x.gapPct)))<0.000001},\ncurrentCategory(){if(this.report?.category)return String(this.report.category);try{const saved=window.localStorage.getItem('pricewatch-b-category');if(saved)return saved}catch(e){}const label=String(document.querySelector('input[role=\"combobox\"]')?.value||'').trim();const categories=['奶類及乳製品 / 大豆製品 / 蛋類','米 / 食油 / 罐頭 / 蔬果 / 肉類','粉麵 / 煮食用料 / 冷凍加工食品','麵包蛋糕 / 穀類早餐 / 麵包醬','家居用品 / 寵物食品及用品','奶粉 / 嬰兒用品','糖果 / 餅乾 / 小食','個人護理','酒類','飲品'];return categories.find(x=>label===x||label.startsWith(x+' /'))||''},logoUrl(code){return '/pricewatch-assets/merchants/'+encodeURIComponent(code)+'.png'},showLogo(code){return code&&!this.failedLogos[code]},logoError(code){this.failedLogos[code]=true},money(v){return v==null?'Not calculated':'HKD '+Number(v).toFixed(2)},signedMoney(v){return (v>0?'+':'')+'HKD '+Number(v).toFixed(2)},pct(n){return this.summary.common?(n/this.summary.common*100).toFixed(1)+'%':'N/A'},formatDate(v){return v?new Date(v).toLocaleString('en-HK',{dateStyle:'medium',timeStyle:'short'}):'Unknown'}}\n}\n</script>\n<style>\n  .pw-b-insights {\n    padding: 16px;\n    color: #334257\n  }\n\n  .pw-b-header {\n    margin: 0 0 18px\n  }\n\n  .pw-b-eyebrow {\n    margin: 0 0 3px;\n    color: #386d83;\n    font-size: 11px;\n    font-weight: 700;\n    letter-spacing: .08em\n  }\n\n  .pw-b-insights h1 {\n    margin: 0;\n    color: #26384a;\n    font-size: 30px;\n    line-height: 1.25\n  }\n\n  .pw-b-subtitle {\n    margin: 5px 0 0;\n    color: #627587\n  }\n\n  .pw-b-product-context {\n    margin: 0 0 16px;\n    padding: 12px 14px;\n    background: #f0f7fa;\n    border: 1px solid #cfe0e8;\n    border-radius: 6px\n  }\n\n  .pw-b-product-context>strong,\n  .pw-b-product-context>span {\n    display: block\n  }\n\n  .pw-b-product-context>span {\n    margin-top: 2px;\n    color: #386d83;\n    font-variant-numeric: tabular-nums\n  }\n\n  .pw-b-product-context>p {\n    margin: 6px 0 0;\n    color: #486373\n  }\n\n  .pw-b-insights h2 {\n    margin: 0 0 10px;\n    font-size: 24px\n  }\n\n  .pw-b-insights h3 {\n    margin: 24px 0 10px;\n    font-size: 20px\n  }\n\n  .pw-b-meta,\n  .pw-b-muted {\n    color: #687887\n  }\n\n  .pw-b-note {\n    padding: 10px 12px;\n    background: #eaf3f7;\n    border-left: 3px solid #386d83\n  }\n\n  .pw-b-warning {\n    padding: 10px 12px;\n    background: #fff5dc;\n    border-left: 3px solid #d49524;\n    color: #6f521b\n  }\n\n  .pw-b-method {\n    margin: -3px 0 12px;\n    color: #627587;\n    font-size: 12px\n  }\n\n  .pw-b-method summary {\n    cursor: pointer;\n    color: #386d83;\n    font-weight: 600\n  }\n\n  .pw-b-method p {\n    margin: 6px 0 0\n  }\n\n  .pw-b-controls {\n    display: grid;\n    grid-template-columns: repeat(4, minmax(150px, 1fr));\n    gap: 10px\n  }\n\n  .pw-b-controls label {\n    display: flex;\n    flex-direction: column;\n    gap: 5px\n  }\n\n  .pw-b-controls select,\n  .pw-b-filter input,\n  .pw-b-filter select,\n  .pw-b-filter label input {\n    padding: 9px;\n    border: 1px solid #dae2e8;\n    border-radius: 4px;\n    background: #fff\n  }\n\n  .pw-b-logo-line img {\n    width: 80px;\n    height: 28px;\n    object-fit: contain;\n    object-position: left center\n  }\n\n  .pw-b-logo-line {\n    display: inline-flex;\n    align-items: center;\n    gap: 8px;\n    min-height: 28px\n  }\n\n  .pw-b-cards {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 10px;\n    margin: 12px 0\n  }\n\n  .pw-b-cards div {\n    display: flex;\n    flex-direction: column;\n    gap: 5px;\n    padding: 12px;\n    background: #fff;\n    border: 1px solid #dae2e8;\n    border-radius: 4px\n  }\n\n  .pw-b-cards b {\n    font-size: 22px;\n    color: #286b80\n  }\n\n  .pw-b-table-wrap {\n    overflow-x: auto\n  }\n\n  .pw-b-insights table {\n    width: 100%;\n    min-width: 720px;\n    border-collapse: collapse;\n    background: #fff\n  }\n\n  .pw-b-insights th,\n  .pw-b-insights td {\n    text-align: left;\n    padding: 9px;\n    border-bottom: 1px solid #e1e7eb;\n    vertical-align: top\n  }\n\n  .pw-b-insights th {\n    background: #eef3f6;\n    white-space: nowrap\n  }\n\n  .pw-b-small {\n    max-width: 650px;\n    min-width: 500px\n  }\n\n  .pw-b-filter {\n    display: grid;\n    grid-template-columns: minmax(220px, 1fr) repeat(2, minmax(150px, auto)) minmax(150px, auto);\n    gap: 8px;\n    margin-bottom: 8px;\n    align-items: end\n  }\n\n  .pw-b-filter label {\n    display: flex;\n    flex-direction: column;\n    gap: 3px\n  }\n\n  .pw-b-quantity {\n    display: inline-flex;\n    align-items: center;\n    gap: 8px\n  }\n\n  .pw-b-quantity input {\n    width: 80px;\n    padding: 8px;\n    border: 1px solid #dae2e8;\n    border-radius: 4px\n  }\n\n  @media(max-width:760px) {\n\n    .pw-b-controls {\n      grid-template-columns: 1fr\n    }\n\n    .pw-b-cards {\n      grid-template-columns: 1fr\n    }\n\n    .pw-b-filter {\n      grid-template-columns: 1fr\n    }\n  }\n\n/* Match A typography and theme; scoped to B only. */\n.pw-b-insights{font-family:inherit;font-size:13px;line-height:1.6;color:#334257;padding:8px 12px 16px}\n.pw-b-insights h1{font-size:30px;line-height:1.25;font-weight:750;color:#26384a}\n.pw-b-insights h2{font-size:27px;line-height:1.4;font-weight:700;color:#26384a;margin:8px 0 14px}\n.pw-b-insights h3{font-size:19px;line-height:1.4;font-weight:700;color:#26384a;margin:24px 0 10px}\n.pw-b-insights .pw-b-meta,.pw-b-insights .pw-b-muted{font-size:12px;line-height:1.6;color:#627587}\n.pw-b-insights label{font-size:12px;color:#486373}\n.pw-b-insights input,.pw-b-insights select,.pw-b-insights button{font-family:inherit;font-size:13px;line-height:1.5;box-sizing:border-box}\n.pw-b-insights input,.pw-b-insights select{min-height:40px;padding:8px 12px;border:1px solid #dae2e8;border-radius:6px;background:#fff;color:#334257;max-width:100%}\n.pw-b-insights input:focus-visible,.pw-b-insights select:focus-visible,.pw-b-insights button:focus-visible{outline:2px solid #386d83;outline-offset:2px}\n.pw-b-insights button{min-height:40px;padding:8px 16px;border:1px solid #386d83;border-radius:6px;background:#386d83;color:#fff;cursor:pointer}\n.pw-b-insights button:hover{background:#2c586b}\n.pw-b-insights button:disabled{background:#f5f7f9;color:#687887;border-color:#dae2e8;cursor:not-allowed}\n.pw-b-insights table{font-size:13px;color:#334257}\n.pw-b-insights th{font-size:12px;font-weight:700;color:#334257;background:#f0f4f7}\n.pw-b-insights th,.pw-b-insights td{padding:12px;border-bottom:1px solid #e3e9ee}\n.pw-b-insights td{font-variant-numeric:tabular-nums}\n.pw-b-insights .pw-b-note{font-size:12px;line-height:1.6;color:#486373;background:#eaf3f7;border-left:3px solid #386d83}\n.pw-b-insights .pw-b-cards>div{border-color:#dae2e8;border-radius:6px}\n.pw-b-insights .pw-b-cards b{font-size:32px;line-height:1.3;font-weight:750;color:#286b80;font-variant-numeric:tabular-nums}\n@media(max-width:600px){.pw-b-insights h1{font-size:25px}.pw-b-insights h2{font-size:23px}.pw-b-insights .pw-b-cards b{font-size:28px}}\n\n.pw-b-insights tr.pw-best-saving td{background:#fff7df;}\n.pw-b-insights .pw-best-badge{display:inline-block;margin:6px 0 0 8px;padding:4px 8px;border-radius:5px;background:#f4d477;color:#654800;font-size:12px;font-weight:700;}\n.pw-b-product-cell{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;min-width:190px}\n.pw-b-product-cell>div{min-width:0;overflow-wrap:anywhere}\n.pw-b-fav-star{flex:0 0 auto;border:0;border-radius:5px;background:transparent;color:#9a6800;font:700 25px/1 sans-serif;padding:5px 8px;min-width:38px;min-height:38px;cursor:pointer}\n.pw-b-fav-star[aria-pressed=true]{color:#b87900}\n.pw-b-fav-star:hover:not(:disabled){background:#fff4d1;color:#b87900}\n.pw-b-fav-star:focus-visible{outline:2px solid #386d83;outline-offset:2px}\n.pw-b-fav-star:disabled{opacity:.45;cursor:wait}\n</style>\n",
+    "storeOutMessages": true,
+    "passthru": false,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1290,
+    "y": 300,
+    "wires": [
+      [
+        "b1c001a1a1a1a1a"
+      ]
+    ]
+  },
+  {
+    "id": "b1c006f6f6f6f6f6",
+    "type": "inject",
+    "z": "25e56c2040ecf110",
+    "name": "B_Load Category Options",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "1",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 160,
+    "y": 420,
+    "wires": [
+      [
+        "b1c007g7g7g7g7g7"
+      ]
+    ]
+  },
+  {
+    "id": "b1c007g7g7g7g7g7",
+    "type": "function",
+    "z": "25e56c2040ecf110",
+    "name": "B_Build Category Options Query",
+    "func": "msg.payload = [[\n  { $match: { schemaVersion: 1, status: 'success' } },\n  { $sort: { collectedAt: -1, _id: -1 } },\n  { $limit: 1 },\n  { $lookup: { from: 'pricewatch_history', let: { selectedBatch: '$_id' }, pipeline: [\n    { $match: { $expr: { $eq: ['$batchId', '$$selectedBatch'] } } },\n    { $group: { _id: '$category1', englishNames: { $addToSet: '$category1En' } } },\n    { $match: { _id: { $nin: [null, ''] } } },\n    { $sort: { _id: 1 } },\n    { $project: { _id: 0, value: '$_id', englishNames: 1 } }\n  ], as: 'categories' } },\n  { $project: { _id: 0, categories: 1 } }\n]]; return msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 390,
+    "y": 420,
+    "wires": [
+      [
+        "b1c008h8h8h8h8h8"
+      ]
+    ]
+  },
+  {
+    "id": "b1c008h8h8h8h8h8",
+    "type": "mongodb4",
+    "z": "25e56c2040ecf110",
+    "clientNode": "c8afa8ba5a79152e",
+    "mode": "collection",
+    "collection": "pricewatch_batches",
+    "operation": "aggregate",
+    "output": "toArray",
+    "maxTimeMS": "0",
+    "handleDocId": false,
+    "name": "B_Query Category Options",
+    "x": 650,
+    "y": 420,
+    "wires": [
+      [
+        "b1c009i9i9i9i9i9"
+      ]
+    ]
+  },
+  {
+    "id": "b1c009i9i9i9i9i9",
+    "type": "function",
+    "z": "25e56c2040ecf110",
+    "name": "B_Set Category Options",
+    "func": "const row = Array.isArray(msg.payload) ? msg.payload[0] : null; const cats = row?.categories || []; const options = cats.map(c => { const en=(c.englishNames||[]).find(v=>typeof v==='string'&&v.trim()); return { value:c.value, label: en && en.trim().toLowerCase()!==c.value.trim().toLowerCase() ? c.value+' / '+en : c.value }; }); msg.ui_update={options}; msg.payload=options[0]?.value || ''; return msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 920,
+    "y": 420,
+    "wires": [
+      [
+        "e2a011e8a2a41eb8",
+        "b1c001a1a1a1a1a"
+      ]
+    ]
+  },
+  {
+    "id": "c7503httpinput001",
+    "type": "http in",
+    "z": "012ae38f59630bef",
+    "name": "C_Query API",
+    "url": "/pricewatch-c/api",
+    "method": "get",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 120,
+    "y": 100,
+    "wires": [
+      [
+        "c7503query0000001"
+      ]
+    ]
+  },
+  {
+    "id": "c7503query0000001",
+    "type": "function",
+    "z": "012ae38f59630bef",
+    "name": "C_Validate and Query",
+    "func": "// Treat simplified/traditional variants as equivalent; preserve literal matching.\nfunction chineseSearchPattern(text) {\n    const groups = [\"万萬\", \"与與\", \"专專\", \"业業\", \"丛叢\", \"东東\", \"丝絲\", \"丟丢\", \"两兩\", \"严嚴\", \"並併并\", \"丧喪\", \"个個箇\", \"丰豐\", \"临臨\", \"为為\", \"丽麗\", \"举舉\", \"义義\", \"乌烏\", \"乐樂\", \"乔喬\", \"习習\", \"乡鄉\", \"书書\", \"买買\", \"乱亂\", \"争爭\", \"亏虧\", \"亘亙\", \"亚亞\", \"产產\", \"亩畝\", \"亲親\", \"亵褻\", \"亿億\", \"仅僅\", \"从從\", \"仑侖崙\", \"仓倉\", \"仪儀\", \"们們\", \"价價\", \"伋汲\", \"伕夫\", \"众眾\", \"优優\", \"会會\", \"伛傴\", \"伞傘\", \"伟偉\", \"传傳\", \"伤傷\", \"伥倀\", \"伦倫\", \"伧傖\", \"伪偽\", \"伫佇\", \"佈布\", \"体體\", \"佔占\", \"佣傭\", \"佥僉\", \"佪徊\", \"來来\", \"侠俠\", \"侣侶\", \"侥僥\", \"侦偵\", \"侧側\", \"侨僑\", \"侩儈\", \"侪儕\", \"侬儂\", \"侷局挶跼\", \"俁俣\", \"係系繫\", \"俦儔\", \"俨儼\", \"俩倆\", \"俪儷\", \"俭儉\", \"倖幸\", \"仿倣\", \"债債\", \"倾傾\", \"偬傯\", \"偺咱\", \"偻僂\", \"偾僨\", \"偿償\", \"傑杰\", \"備备\", \"傢家\", \"傥儻\", \"傧儐\", \"储儲\", \"傩儺\", \"僇戮\", \"仆僕\", \"僱雇\", \"儅噹当當\", \"儘尽盡\", \"儸囉罗羅\", \"儿兒\", \"兇凶\", \"兌兑\", \"兖兗\", \"党黨\", \"內内\", \"兰蘭\", \"关關\", \"兴興\", \"兹玆茲\", \"养養\", \"兽獸\", \"冁囅\", \"冈岡\", \"冊册\", \"冑胄\", \"写寫\", \"军軍\", \"农農\", \"冪幂\", \"冯馮\", \"冲沖衝\", \"决決\", \"况況\", \"冻凍\", \"净凈淨\", \"准準\", \"凉涼\", \"减減\", \"凑湊\", \"凛凜\", \"几幾\", \"凤鳳\", \"凫鳧\", \"凭憑\", \"凯凱\", \"击擊\", \"凿鑿\", \"刍芻\", \"划劃\", \"刘劉\", \"则則\", \"刚剛\", \"创創\", \"删刪\", \"別别彆\", \"刭剄\", \"刹剎\", \"刽劊\", \"刿劌\", \"剀剴\", \"剂劑\", \"克剋\", \"剐剮\", \"剑劍\", \"剝剥\", \"剧劇\", \"剷鏟铲\", \"劝勸\", \"办辦\", \"务務\", \"劢勱\", \"动動\", \"励勵\", \"劲勁\", \"劳勞\", \"劻匡\", \"势勢\", \"勋勛\", \"勖勗\", \"勝胜\", \"勣积積\", \"剿勦\", \"勻匀\", \"匦匭\", \"匮匱\", \"匯彙汇\", \"区區\", \"医醫\", \"华華\", \"协協\", \"单單\", \"卖賣\", \"卢盧\", \"卤滷鹵\", \"卧臥\", \"卫衛\", \"却卻\", \"卹恤\", \"卺巹\", \"厂廠\", \"厅廳\", \"历曆歷\", \"厉厲\", \"压壓\", \"厌厭\", \"厍厙\", \"厕廁\", \"厢廂\", \"厣厴\", \"厦廈\", \"厨廚\", \"厩廄\", \"厮廝\", \"县縣\", \"参參\", \"双雙\", \"发發髮\", \"变變\", \"叙敘\", \"叠疊\", \"叶葉\", \"号號\", \"叹嘆歎\", \"叽嘰\", \"吋寸\", \"吓嚇\", \"吕呂\", \"吗嗎\", \"吨噸\", \"听聽\", \"启啟\", \"吳吴\", \"吶呐\", \"呎尺\", \"呒嘸\", \"呓囈\", \"呕嘔\", \"呖嚦\", \"呗唄\", \"员員\", \"呙咼\", \"呛嗆\", \"呜嗚\", \"咏詠\", \"咙嚨\", \"咛嚀\", \"响響\", \"哑啞\", \"哒噠\", \"哓嘵\", \"哔嗶\", \"哕噦\", \"哗嘩\", \"哙噲\", \"哜嚌\", \"哝噥\", \"哟喲\", \"唛嘜\", \"唠嘮\", \"唢嗩\", \"唤喚\", \"唸念\", \"問问\", \"啣衔銜\", \"啧嘖\", \"啬嗇\", \"啭囀\", \"啮嚙齧\", \"啸嘯\", \"吃喫\", \"喷噴\", \"喽嘍\", \"喾嚳\", \"嗫囁\", \"嗳噯\", \"嘗尝\", \"嘘噓\", \"嘤嚶\", \"嘱囑\", \"噁恶惡\", \"噜嚕\", \"嚣囂\", \"咽嚥\", \"向嚮\", \"囌甦苏蘇\", \"团團糰\", \"囪囱\", \"园園\", \"围圍\", \"囵圇\", \"国國\", \"图圖\", \"圆圓\", \"圹壙\", \"场場\", \"坏壞\", \"块塊\", \"坚堅\", \"坛壇罈\", \"坜壢\", \"坝壩\", \"坞塢\", \"坟墳\", \"坠墜\", \"坰垧\", \"垄壟\", \"垆壚\", \"垒壘\", \"垦墾\", \"垩堊\", \"垫墊\", \"垭埡\", \"垲塏\", \"埘塒\", \"埙塤壎\", \"埚堝\", \"執执\", \"堑塹\", \"堕墮\", \"堯尧\", \"報报\", \"堿碱\", \"塋茔\", \"塗涂\", \"塵尘\", \"墑墒\", \"墙墻牆\", \"壮壯\", \"声聲\", \"壳殼\", \"壶壺\", \"壽寿\", \"处處\", \"复復複\", \"够夠\", \"夢梦\", \"头頭\", \"夹夾\", \"夺奪\", \"奁奩\", \"奂奐\", \"奋奮\", \"奖獎\", \"奥奧\", \"妆妝\", \"妇婦\", \"妈媽\", \"妩嫵\", \"妪嫗\", \"妫媯\", \"你妳\", \"姍姗\", \"奸姦\", \"侄姪\", \"娄婁\", \"娅婭\", \"娆嬈\", \"娇嬌\", \"娈孌\", \"娛娱\", \"娲媧\", \"娴嫻\", \"婴嬰\", \"婵嬋\", \"婶嬸\", \"媪媼\", \"嫒嬡\", \"嫔嬪\", \"嫱嬙\", \"嬝袅裊\", \"嬤嬷\", \"娘孃\", \"孙孫\", \"学學\", \"孪孿\", \"宁寧\", \"宝寶\", \"实實\", \"宠寵\", \"审審\", \"宪憲\", \"宫宮\", \"宽寬\", \"宾賓\", \"寝寢\", \"对對\", \"寻尋\", \"导導\", \"将將\", \"尔爾\", \"尴尷\", \"层層\", \"屆届\", \"屉屜\", \"屝扉\", \"属屬\", \"屡屢\", \"屦屨\", \"屿嶼\", \"岁歲\", \"岂豈\", \"岖嶇\", \"岗崗\", \"岘峴\", \"岚嵐\", \"岛島\", \"岧迢\", \"岩嵒巖\", \"岭嶺\", \"岽崠\", \"岿巋\", \"峄嶧\", \"峡峽\", \"峤嶠\", \"峥崢\", \"峦巒\", \"崂嶗\", \"崃崍\", \"崭嶄\", \"崳嵛\", \"嵘嶸\", \"嵝嶁\", \"岳嶽\", \"巅巔\", \"巑漓灕\", \"巩鞏\", \"巯巰\", \"币幣\", \"帅帥\", \"师師\", \"帏幃\", \"帐帳\", \"帘簾\", \"帜幟\", \"带帶\", \"帧幀\", \"帮幫\", \"帱幬\", \"帻幘\", \"帼幗\", \"广廣\", \"仄庂\", \"庄莊\", \"庆慶\", \"庐廬\", \"庑廡\", \"库庫\", \"应應\", \"庙廟\", \"庞龐\", \"废廢\", \"廩廪\", \"廱痈癰\", \"开開\", \"异異\", \"弃棄\", \"弑弒\", \"吊弔\", \"张張\", \"弥彌瀰\", \"弪弳\", \"弯彎\", \"強强彊\", \"弹彈\", \"归歸\", \"录錄\", \"彥彦\", \"彫雕\", \"彻徹\", \"佛彿\", \"径徑\", \"徕徠\", \"徬旁\", \"忆憶\", \"忏懺\", \"忧憂\", \"忾愾\", \"怀懷\", \"态態\", \"怂慫\", \"怃憮\", \"怄慪\", \"怅悵\", \"怆愴\", \"怜憐\", \"总總\", \"怼懟\", \"怿懌\", \"恆恒\", \"恋戀\", \"恥耻\", \"恳懇\", \"恸慟\", \"恹懨\", \"恺愷\", \"恻惻\", \"恼惱\", \"恽惲\", \"悅悦\", \"悫愨\", \"悬懸\", \"悭慳\", \"悯憫\", \"悶闷\", \"凄悽淒\", \"惊驚\", \"惧懼\", \"惨慘\", \"惩懲\", \"惫憊\", \"惬愜\", \"惭慚\", \"惮憚\", \"惯慣\", \"愛爱\", \"愠慍\", \"愤憤\", \"愦憒\", \"慄栗\", \"慇殷\", \"慑懾\", \"慮虑\", \"慼戚\", \"懍檁檩\", \"懑懣\", \"懒懶\", \"懞濛矇蒙\", \"戆戇\", \"戉鉞钺\", \"戋戔\", \"戏戲\", \"戗戧\", \"战戰\", \"戩戬\", \"戶户\", \"仂扐\", \"扑撲\", \"扞捍\", \"叉扠\", \"扢扦\", \"扩擴\", \"扪捫\", \"扫掃\", \"扬揚颺\", \"扰擾\", \"扺抵牴\", \"抃拚\", \"抆擦\", \"抎殒殞\", \"抚撫\", \"抛拋\", \"抟摶\", \"抠摳\", \"抡掄\", \"抢搶\", \"护護\", \"抴曳\", \"担擔\", \"拟擬\", \"拢攏\", \"拣揀\", \"拥擁\", \"拦攔\", \"拧擰\", \"拨撥\", \"择擇\", \"挂掛\", \"挚摯\", \"挛攣\", \"挝撾\", \"挞撻\", \"挟挾\", \"挠撓\", \"挡擋\", \"挢撟\", \"挣掙\", \"挤擠\", \"挥揮\", \"捞撈\", \"损損\", \"捡撿\", \"换換\", \"捣搗擣\", \"捨舍\", \"据據\", \"卷捲\", \"採采\", \"掳擄\", \"掴摑\", \"掷擲\", \"掸撢撣\", \"掺摻\", \"掼摜\", \"揹背\", \"揽攬\", \"揿撳\", \"搀攙\", \"搁擱\", \"搂摟\", \"搅攪\", \"搆构構\", \"搖摇\", \"搟擀\", \"携攜\", \"摄攝\", \"摅攄\", \"摆擺襬\", \"摈擯\", \"摊攤\", \"撄攖\", \"撐撑\", \"捻撚\", \"撵攆\", \"撷擷\", \"撸擼\", \"撺攛\", \"擞擻\", \"攒攢\", \"攷考\", \"敌敵\", \"敗败\", \"敛斂\", \"数數\", \"斃毙\", \"斋齋\", \"斓斕\", \"斩斬\", \"断斷\", \"旂旗\", \"无無\", \"旧舊\", \"时時\", \"旷曠\", \"昙曇\", \"昼晝\", \"显顯\", \"晉晋\", \"晒曬\", \"晓曉\", \"晔曄\", \"晕暈\", \"晖暉\", \"晞曦\", \"暂暫\", \"暘阳陽\", \"暢畅\", \"暧曖\", \"昵暱\", \"了暸瞭\", \"朧矓胧\", \"朮术術\", \"朴樸\", \"机機\", \"杀殺\", \"杂雜\", \"权權\", \"杆桿\", \"圬杇\", \"条條\", \"杨楊\", \"杩榪\", \"极極\", \"枙栀梔\", \"枞樅\", \"枢樞\", \"枣棗\", \"枥櫪\", \"枨棖\", \"枪槍鎗\", \"枫楓\", \"枭梟\", \"拐枴\", \"柠檸\", \"柵栅\", \"柽檉\", \"标標\", \"栈棧\", \"栉櫛\", \"栊櫳\", \"栋棟\", \"栌櫨\", \"栎櫟\", \"栏欄\", \"树樹\", \"栖棲\", \"样樣\", \"栾欒\", \"桠椏\", \"桡橈\", \"桢楨\", \"档檔\", \"桤榿\", \"桥橋\", \"桦樺\", \"桧檜\", \"桨槳\", \"桩樁\", \"检檢\", \"棂櫺欞\", \"椁槨\", \"椟櫝\", \"椠槧\", \"椤欏\", \"椭橢\", \"楼樓\", \"榄欖\", \"榇櫬\", \"榈櫚\", \"榉櫸\", \"榮荣\", \"槃盘盤\", \"杠槓\", \"槛檻\", \"槟檳\", \"槠櫧\", \"梁樑\", \"横橫\", \"樯檣\", \"樱櫻\", \"橱櫥\", \"橹櫓艣\", \"橼櫞\", \"柜櫃\", \"欢歡\", \"欤歟\", \"欧歐\", \"欽钦\", \"歼殲\", \"歿殁\", \"殇殤\", \"残殘\", \"殓殮\", \"殚殫\", \"殡殯\", \"殴毆\", \"毀毁燬\", \"毂轂\", \"毋毌\", \"毕畢\", \"毡氈\", \"毬球\", \"毵毿\", \"氇氌\", \"气氣\", \"氢氫\", \"氩氬\", \"氲氳\", \"氾汎泛\", \"汉漢\", \"丸汍\", \"汙污\", \"汤湯\", \"汹洶\", \"沒没\", \"沟溝\", \"沣灃\", \"沤漚\", \"沥瀝\", \"沦淪\", \"沧滄\", \"沩溈\", \"沪滬\", \"泞濘\", \"泪淚\", \"泶澩\", \"泷瀧\", \"泸瀘\", \"泺濼\", \"泻潟瀉\", \"泼潑\", \"泽澤\", \"泾涇\", \"洁潔\", \"洒灑\", \"泄洩\", \"浃浹\", \"浅淺\", \"浆漿\", \"浇澆\", \"浈湞\", \"浊濁\", \"测測\", \"浍澮\", \"济濟\", \"浏瀏\", \"浑渾\", \"浒滸\", \"浓濃\", \"浔潯\", \"涛濤\", \"涝澇\", \"涞淶\", \"涟漣\", \"涠潿\", \"涡渦\", \"涣渙\", \"涤滌\", \"润潤\", \"涧澗\", \"涨漲\", \"涩澀\", \"淥渌\", \"淵渊\", \"渍漬\", \"渎瀆\", \"渐漸\", \"渑澠\", \"渔漁\", \"渖瀋\", \"渗滲\", \"温溫\", \"涌湧\", \"湾灣\", \"湿溼濕\", \"溃潰\", \"溅濺\", \"滅灭\", \"滎荥\", \"滗潷\", \"滚滾\", \"滞滯\", \"滠灄\", \"满滿\", \"滢瀅\", \"滤濾\", \"滥濫\", \"滦灤\", \"滨濱\", \"滩灘\", \"潁颍\", \"潆瀠\", \"潇瀟\", \"潋瀲\", \"潍濰\", \"潛潜\", \"澜瀾\", \"淀澱\", \"濑瀨\", \"濒瀕\", \"灏灝\", \"灯燈\", \"灵靈\", \"災灾\", \"灿燦\", \"炀煬\", \"炉爐\", \"炖燉\", \"炜煒\", \"炝熗\", \"点點\", \"炼煉\", \"炽熾\", \"烁爍\", \"烂爛\", \"烃烴\", \"烛燭\", \"烟煙\", \"烦煩\", \"烧燒\", \"烨燁\", \"烩燴\", \"烫燙\", \"烬燼\", \"热熱\", \"焕煥\", \"焖燜\", \"焘燾\", \"煢茕\", \"熒荧\", \"焰燄\", \"燐磷\", \"營营\", \"爷爺\", \"牍牘\", \"牪瘪癟\", \"牵牽\", \"牺犧\", \"犊犢\", \"犖荦\", \"犁犛\", \"状狀\", \"犷獷\", \"犹猶\", \"狈狽\", \"狞獰\", \"独獨\", \"狭狹\", \"狮獅\", \"狯獪\", \"狰猙\", \"狱獄\", \"狲猻\", \"狸貍\", \"猃獫\", \"猎獵\", \"猕獮獼\", \"猡玀\", \"猪豬\", \"猫貓\", \"献獻\", \"獭獺\", \"獲穫获\", \"玑璣\", \"玛瑪\", \"玨珏\", \"玮瑋\", \"环環\", \"现現\", \"玺璽\", \"珐琺\", \"珑瓏\", \"佩珮\", \"珲琿\", \"琅瑯\", \"琏璉\", \"琐瑣\", \"琼瓊\", \"瑤瑶\", \"瑩莹\", \"瑷璦\", \"璎瓔\", \"瓒瓚\", \"瓖鑲镶\", \"瓮甕\", \"瓯甌\", \"电電\", \"画畫\", \"畬畲\", \"畴疇\", \"疖癤\", \"疗療\", \"疟瘧\", \"疠癘\", \"疡瘍\", \"疮瘡\", \"疯瘋\", \"疱皰\", \"疿痱\", \"症癥\", \"痉痙\", \"痒癢\", \"痠酸\", \"痨癆\", \"痪瘓\", \"痫癇\", \"痲痳麻\", \"痴癡\", \"痹痺\", \"瘅癉\", \"瘗瘞\", \"瘘瘺\", \"瘫癱\", \"瘾癮\", \"瘿癭\", \"癞癩\", \"癣癬\", \"癫癲\", \"皑皚\", \"皱皺\", \"皲皸\", \"皻隳\", \"盏盞\", \"盐鹽\", \"监監鑑\", \"盖蓋\", \"盗盜\", \"盪荡蕩\", \"眥眦\", \"眯瞇\", \"着著\", \"睁睜\", \"睃脧\", \"困睏\", \"睐睞\", \"睑瞼\", \"睪睾\", \"瞒瞞\", \"瞩矚\", \"矫矯\", \"矶磯\", \"矾礬\", \"矿礦\", \"砀碭\", \"码碼\", \"砖磚\", \"砗硨\", \"砚硯\", \"炮砲\", \"砺礪\", \"砻礱\", \"砾礫\", \"础礎\", \"朱硃\", \"硕碩\", \"硖硤\", \"硗磽\", \"确確\", \"硷鹼\", \"碍礙\", \"碛磧\", \"碜磣\", \"礼禮\", \"祅祆\", \"只祇衹隻\", \"佑祐\", \"祕秘\", \"祢禰\", \"祯禎\", \"祷禱\", \"祸禍\", \"祿禄\", \"禀稟\", \"禅禪\", \"御禦\", \"离離\", \"禿秃\", \"秆稈\", \"秈籼\", \"种種\", \"称稱\", \"秽穢\", \"稅税\", \"棱稜\", \"稣穌\", \"稳穩\", \"穀谷\", \"穎颖\", \"穑穡\", \"穷窮\", \"窃竊\", \"窍竅\", \"窑窯\", \"窜竄\", \"窝窩\", \"窥窺\", \"窦竇\", \"洼窪\", \"窭窶\", \"竖豎\", \"竞競\", \"笃篤\", \"笋筍\", \"笔筆\", \"笕筧\", \"笺箋\", \"笻筇\", \"笼籠\", \"笾籩\", \"筚篳\", \"筛篩\", \"筝箏\", \"筹籌\", \"签簽籤\", \"简簡\", \"箄箅\", \"箦簀\", \"箧篋\", \"箨籜\", \"箩籮\", \"箪簞\", \"箫簫\", \"節节\", \"範范\", \"筑築\", \"篑簣\", \"篓簍\", \"筱篠\", \"篮籃\", \"篱籬\", \"簑蓑\", \"簖籪\", \"檐簷\", \"籁籟\", \"籐藤\", \"籥龠\", \"吁籲\", \"籴糴\", \"类類\", \"粜糶\", \"粝糲\", \"粤粵\", \"粪糞\", \"粮糧\", \"糁糝\", \"糢饃馍\", \"糾纠\", \"紀纪\", \"紂纣\", \"約约\", \"紅红\", \"紆纡\", \"紇纥\", \"紈纨\", \"紉纫\", \"紋纹\", \"納纳\", \"紐纽\", \"紓纾\", \"純纯\", \"紕纰\", \"紗纱\", \"紙纸\", \"級级\", \"紛纷\", \"紜纭\", \"紡纺\", \"紧緊\", \"細细\", \"紱绂\", \"紲绁\", \"紳绅\", \"紹绍\", \"紺绀\", \"紼绋\", \"紿绐\", \"絀绌\", \"終终\", \"弦絃\", \"組组\", \"絆绊\", \"絎绗\", \"結结\", \"絕绝\", \"絛絳縚绛绦\", \"絞绞\", \"絡络\", \"絢绚\", \"給给\", \"絨绒\", \"統统\", \"絷縶\", \"絹绢\", \"綁绑\", \"綃绡\", \"綆绠\", \"綈绨\", \"綏绥\", \"經经\", \"綜综\", \"綞缍\", \"綠绿\", \"綢绸\", \"綣绻\", \"綬绶\", \"維维\", \"綰绾\", \"綱纲\", \"網网\", \"綴缀\", \"彩綵\", \"綸纶\", \"綹绺\", \"綺绮\", \"綻绽\", \"綽绰\", \"綾绫\", \"綿绵\", \"緄绲\", \"緇缁\", \"緋绯\", \"緒绪\", \"緗缃\", \"緘缄\", \"緙缂\", \"線线\", \"緝缉\", \"緞缎\", \"締缔\", \"緡缗\", \"緣缘\", \"緦缌\", \"編编\", \"緩缓\", \"緬缅\", \"緯纬\", \"緱缑\", \"緲缈\", \"練练\", \"緶缏\", \"緹缇\", \"緻致\", \"縈萦\", \"縉缙\", \"縊缢\", \"縋缒\", \"縐绉\", \"縑缣\", \"縛縳缚\", \"縝缜\", \"縞缟\", \"縟缛\", \"縫缝\", \"縭缡\", \"縮缩\", \"演縯\", \"縱纵\", \"縲缧\", \"縴纖纤\", \"縵缦\", \"縷缕\", \"縹缥\", \"績绩\", \"繃绷\", \"繅缫\", \"繆缪\", \"繈襁\", \"繒缯\", \"織织\", \"繕缮\", \"繚缭\", \"繞绕\", \"繡绣\", \"繢缋\", \"繩绳\", \"繪绘\", \"繭茧\", \"繯缳\", \"繰缲\", \"繳缴\", \"繹绎\", \"繼继\", \"繽缤\", \"繾缱\", \"纈缬\", \"纊纩\", \"續续\", \"累纍\", \"纏缠\", \"纓缨\", \"才纔\", \"纘缵\", \"纜缆\", \"缰韁\", \"缽钵\", \"罂罌\", \"罚罰\", \"罢罷\", \"罴羆\", \"罵骂\", \"羁羈\", \"羋芈\", \"羟羥\", \"羡羨\", \"翘翹\", \"端耑\", \"耧耬\", \"耸聳\", \"聂聶\", \"聋聾\", \"职職\", \"聍聹\", \"联聯\", \"圣聖\", \"聞闻\", \"聩聵\", \"聪聰\", \"肃肅\", \"肠腸\", \"肤膚\", \"肮骯\", \"肾腎\", \"肿腫\", \"胀脹\", \"胁脅\", \"胆膽\", \"胪臚\", \"胫脛\", \"胶膠\", \"脈脉\", \"脍膾\", \"脏臟髒\", \"脐臍\", \"脑腦\", \"脓膿\", \"脔臠\", \"脚腳\", \"唇脣\", \"修脩\", \"脫脱\", \"脶腡\", \"脸臉\", \"腊臘\", \"腻膩\", \"腼靦\", \"腽膃\", \"腾騰\", \"膑臏\", \"舆輿\", \"舣艤\", \"舰艦\", \"舱艙\", \"舻艫\", \"艰艱\", \"艳艷豔\", \"艸艹\", \"艺藝\", \"芐苄\", \"芗薌\", \"芜蕪\", \"芦蘆\", \"芸蕓\", \"苁蓯\", \"苇葦\", \"苈藶\", \"苋莧\", \"苌萇\", \"苍蒼\", \"苎苧\", \"苟茍\", \"苹蘋\", \"茎莖\", \"茏蘢\", \"茑蔦\", \"荆荊\", \"荐薦\", \"荚莢\", \"荛蕘\", \"荜蓽\", \"荞蕎\", \"荟薈\", \"荠薺\", \"荤葷\", \"荨蕁\", \"荩藎\", \"荪蓀\", \"荫蔭\", \"荭葒\", \"药葯藥\", \"莅蒞\", \"莱萊\", \"莲蓮\", \"莳蒔\", \"莴萵\", \"莶薟\", \"莸蕕\", \"莺鶯\", \"庵菴\", \"萝蘿\", \"萤螢\", \"萧蕭\", \"萨薩\", \"葱蔥\", \"蒇蕆\", \"蒉蕢\", \"蒋蔣\", \"蒌蔞\", \"蓝藍\", \"蓟薊\", \"蓠蘺\", \"蓣蕷\", \"蓥鎣\", \"蓦驀\", \"菱蔆\", \"卜蔔\", \"蔷薔\", \"蔹蘞\", \"蔺藺\", \"蔼藹\", \"蕲蘄\", \"蕴蘊\", \"姜薑\", \"槁薧\", \"薮藪\", \"藓蘚\", \"薯藷\", \"蘖蘗\", \"虏虜\", \"虚虛\", \"虫蟲\", \"虮蟣\", \"虽雖\", \"虾蝦\", \"虿蠆\", \"蚀蝕\", \"蚁蟻\", \"蚂螞\", \"蚕蠶\", \"蚝蠔\", \"蚬蜆\", \"蛊蠱\", \"蛎蠣\", \"蛏蟶\", \"蛮蠻\", \"蛰蟄\", \"蛱蛺\", \"蛲蟯\", \"蛳螄\", \"蛴蠐\", \"蛻蜕\", \"蜗蝸\", \"蜡蠟\", \"蝇蠅\", \"蝈蟈\", \"蝉蟬\", \"蝼螻\", \"蝾蠑\", \"衅釁\", \"蔑衊\", \"补補\", \"衬襯\", \"衮袞\", \"袄襖\", \"袜襪\", \"袭襲\", \"装裝\", \"裆襠\", \"裢褳\", \"裣襝\", \"裤褲\", \"制製\", \"褛褸\", \"褴襤\", \"核覈\", \"見见\", \"規规\", \"覓觅\", \"視视\", \"覘觇\", \"覡觋\", \"覦觎\", \"覬觊\", \"覯觏\", \"覲觐\", \"覷觑\", \"覺觉\", \"覽览\", \"覿觌\", \"觀观\", \"筋觔\", \"觞觴\", \"触觸\", \"觯觶\", \"訂订\", \"訃讣\", \"計计\", \"訊讯\", \"訌讧\", \"討讨\", \"訐讦\", \"訓训\", \"訕讪\", \"訖讫\", \"托託\", \"記记\", \"訛讹\", \"訝讶\", \"訟讼\", \"欣訢\", \"訣诀\", \"訥讷\", \"訪访\", \"設设\", \"許许\", \"訴诉\", \"訶诃\", \"診诊\", \"注註\", \"証證证\", \"詁诂\", \"詆诋\", \"詎讵\", \"詐诈\", \"詒诒\", \"詔诏\", \"評评\", \"詘诎\", \"詛诅\", \"詞词\", \"詡诩\", \"詢询\", \"詣诣\", \"試试\", \"詩诗\", \"詫诧\", \"詬诟\", \"詭诡\", \"詮诠\", \"詰诘\", \"話话\", \"該该\", \"詳详\", \"詵诜\", \"詼诙\", \"詿诖\", \"誄诔\", \"誅诛\", \"誆诓\", \"夸誇\", \"誉譽\", \"誊謄\", \"志誌\", \"認认\", \"誑诳\", \"誒诶\", \"誕诞\", \"誘诱\", \"誚诮\", \"語语\", \"誠诚\", \"誡诫\", \"誣诬\", \"誤误\", \"誥诰\", \"誦诵\", \"誨诲\", \"說说\", \"誰谁\", \"課课\", \"誶谇\", \"誹诽\", \"誼谊\", \"調调\", \"諂谄\", \"諄谆\", \"談谈\", \"諉诿\", \"請请\", \"諍诤\", \"諏诹\", \"諑诼\", \"諒谅\", \"論论\", \"諗谂\", \"諛谀\", \"諜谍\", \"諞谝\", \"諢诨\", \"諤谔\", \"諦谛\", \"諧谐\", \"諫谏\", \"諭谕\", \"諮谘\", \"諱讳\", \"諳谙\", \"諶谌\", \"諷讽\", \"諸诸\", \"諺谚\", \"諼谖\", \"諾诺\", \"謀谋\", \"謁谒\", \"謂谓\", \"謅诌\", \"謊谎\", \"謎谜\", \"謐谧\", \"謔谑\", \"謖谡\", \"謗谤\", \"謙谦\", \"謚谥\", \"講讲\", \"謝谢\", \"謠谣\", \"謨谟\", \"謫谪\", \"謬谬\", \"謳讴\", \"謹谨\", \"謾谩\", \"譎谲\", \"譏讥\", \"譖谮\", \"識识\", \"譙谯\", \"譚谭\", \"譜谱\", \"噪譟\", \"譫谵\", \"譯译\", \"議议\", \"譴谴\", \"讀读\", \"讎雠\", \"讒谗\", \"讓让\", \"讕谰\", \"讖谶\", \"讚贊赞\", \"讜谠\", \"讞谳\", \"貝贝\", \"貞贞\", \"負负\", \"財财\", \"貢贡\", \"貧贫\", \"貨货\", \"販贩\", \"貪贪\", \"貫贯\", \"責责\", \"貯贮\", \"貰贳\", \"貲赀\", \"貳贰\", \"貴贵\", \"貶贬\", \"貸贷\", \"貺贶\", \"費费\", \"貼贴\", \"貽贻\", \"貿贸\", \"賀贺\", \"賁贲\", \"賂赂\", \"賃赁\", \"賄贿\", \"賅赅\", \"資资\", \"賈贾\", \"賊贼\", \"賑赈\", \"賒赊\", \"賕赇\", \"賚赉\", \"賜赐\", \"賞赏\", \"賠赔\", \"賡赓\", \"賢贤\", \"賤贱\", \"賦赋\", \"賧赕\", \"質质\", \"賬账\", \"賭赌\", \"賴赖\", \"賺赚\", \"賻赙\", \"購购\", \"賽赛\", \"賾赜\", \"贄贽\", \"贅赘\", \"贈赠\", \"贍赡\", \"贏赢\", \"贐赆\", \"贓赃\", \"贖赎\", \"贗赝\", \"贛赣\", \"赵趙\", \"赶趕\", \"趋趨\", \"趱趲\", \"趸躉\", \"跃躍\", \"跄蹌\", \"跞躒\", \"跡迹\", \"践踐\", \"跷蹺\", \"跸蹕\", \"跹躚\", \"跻躋\", \"踊踴\", \"踌躊\", \"蜷踡\", \"踪蹤\", \"碰踫\", \"踬躓\", \"踯躑\", \"蹑躡\", \"蹒蹣\", \"跖蹠\", \"蹰躕\", \"蹿躥\", \"躏躪\", \"躜躦\", \"躯軀\", \"車车\", \"軋轧\", \"軌轨\", \"軒轩\", \"軔轫\", \"軛轭\", \"軟软\", \"軫轸\", \"軸轴\", \"軹轵\", \"軺轺\", \"軻轲\", \"軼轶\", \"軾轼\", \"較较\", \"輅辂\", \"輇辁\", \"載载\", \"輊轾\", \"輒辄\", \"挽輓\", \"輔辅\", \"輕轻\", \"輛辆\", \"輜辎\", \"輝辉\", \"輞辋\", \"輟辍\", \"輥辊\", \"輦辇\", \"輩辈\", \"輪轮\", \"輯辑\", \"輳辏\", \"輸输\", \"輻辐\", \"輾辗\", \"轄辖\", \"轅辕\", \"轆辘\", \"轉转\", \"轍辙\", \"轎轿\", \"轔辚\", \"轟轰\", \"轡辔\", \"轢轹\", \"轤轳\", \"辞辭\", \"辩辯\", \"辫辮\", \"边邊\", \"辽遼\", \"达達\", \"迁遷\", \"迆迤\", \"过過\", \"迈邁\", \"运運\", \"还還\", \"这這\", \"进進\", \"远遠\", \"违違\", \"连連\", \"迟遲\", \"迩邇\", \"迳逕\", \"回迴\", \"乃迺\", \"适適\", \"选選\", \"逊遜\", \"递遞\", \"逦邐\", \"周週\", \"逻邏\", \"游遊\", \"遗遺\", \"遙遥\", \"邓鄧\", \"邝鄺\", \"邬鄔\", \"邮郵\", \"邹鄒\", \"邺鄴\", \"邻鄰\", \"合郃閤\", \"郏郟\", \"郐鄶\", \"郑鄭\", \"郓鄆\", \"郦酈\", \"郧鄖\", \"郸鄲\", \"酝醞\", \"酱醬\", \"酽釅\", \"酾釃\", \"酿釀\", \"腌醃\", \"丑醜\", \"释釋\", \"厘釐\", \"釓钆\", \"釔钇\", \"釕钌\", \"釗钊\", \"釘钉\", \"釙钋\", \"針针\", \"釣钓\", \"釤钐\", \"扣釦\", \"釧钏\", \"釩钒\", \"釬钎\", \"釵钗\", \"釷钍\", \"釹钕\", \"鈀钯\", \"鈁钫\", \"鈄钭\", \"鈉钠\", \"鈍钝\", \"鈐钤\", \"鈑钣\", \"鈔钞\", \"鈕钮\", \"鈞钧\", \"鈣钙\", \"鈥钬\", \"鈦钛\", \"鈧钪\", \"鈮铌\", \"鈰铈\", \"鈳钶\", \"鈴铃\", \"鈷钴\", \"鈸钹\", \"鈹铍\", \"鈺钰\", \"鈽钸\", \"鈾铀\", \"鈿钿\", \"鉀钾\", \"鉅钜\", \"鉆鑽钻\", \"鉈铊\", \"鉉铉\", \"刨鉋鑤\", \"鉍铋\", \"鉑铂\", \"鉗钳\", \"鉚铆\", \"鉛铅\", \"鉤钩\", \"鉦钲\", \"鉬钼\", \"鉭鐽钽\", \"鉴鑒\", \"鉸铰\", \"鉺铒\", \"鉻铬\", \"鉿铪\", \"銀银\", \"銃铳\", \"銅铜\", \"銑鐉铣\", \"銓铨\", \"銖铢\", \"銘铭\", \"銚铫\", \"銠铑\", \"銣铷\", \"銥铱\", \"銦铟\", \"銨铵\", \"銩铥\", \"銪铕\", \"銫铯\", \"銬铐\", \"銮鑾\", \"焊銲\", \"銳锐\", \"銷销\", \"銹鏽锈\", \"銻锑\", \"銼锉\", \"鋁铝\", \"鋃锒\", \"鋅锌\", \"鋇钡\", \"鋌铤\", \"鋏铗\", \"鋒锋\", \"鋝锊\", \"鋟锓\", \"鋤锄\", \"鋦锔\", \"鋨锇\", \"鋪铺\", \"鋮铖\", \"鋯锆\", \"鋰锂\", \"鋱铽\", \"鋸锯\", \"鋼钢\", \"錁锞\", \"錆锖\", \"錈锩\", \"錐锥\", \"錒锕\", \"錕锟\", \"錘锤\", \"錙锱\", \"錚铮\", \"錛锛\", \"錟锬\", \"錠锭\", \"錢钱\", \"錦锦\", \"錨锚\", \"錫锡\", \"錮锢\", \"錯错\", \"錳锰\", \"表錶\", \"錸铼\", \"錾鏨\", \"鍆钔\", \"鍇锴\", \"鍊鏈链\", \"鍋锅\", \"鍍镀\", \"鍔锷\", \"鍘铡\", \"鍛锻\", \"鍤锸\", \"鍥锲\", \"鍬锹\", \"鍰锾\", \"鍵键\", \"鍶锶\", \"鍺锗\", \"鍾锺\", \"鎂镁\", \"鎊镑\", \"熔鎔\", \"鎖锁\", \"鎘镉\", \"鎢钨\", \"鎦镏\", \"鎧铠\", \"鎩铩\", \"鎪锼\", \"鎬镐\", \"鎮镇\", \"鎰镒\", \"鎳镍\", \"鎵镓\", \"鏃镞\", \"鏇镟\", \"鏌镆\", \"鏍镙\", \"鏑镝\", \"鏗铿\", \"鏘锵\", \"鏜镗\", \"鏝镘\", \"鏞镛\", \"鏡镜\", \"鏢镖\", \"鏤镂\", \"鏵铧\", \"鏷镤\", \"鏹镪\", \"鐃铙\", \"鐋铴\", \"鐐镣\", \"鐒铹\", \"鐓镦\", \"鐔镡\", \"鐘钟\", \"鐙镫\", \"鐠镨\", \"鐨镄\", \"鐫镌\", \"鐮镰\", \"鐲镯\", \"鐳镭\", \"鐵铁\", \"鐸铎\", \"鐺铛\", \"鐿镱\", \"鑄铸\", \"鑊镬\", \"鑌镔\", \"鑠铄\", \"鑣镳\", \"鑭镧\", \"鑰钥\", \"鑷镊\", \"鑼锣\", \"長长\", \"門门\", \"閂闩\", \"閃闪\", \"閆闫\", \"閉闭\", \"閌闶\", \"閎闳\", \"閏闰\", \"閑閒闲\", \"間间\", \"閔闵\", \"閘闸\", \"閡阂\", \"閣阁\", \"閥阀\", \"閨闺\", \"閩闽\", \"閫阃\", \"閬阆\", \"閭闾\", \"閱阅\", \"閶阊\", \"閹阉\", \"閻阎\", \"閼阏\", \"閽阍\", \"閾阈\", \"閿阌\", \"闃阒\", \"板闆\", \"闈闱\", \"闊阔\", \"闋阕\", \"闌阑\", \"闐阗\", \"闔阖\", \"闕阙\", \"闖闯\", \"闞阚\", \"闡阐\", \"辟闢\", \"闥闼\", \"闹鬧\", \"阄鬮\", \"阋鬩\", \"队隊\", \"厄阨\", \"址阯\", \"阴陰\", \"阵陣\", \"阶階\", \"际際\", \"陆陸\", \"陇隴\", \"陈陳\", \"陉陘\", \"陕陜陝\", \"陧隉\", \"陨隕\", \"险險\", \"堤隄\", \"随隨\", \"隐隱\", \"隶隸\", \"隽雋\", \"难難\", \"雏雛\", \"雞鸡\", \"云雲\", \"雳靂\", \"雾霧\", \"霁霽\", \"沾霑\", \"溜霤\", \"霭靄\", \"靓靚\", \"静靜\", \"靥靨\", \"鞑韃\", \"秋鞦\", \"鞯韉\", \"千韆\", \"韋韦\", \"韌韧\", \"韓韩\", \"韙韪\", \"韜韬\", \"韞韫\", \"韵韻\", \"頁页\", \"頂顶\", \"頃顷\", \"項项\", \"順顺\", \"頇顸\", \"須须鬚\", \"頊顼\", \"頌颂\", \"頎颀\", \"頏颃\", \"預预\", \"頑顽\", \"頒颁\", \"頓顿\", \"頗颇\", \"領领\", \"頜颌\", \"頡颉\", \"頤颐\", \"頦颏\", \"頰颊\", \"頷颔\", \"頸颈\", \"頹颓\", \"頻频\", \"顆颗\", \"題题\", \"額额\", \"顎颚\", \"顏颜\", \"顓颛\", \"愿願\", \"顙颡\", \"顛颠\", \"顢颟\", \"顥颢\", \"顧顾\", \"顫颤\", \"顰颦\", \"顱颅\", \"顳颞\", \"顴颧\", \"風风\", \"颮飑\", \"颯飒\", \"刮颳\", \"颶飓\", \"颼飕\", \"飄飘\", \"飆飙\", \"飛飞\", \"飢饑饥\", \"飨饗\", \"飩饨\", \"飪饪\", \"飫饫\", \"飭饬\", \"飯饭\", \"飲饮\", \"飴饴\", \"飼饲\", \"飽饱\", \"飾饰\", \"餃饺\", \"餅饼\", \"餉饷\", \"餌饵\", \"餍饜\", \"餑饽\", \"餒馁\", \"餓饿\", \"余餘\", \"肴餚\", \"餛馄\", \"餞饯\", \"餡馅\", \"館馆\", \"餳饧\", \"喂餵\", \"餼饩\", \"餽饋馈\", \"餾馏\", \"餿馊\", \"饅馒\", \"饈馐\", \"饉馑\", \"饌馔\", \"饒饶\", \"饞馋\", \"馬马\", \"馭驭\", \"馱驮\", \"馳驰\", \"馴驯\", \"駁驳\", \"駐驻\", \"駑驽\", \"駒驹\", \"駔驵\", \"駕驾\", \"駘骀\", \"駙驸\", \"駛驶\", \"駝驼\", \"駟驷\", \"駢骈\", \"駭骇\", \"駱骆\", \"駿骏\", \"騁骋\", \"騅骓\", \"騍骒\", \"騎骑\", \"騏骐\", \"騖骛\", \"騙骗\", \"騫骞鶱\", \"騭骘\", \"騮骝\", \"騶驺\", \"騷骚\", \"騸骟\", \"騾骡\", \"驁骜\", \"驂骖\", \"驃骠\", \"驄骢\", \"驅驱\", \"驊骅\", \"驍骁\", \"驏骣\", \"驕骄\", \"驗验\", \"驛驿\", \"驟骤\", \"驢驴\", \"驤骧\", \"驥骥\", \"驪骊\", \"髅髏\", \"髋髖\", \"髌髕\", \"松鬆\", \"胡鬍\", \"鬓鬢\", \"斗鬥\", \"哄鬨\", \"郁鬱\", \"魇魘\", \"魉魎\", \"魚鱼\", \"魯鲁\", \"魴鲂\", \"魷鱿\", \"鮐鲐\", \"鮑鲍\", \"鮒鲋\", \"鮚鲒\", \"鮞鲕\", \"鮪鲔\", \"鮫鲛\", \"鮭鲑\", \"鮮鲜\", \"鯀鲧\", \"鯁鲠\", \"鯇鲩\", \"鯉鲤\", \"鯊鲨\", \"鯔鲻\", \"鯖鲭\", \"鯛鲷\", \"鯡鲱\", \"鯢鲵\", \"鯤鲲\", \"鯧鲳\", \"鯨鲸\", \"鯪鲮\", \"鯫鲰\", \"鯰鲶\", \"鯽鲫\", \"鰈鲽\", \"鰉鳇\", \"鰍鳅\", \"鰒鳆\", \"鰓鳃\", \"鰣鲥\", \"鰥鳏\", \"鰨鳎\", \"鰩鳐\", \"鰭鳍\", \"鰱鲢\", \"鰲鳌鼇\", \"鰳鳓\", \"鰷鲦\", \"鰹鲣\", \"鰻鳗\", \"鰾鳔\", \"鱈鳕\", \"鱉鳖\", \"鱒鳟\", \"鱔鳝\", \"鱖鳜\", \"鱗鳞\", \"鱘鲟\", \"鱟鲎\", \"鱧鳢\", \"鱭鲚\", \"鱷鳄\", \"鱸鲈\", \"鱺鲡\", \"鳥鸟\", \"鳩鸠\", \"鳴鸣\", \"鳶鸢\", \"鴆鸩\", \"鴇鸨\", \"鴉鸦\", \"鴕鸵\", \"鴛鸳\", \"鴝鸲\", \"鴟鸱\", \"鴣鸪\", \"鴦鸯\", \"鴨鸭\", \"鴯鸸\", \"鴰鸹\", \"鴻鸿\", \"鴿鸽\", \"鵂鸺\", \"鵑鹃\", \"鵒鹆\", \"鵓鹁\", \"鵜鹈\", \"鵝鹅\", \"鵠鹄\", \"鵡鹉\", \"鵪鹌\", \"鵬鹏\", \"鵯鹎\", \"鵲鹊\", \"鶇鸫\", \"鶉鹑\", \"鶘鹕\", \"鶚鹗\", \"鶩鹜\", \"鶴鹤\", \"鶻鹘\", \"鶼鹣\", \"鶿鹚\", \"鷂鹞\", \"鷓鹧\", \"鷗鸥\", \"鷙鸷\", \"鷚鹨\", \"鷥鸶\", \"鷦鹪\", \"鷯鹩\", \"鷲鹫\", \"鷳鷴鹇\", \"鷸鹬\", \"鷹鹰\", \"鷺鹭\", \"鸕鸬\", \"鸚鹦\", \"鸛鹳\", \"鸝鹂\", \"鸞鸾\", \"咸鹹\", \"鹺鹾\", \"麥麦\", \"麩麸\", \"麼麽\", \"黃黄\", \"黉黌\", \"黩黷\", \"黪黲\", \"霉黴\", \"黽黾\", \"黿鼋\", \"鼉鼍\", \"冬鼕\", \"鼴鼹\", \"齊齐\", \"齏齑\", \"齒齿\", \"齔龀\", \"齙龅\", \"齜龇\", \"齟龃\", \"齠龆\", \"齡龄\", \"出齣\", \"齦龈\", \"齪龊\", \"齬龉\", \"齲龋\", \"齷龌\", \"龍龙\", \"龔龚\", \"龕龛\", \"龜龟\", \"乾干幹榦\", \"面麵\", \"台檯臺颱\", \"浬裏裡里\"];\n    const variants = new Map();\n    for (const group of groups) for (const ch of group) variants.set(ch, group);\n    const escape = s => s.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');\n    return Array.from(text, ch => variants.has(ch) ? '[' + variants.get(ch) + ']' : escape(ch)).join('');\n}\n\nconst q = msg.req.query || {};\nconst mode = q.mode || 'history';\nconst code = String(q.productCode || '').trim();\nconst merchants = ['AEON', 'DCHFOOD', 'JASONS', 'LUNGFUNG', 'MANNINGS', 'PARKNSHOP', 'SASA', 'WATSONS', 'WELLCOME'];\nconst fail = s => { msg.statusCode = 400; msg.payload = { error: s }; return [null, msg] };\nif (!['history', 'search', 'advantage', 'categories'].includes(mode)) return fail('Unknown query');\nif (mode === 'history' && !/^P[0-9]{1,20}$/.test(code)) return fail('Enter a valid product code, such as P000003984');\nif (mode === 'advantage' && (!merchants.includes(q.a) || !merchants.includes(q.b) || q.a === q.b)) return fail('Choose two different merchants');\nlet match = { schemaVersion: 1, status: 'success' };\nif (q.start || q.end) { match.collectedAt = {}; for (const k of ['start', 'end']) if (q[k]) { if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(q[k])) return fail('Invalid date format'); const d = new Date(q[k] + 'T00:00:00+08:00'); if (!Number.isFinite(+d) || new Date(+d + 28800000).toISOString().slice(0, 10) !== q[k]) return fail('Invalid date'); match.collectedAt[k === 'start' ? '$gte' : '$lt'] = k === 'end' ? new Date(+d + 86400000) : d; } }\nif (q.start && q.end && q.start > q.end) return fail('Start date must not follow end date');\nlet filter = { schemaVersion: 1, $expr: { $eq: ['$batchId', '$$batch'] } };\nif (mode === 'history') filter.productCode = code;\nif (mode === 'advantage') { filter.merchantCode = { $in: [q.a, q.b] }; if (q.category) filter.category1 = String(q.category); }\nif (mode === 'search') { if (q.category) filter.category1 = String(q.category); const term = chineseSearchPattern(String(q.keyword || '').slice(0, 80).trim()); filter.$or = ['name', 'nameEn', 'brand', 'brandEn', 'productCode'].map(k => ({ [k]: { $regex: term, $options: 'i' } })); }\n/** @type {any[]} */\nlet pipeline = [{ $match: match }, { $sort: { collectedAt: ['search', 'categories'].includes(mode) ? -1 : 1, _id: ['search', 'categories'].includes(mode) ? -1 : 1 } }];\nif (['search', 'categories'].includes(mode)) pipeline.push({ $limit: 1 });\n/** @type {any[]} */\nlet inner = [{ $match: filter }, { $project: { _id: 0, productCode: 1, name: 1, nameEn: 1, brand: 1, brandEn: 1, merchantCode: 1, price: 1, category1: 1 } }];\nif (mode === 'search') inner.push({ $group: { _id: '$productCode', name: { $first: '$name' }, nameEn: { $first: '$nameEn' }, brand: { $first: '$brand' }, brandEn: { $first: '$brandEn' } } }, { $sort: { _id: 1 } }, { $limit: 51 });\nif (mode === 'categories') inner = [{ $match: filter }, { $group: { _id: '$category1' } }, { $match: { _id: { $nin: [null, ''] } } }, { $sort: { _id: 1 } }];\npipeline.push({ $lookup: { from: 'pricewatch_history', let: { batch: '$batchId' }, pipeline: inner, as: 'quotes' } }, { $project: { _id: 0, batchId: 1, collectedAt: 1, quotes: 1 } });\nmsg.cQuery = { mode, code, a: q.a, b: q.b }; msg.payload = [pipeline]; return [msg, null];",
+    "outputs": 2,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 350,
+    "y": 100,
+    "wires": [
+      [
+        "c7503mongo0000001"
+      ],
+      [
+        "c7503response0001"
+      ]
+    ]
+  },
+  {
+    "id": "c7503mongo0000001",
+    "type": "mongodb4",
+    "z": "012ae38f59630bef",
+    "clientNode": "c8afa8ba5a79152e",
+    "mode": "collection",
+    "collection": "pricewatch_batches",
+    "operation": "aggregate",
+    "output": "toArray",
+    "maxTimeMS": "0",
+    "handleDocId": false,
+    "name": "C_Read Successful History",
+    "x": 600,
+    "y": 100,
+    "wires": [
+      [
+        "c7503analyse00001"
+      ]
+    ]
+  },
+  {
+    "id": "c7503analyse00001",
+    "type": "function",
+    "z": "012ae38f59630bef",
+    "name": "C_Analyse",
+    "func": "// Display-only normalization following A's shared naming rule.\nfunction displayName(name, brand) {\n    name = typeof name === 'string' ? name.trim() : '';\n    brand = typeof brand === 'string' ? brand.trim() : '';\n    const unit = /^(?:\\(\\s*(?:每個|每个|每件|每包|each\\s*pc|each|per\\s*pc)\\s*\\)|（\\s*(?:每個|每个|每件|每包)\\s*）)/i;\n    return unit.test(name) && brand && !name.includes(brand) ? brand + ' ' + name : name;\n}\nconst batches = msg.payload || [], q = msg.cQuery;\nfor (const batch of batches) {\n    batch.quotes = (batch.quotes || []).map(row => ({...row,\n        name: displayName(row.name, row.brand),\n        nameEn: displayName(row.nameEn, row.brandEn)}));\n}\nconst cents = p => typeof p === 'number' && Number.isFinite(p) && p > 0 ? Math.round(p * 100) : null;\nconst day = t => new Date(t).toLocaleDateString('en-CA', { timeZone: 'Asia/Hong_Kong' });\nlet result = { mode: q.mode, batches: batches.map(b => ({ batchId: b.batchId, time: b.collectedAt })), note: 'Successful collections only. Dates show Hong Kong collection times, which may differ from source update times.' };\nif (q.mode === 'search' || q.mode === 'categories') result.items = batches[0]?.quotes || [];\nelse if (q.mode === 'history') {\n    const names = [...new Set(batches.flatMap(b => b.quotes.map(r => r.merchantCode)))].sort();\n    result.nameEn = batches.flatMap(b => b.quotes)[0]?.nameEn || ''; result.name = batches.flatMap(b => b.quotes)[0]?.name || ''; result.productCode = q.code;\n    result.series = names.map(merchant => {\n        const points = batches.map(b => ({ time: b.collectedAt, batchId: b.batchId, price: cents(b.quotes.find(r => r.merchantCode === merchant)?.price) }));\n        const valid = points.filter(p => p.price !== null), last = valid.at(-1), prev = valid.at(-2), min = valid.length ? Math.min(...valid.map(p => p.price)) : null;\n        return { merchant, points, observations: valid.length, min, last, previous: prev, drop: last && prev ? prev.price - last.price : null, dropPercent: last && prev ? (prev.price - last.price) / prev.price * 100 : null, gap: last ? last.price - min : null };\n    });\n} else {\n    const maps = batches.map(b => { const m = new Map(); for (const r of b.quotes) { const p = cents(r.price); if (p === null) continue; if (!m.has(r.productCode)) m.set(r.productCode, {}); m.get(r.productCode)[r.merchantCode] = p; } return m; });\n    const sample = maps.length ? [...maps[0].keys()].filter(code => maps.every(m => m.get(code)?.[q.a] != null && m.get(code)?.[q.b] != null)) : [];\n    result.sampleSize = sample.length; result.a = q.a; result.b = q.b;\n    result.periods = batches.map((b, i) => { let a = 0, equal = 0, bb = 0; for (const code of sample) { const v = maps[i].get(code); if (v[q.a] < v[q.b]) a++; else if (v[q.a] > v[q.b]) bb++; else equal++; } return { time: b.collectedAt, a, b: bb, equal }; });\n    result.warning = batches.length < 2 ? 'Too few batches to assess persistence.' : sample.length < 10 ? 'Fewer than 10 products in the fixed sample; interpret with caution.' : '';\n}\nmsg.payload = result; msg.headers = { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' }; return msg;\n",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 820,
+    "y": 100,
+    "wires": [
+      [
+        "c7503response0001"
+      ]
+    ]
+  },
+  {
+    "id": "c7503response0001",
+    "type": "http response",
+    "z": "012ae38f59630bef",
+    "name": "C_Response",
+    "statusCode": "",
+    "headers": {},
+    "x": 1050,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "c7503catch0000001",
+    "type": "catch",
+    "z": "012ae38f59630bef",
+    "name": "C_Query Errors",
+    "scope": [
+      "c7503query0000001",
+      "c7503mongo0000001",
+      "c7503analyse00001"
+    ],
+    "uncaught": false,
+    "x": 350,
+    "y": 220,
+    "wires": [
+      [
+        "c7503error0000001"
+      ]
+    ]
+  },
+  {
+    "id": "c7503error0000001",
+    "type": "function",
+    "z": "012ae38f59630bef",
+    "name": "C_Error Response",
+    "func": "msg.statusCode = 500; msg.payload = { error: 'History query failed. Please retry or check the database connection.' }; return msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 650,
+    "y": 220,
+    "wires": [
+      [
+        "c7503response0001"
+      ]
+    ]
+  },
+  {
+    "id": "c7503template001",
+    "type": "ui-template",
+    "z": "012ae38f59630bef",
+    "group": "c7503historygroup",
+    "page": "",
+    "ui": "",
+    "name": "C_History Dashboard",
+    "order": 1,
+    "width": 12,
+    "height": 0,
+    "head": "",
+    "format": "<template>\n<section class=\"pw-c\"><h1>Price History</h1><p>Explore collected prices and merchant advantages over time.</p>\n<nav class=\"pw-c-tabs\" aria-label=\"History views\"><button @click=\"tab='history'\" :aria-pressed=\"tab==='history'\">Product history</button><button @click=\"tab='trends'\" :aria-pressed=\"tab==='trends'\">Merchant trends</button></nav>\n<div v-show=\"tab==='history'\">\n<div class=\"pw-c-find\">\n<form @submit.prevent=\"search\"><label>Category<select v-model=\"productCategory\" @change=\"changeCategory\"><option value=\"\">All categories</option><option v-for=\"c in categories\" :value=\"c._id\">{{categoryLabel(c._id)}}</option></select></label><label>Search by name<input v-model=\"keyword\" placeholder=\"Name, keyword or product code\"></label><button>Search</button></form>\n<form @submit.prevent=\"choose(code)\"><label>Find by product code<input v-model=\"code\" placeholder=\"P000003984\"></label><button>View history</button></form>\n</div>\n<p>Search covers the latest successful collection. Showing up to 50 products; narrow the category or keyword if more results are available.</p>\n<p role=\"status\">{{states.search}}</p>\n<select v-if=\"items.length>1\" v-model=\"candidate\" @change=\"choose(candidate)\" aria-label=\"Choose a product\"><option disabled value=\"\">Choose a product</option><option v-for=\"i in items\" :value=\"i._id\">{{i.nameEn || i.name}} · {{i._id}}</option></select>\n<h2 v-if=\"selectedCode\">{{productName || 'Selected product'}} <button type=\"button\" class=\"pw-fav-star\" :disabled=\"!favoriteReady || !data || !data.series.length\" :aria-pressed=\"favoriteSaved\" :aria-label=\"favoriteSaved ? 'Remove from favorites' : 'Save to favorites'\" @click=\"toggleFavorite\">{{favoriteSaved ? '★' : '☆'}}</button><small>{{selectedCode}}</small></h2><p role=\"alert\" v-if=\"favoriteError\">{{favoriteError}}</p><p v-if=\"data &amp;&amp; data.name &amp;&amp; data.name!==productName\">{{data.name}}</p>\n<form @submit.prevent=\"history\"><label>Start date<input type=\"date\" v-model=\"start\"></label><label>End date<input type=\"date\" v-model=\"end\"></label><button :disabled=\"!selectedCode\">Apply dates</button><button type=\"button\" @click=\"allDates\" :disabled=\"!selectedCode\">All dates</button></form>\n<p v-if=\"start!==applied.start || end!==applied.end\">Date changes have not been applied.</p>\n<p role=\"status\">{{states.history}}</p>\n<p v-if=\"data\">Applied range: {{range(applied)}}</p>\n<div v-if=\"data\"><p>{{data.note}} {{data.batches.length}} batches. Missing quotes and gaps in calendar coverage break the line. Same-day collections retain separate timestamps.</p>\n<label>Chart merchant <select v-model=\"merchant\"><option v-for=\"s in data.series\" :value=\"s.merchant\">{{s.merchant}}</option></select></label>\n<svg v-if=\"selected && selected.observations\" viewBox=\"0 0 900 260\" role=\"img\" :aria-label=\"merchant+' price history chart'\">\n<line x1=\"60\" y1=\"220\" x2=\"870\" y2=\"220\" stroke=\"#627587\"/><line x1=\"60\" y1=\"20\" x2=\"60\" y2=\"220\" stroke=\"#627587\"/>\n<text x=\"4\" y=\"18\">HKD</text><text x=\"5\" y=\"42\">{{money(maxPrice)}}</text><text x=\"5\" y=\"216\">{{money(minPrice)}}</text>\n<path :d=\"chartPath\" fill=\"none\" stroke=\"#386D83\" stroke-width=\"3\"/>\n<circle v-for=\"p in selected.points.filter(p=>p.price!==null)\" :cx=\"x(p.time)\" :cy=\"y(p.price)\" r=\"4\" fill=\"#386D83\"><title>{{date(p.time)}} — HKD {{money(p.price)}}</title></circle>\n<text x=\"60\" y=\"245\">{{date(data.batches[0]?.time)}}</text><text x=\"870\" y=\"245\" text-anchor=\"end\">{{date(data.batches.at(-1)?.time)}}</text></svg>\n<div class=\"pw-c-scroll\"><table><thead><tr><th>Merchant</th><th>Valid quotes</th><th>Period minimum (HKD)</th><th>Latest valid price (HKD)</th><th>Above period minimum (HKD)</th><th>Last two valid quotes: drop</th><th>Comparison dates</th></tr></thead><tbody><tr v-for=\"s in sortedSeries\" :key=\"s.merchant\" :class=\"{'pw-low':s.min!==null &amp;&amp; s.min===lowest,'pw-empty':!s.observations}\"><td><img class=\"pw-logo\" :src=\"'/pricewatch-assets/merchants/'+s.merchant+'.png'\" alt=\"\" @error=\"$event.target.style.display='none'\">{{s.merchant}}<small v-if=\"s.min!==null &amp;&amp; s.min===lowest\"> Lowest in selected period</small></td><td>{{s.observations}}</td><td>{{money(s.min)}}</td><td>{{money(s.last?.price)}}</td><td>{{money(s.gap)}}</td><td>{{s.drop==null?'Insufficient data':s.drop>0?money(s.drop)+' ('+s.dropPercent.toFixed(2)+'%)':s.drop===0?'Unchanged':'Increase '+money(-s.drop)}}</td><td>{{date(s.previous?.time)}} → {{date(s.last?.time)}}</td></tr></tbody></table></div>\n<p>The latest valid quote may precede the latest collection. Minimum prices refer only to the selected period. See the comparison dates.</p>\n<details v-if=\"selected\"><summary>View individual collection records</summary><table><tr v-for=\"p in selected.points\"><td>{{date(p.time)}}</td><td>{{money(p.price)}}</td></tr></table></details></div>\n</div><div v-show=\"tab==='trends'\"><h2>Merchant trends</h2><p>The fixed sample includes products with valid prices at both merchants in every selected batch. Each collection is counted separately.</p>\n<form @submit.prevent=\"advantage\"><label>Merchant A <select v-model=\"a\"><option v-for=\"m in merchants\">{{m}}</option></select></label><label>Merchant B <select v-model=\"b\"><option v-for=\"m in merchants\">{{m}}</option></select></label><label>Category <select v-model=\"category\" aria-label=\"Category\"><option value=\"\">All categories</option><option v-for=\"c in categories\" :value=\"c._id\">{{categoryLabel(c._id)}}</option></select></label><label>Start date<input type=\"date\" v-model=\"trendStart\"></label><label>End date<input type=\"date\" v-model=\"trendEnd\"></label><button>Compare</button><button type=\"button\" @click=\"allTrendDates\">All dates</button></form>\n<p role=\"status\">{{states.advantage}}</p><p v-if=\"trendStart!==trendApplied.start || trendEnd!==trendApplied.end\">Date changes have not been applied.</p><div v-if=\"comparison\"><p>Applied range: {{range(trendApplied)}}</p><p>Fixed sample {{comparison.sampleSize}} products · {{comparison.periods.length}} batches</p><p>{{comparison.warning}}</p><p v-if=\"comparison.periods.length\">Coverage: {{date(comparison.periods[0].time)}} to {{date(comparison.periods.at(-1).time)}}</p><div class=\"pw-c-scroll\"><table><thead><tr><th>Collection time (Hong Kong)</th><th>{{comparison.a}} cheaper</th><th>Equal</th><th>{{comparison.b}} cheaper</th></tr></thead><tbody><tr v-for=\"p in comparison.periods\"><td>{{date(p.time)}}</td><td>{{p.a}} · {{pct(p.a)}}</td><td>{{p.equal}} · {{pct(p.equal)}}</td><td>{{p.b}} · {{pct(p.b)}}</td></tr></tbody></table></div><p>All shares use the same denominator of {{comparison.sampleSize}}. Results represent only this fixed sample.</p></div>\n</div></section>\n</template>\n<script>export default {\ndata(){return {favoriteReady:false,favoriteSaved:false,favoriteError:'',tab:'history',start:'',end:'',trendStart:'',trendEnd:'',applied:{start:'',end:''},trendApplied:{start:'',end:''},keyword:'',code:'',selectedCode:'',productName:'',candidate:'',productCategory:'',items:[],categories:[],data:null,comparison:null,merchant:'',a:'PARKNSHOP',b:'WELLCOME',category:'',states:{search:'',history:'',advantage:'',categories:''},requests:{search:0,history:0,advantage:0,categories:0},merchants:['AEON','DCHFOOD','JASONS','LUNGFUNG','MANNINGS','PARKNSHOP','SASA','WATSONS','WELLCOME']};},computed:{sortedSeries(){return [...(this.data?.series||[])].sort((a,b)=>(Number(b.observations>0)-Number(a.observations>0))||((a.min??Infinity)-(b.min??Infinity))||a.merchant.localeCompare(b.merchant))},lowest(){const values=(this.data?.series||[]).filter(s=>s.min!==null).map(s=>s.min);return values.length?Math.min(...values):null},selected(){return this.data?.series.find(s=>s.merchant===this.merchant)},minPrice(){return Math.min(...(this.selected?.points.filter(p=>p.price!==null).map(p=>p.price)||[0]))},maxPrice(){return Math.max(...(this.selected?.points.filter(p=>p.price!==null).map(p=>p.price)||[0]))},chartPath(){let d='',prev=null;for(const p of this.selected?.points||[]){if(p.price===null){prev=null;continue}const gap=prev?Math.floor((+new Date(p.time)+28800000)/86400000)-Math.floor((+new Date(prev.time)+28800000)/86400000):99;d+=(prev&&gap<=1?' L':' M')+this.x(p.time)+','+this.y(p.price);prev=p;}return d;}},\nmethods:{\nsyncFavorite() {\n    this.favoriteReady = Boolean(window.PriceWatchFavorites);\n    if (!this.favoriteReady) return;\n    try {\n        this.favoriteSaved = this.data ? window.PriceWatchFavorites.has(this.data.productCode) : false;\n        this.favoriteError = '';\n    } catch (error) {\n        this.favoriteReady = false;\n        this.favoriteError = 'Favorites could not be read. Check browser storage and retry.';\n    }\n},\ntoggleFavorite() {\n    if (!this.favoriteReady || !this.data || !this.data.series.length) return;\n    try {\n        window.PriceWatchFavorites.toggle({productCode:this.data.productCode,name:this.productName || this.data.name || this.data.productCode});\n        this.syncFavorite();\n    } catch (error) {\n        this.favoriteError = 'Could not save favorites. Your previous selection has been kept.';\n    }\n},\nmoney(v){return v==null?'No quote':(v/100).toFixed(2)},date(t){return t?new Date(t).toLocaleString('en-GB',{timeZone:'Asia/Hong_Kong',hour12:false}):'—'},pct(v){return this.comparison.sampleSize?(v/this.comparison.sampleSize*100).toFixed(1)+'%':'—'},x(t){const lo=+new Date(this.data.batches[0].time),hi=+new Date(this.data.batches.at(-1).time);return 60+(hi===lo?0.5:(+new Date(t)-lo)/(hi-lo))*810},y(p){return this.maxPrice===this.minPrice?120:220-(p-this.minPrice)/(this.maxPrice-this.minPrice)*190},range(value) {\n    return value.start || value.end ? (value.start || 'First available') + ' to ' + (value.end || 'Latest available') : 'All available dates';\n},\ncategoryLabel(value) {\n    const labels = {'個人護理':'Personal care','奶粉 / 嬰兒用品':'Infant formula / Baby products','奶類及乳製品 / 大豆製品 / 蛋類':'Dairy / Soy / Eggs','家居用品 / 寵物食品及用品':'Household / Pet supplies','米 / 食油 / 罐頭 / 蔬果 / 肉類':'Rice / Oil / Canned food / Produce / Meat','粉麵 / 煮食用料 / 冷凍加工食品':'Noodles / Cooking ingredients / Frozen food','糖果 / 餅乾 / 小食':'Confectionery / Biscuits / Snacks','酒類':'Alcohol','飲品':'Beverages','麵包蛋糕 / 穀類早餐 / 麵包醬':'Bread / Cakes / Cereals / Spreads'};\n    return labels[value] || value;\n},\nasync request(key, query) {\n    const id = ++this.requests[key];\n    this.states[key] = 'Loading…';\n    try {\n        const response = await fetch('/pricewatch-c/api?' + new URLSearchParams(query));\n        const result = await response.json();\n        if (id !== this.requests[key]) return null;\n        if (!response.ok || result.error) throw new Error(result.error || 'Query failed. Please retry.');\n        this.states[key] = 'Results loaded';\n        return result;\n    } catch (error) {\n        if (id === this.requests[key]) this.states[key] = error.message || 'Connection failed. Please retry.';\n        return null;\n    }\n},\nasync loadCategories() {\n    const result = await this.request('categories', {mode:'categories'});\n    if (result) this.categories = result.items;\n},\nchangeCategory() {\n    this.requests.search++;\n    this.requests.history++;\n    this.states.search = '';\n    this.states.history = '';\n    this.items = [];\n    this.candidate = '';\n    this.selectedCode = '';\n    this.productName = '';\n    this.data = null;\n    this.search();\n},\nasync search() {\n    this.items = [];\n    this.candidate = '';\n    const keyword = this.keyword.trim();\n    if (/^P[0-9]{1,20}$/i.test(keyword)) {\n        this.choose(keyword);\n        return;\n    }\n    const result = await this.request('search', {mode:'search', keyword, category:this.productCategory});\n    if (!result) return;\n    this.items = result.items.slice(0,50);\n    this.states.search = result.items.length > 50 ? 'Showing the first 50 matches. Narrow your search.' : result.items.length + ' matching products';\n    if (!result.items.length) this.states.search = 'No matching products in the latest successful collection. Try another category or keyword.';\n    if (result.items.length === 1) this.choose(result.items[0]._id);\n},\nchoose(value) {\n    this.requests.search++;\n    this.states.search = '';\n    this.items = [];\n    this.candidate = '';\n    this.code = String(value || '').trim().toUpperCase();\n    this.selectedCode = this.code;\n    this.productName = '';\n    this.start = '';\n    this.end = '';\n    this.productCategory = '';\n    this.history();\n},\nallDates() {\n    this.start = '';\n    this.end = '';\n    this.history();\n},\nasync history() {\n    this.data = null;\n    const range = {start:this.start,end:this.end};\n    const result = await this.request('history', {mode:'history',productCode:this.selectedCode,...range});\n    if (!result) return;\n    this.data = result;\n    this.syncFavorite();\n    this.productName = result.nameEn || result.name;\n    this.applied = range;\n    this.merchant = result.series.find(s=>s.observations>0)?.merchant || result.series[0]?.merchant || '';\n    if (!result.batches.length || !result.series.some(s=>s.observations>0)) this.states.history = 'No valid quotations for this product in the applied range.';\n},\nallTrendDates() {\n    this.trendStart = '';\n    this.trendEnd = '';\n    this.advantage();\n},\nasync advantage() {\n    this.comparison = null;\n    const range = {start:this.trendStart,end:this.trendEnd};\n    const result = await this.request('advantage', {mode:'advantage',a:this.a,b:this.b,category:this.category,...range});\n    if (!result) return;\n    this.comparison = result;\n    this.trendApplied = range;\n    if (!result.periods.length || !result.sampleSize) this.states.advantage = 'No common valid sample for these filters.';\n}\n},\nmounted(){window.addEventListener(\"pricewatch:favorites-changed\",this.syncFavorite);window.addEventListener(\"storage\",this.syncFavorite);this.syncFavorite();this.loadCategories();const code=new URLSearchParams(window.location.search).get(\"productCode\");if(code)this.choose(code)},unmounted(){window.removeEventListener(\"pricewatch:favorites-changed\",this.syncFavorite);window.removeEventListener(\"storage\",this.syncFavorite);for(const key of Object.keys(this.requests))this.requests[key]++}\n};</script>\n<style>\n\n.pw-c{font-family:inherit;font-size:13px;line-height:1.6;color:#334257;padding:16px 20px 24px;width:100%;max-width:100%;min-width:0;margin:auto;box-sizing:border-box}\n.pw-c h1{color:#26384a;font-size:27px;line-height:1.4;font-weight:700;margin:8px 0 12px}\n.pw-c h2{color:#26384a;font-size:19px;line-height:1.4;font-weight:700;margin:26px 0 14px}\n.pw-c p{font-size:12px;line-height:1.7;color:#486373;margin:10px 0 18px}\n.pw-c small{font-size:12px;color:#627587;font-weight:400}\n.pw-c label{min-width:0;max-width:100%;font-size:12px;color:#486373}\n.pw-c input,.pw-c select,.pw-c button{font-family:inherit;font-size:13px;line-height:1.5;box-sizing:border-box;min-height:44px;border:1px solid #dae2e8;border-radius:6px;padding:10px 14px;margin:0;background:#fff;color:#334257;max-width:100%}\n.pw-c input{width:240px}.pw-c input[type=date]{width:180px}\n.pw-c button{background:#386d83;border-color:#386d83;color:#fff;font-size:14px;font-weight:600;padding:10px 22px;cursor:pointer;transition:background .15s}\n.pw-c button:hover:not(:disabled){background:#2c586b;border-color:#2c586b}\n.pw-c button:disabled{opacity:.5;cursor:not-allowed}\n.pw-c input:focus-visible,.pw-c select:focus-visible,.pw-c button:focus-visible{outline:2px solid #386d83;outline-offset:2px}\n.pw-c-controls{display:flex;flex-wrap:wrap;gap:20px;margin:22px 0}\n.pw-c-controls label{display:flex;align-items:center;gap:10px}\n.pw-c form{display:flex;flex-wrap:wrap;align-items:end;gap:16px;margin:16px 0}\n.pw-c form label{display:flex;flex-direction:column;gap:6px}\n.pw-c>select{display:block;margin:14px 0;min-width:260px}\n.pw-c svg{display:block;width:100%;max-height:320px;background:#f0f2f4;margin:22px 0;font-family:inherit}\n.pw-c-scroll,.pw-c details{overflow-x:auto}\n.pw-c table{min-width:760px;border-collapse:collapse;width:100%;font-size:13px;color:#334257}\n.pw-c td,.pw-c th{padding:12px;text-align:left;vertical-align:top;border-bottom:1px solid #e3e9ee}\n.pw-c td{font-variant-numeric:tabular-nums}\n.pw-c th{background:#f0f4f7;font-size:12px;font-weight:700}\n.pw-c hr{margin:34px 0;border:0;border-top:1px solid #dae2e8}\n.pw-c summary{font-size:12px;color:#386d83;cursor:pointer;padding:8px 0}\n@media(max-width:600px){.pw-c{padding:12px}.pw-c h1{font-size:23px}.pw-c-controls{gap:12px}.pw-c-controls label{flex:1 1 100%;justify-content:space-between}.pw-c form{gap:12px}.pw-c form input{flex:1 1 180px;min-width:0}.pw-c form label{flex:1 1 150px}}\n\n.pw-c-tabs{display:flex;gap:12px;margin:20px 0}.pw-c-tabs button[aria-pressed=true]{outline:3px solid #adc6d1}.pw-c-find{display:grid;grid-template-columns:2fr 1fr;gap:24px}.pw-c form label{flex:1;min-width:140px}.pw-c label input,.pw-c label select{width:100%}.pw-c .pw-logo{width:32px;height:32px;object-fit:contain;vertical-align:middle;margin-right:8px}.pw-c .pw-low{background:#eaf3f8}.pw-c .pw-low td:nth-child(3){font-weight:700;color:#245c75}.pw-c .pw-empty{color:#697a87}.pw-c small{display:block}@media(max-width:700px){.pw-c-find{grid-template-columns:1fr}.pw-c-tabs{flex-wrap:wrap}}\n.pw-c input,.pw-c select{height:44px!important;min-height:44px!important;flex:initial!important}.pw-c form{align-items:end}.pw-c form label{display:flex;flex-direction:column}\n.pw-c .pw-fav-star{background:transparent;color:#9a6800;border:0;padding:4px 10px;margin-left:8px;font-size:26px;min-height:40px;vertical-align:middle}.pw-c .pw-fav-star[aria-pressed=true]{color:#b87900}.pw-c .pw-fav-star:hover:not(:disabled){background:#fff4d1;color:#b87900}\n</style>\n",
+    "storeOutMessages": false,
+    "passthru": false,
+    "resendOnRefresh": false,
+    "templateScope": "local",
+    "className": "",
+    "x": 350,
+    "y": 340,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "1b5f50a9ae9a0e2f",
+    "type": "global-config",
+    "env": [],
+    "modules": {
+      "node-red-contrib-mongodb4": "3.4.0",
+      "@flowfuse/node-red-dashboard": "1.33.0"
+    }
+  },
+  {
+    "id": "c7503favoritesui",
+    "type": "ui-template",
+    "z": "b2c09448dfb8fbf4",
+    "group": "",
+    "page": "",
+    "ui": "c2f82ffa5dfda3e4",
+    "name": "C_Global Favorites",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "head": "",
+    "format": "<template>\n<div class=\"pw-favorites-global\">\n<button ref=\"favoritesTrigger\" type=\"button\" class=\"pw-favorites-trigger\" :disabled=\"!ready\" :aria-expanded=\"opened\" @click=\"openList\">★ Favorites <span v-if=\"items.length\">({{items.length}})</span></button>\n<div v-if=\"opened\" class=\"pw-favorites-shade\" @click.self=\"closeList\">\n<section ref=\"favoritesPanel\" class=\"pw-favorites-panel\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"pw-favorites-title\" tabindex=\"-1\" @keydown=\"handleKey\">\n<header><h2 id=\"pw-favorites-title\">Favorites</h2><button type=\"button\" aria-label=\"Close favorites\" @click=\"closeList\">Close</button></header>\n<p>Saved in this browser.</p><p role=\"alert\" v-if=\"error\">{{error}}</p>\n<p v-if=\"!items.length &amp;&amp; !error\">No favorites yet. Save a product using its star button.</p>\n<ul><li v-for=\"item in items\" :key=\"item.productCode\"><div><strong>{{item.name || item.productCode}}</strong><small>{{item.productCode}}</small></div><button type=\"button\" :aria-label=\"'Remove '+(item.name || item.productCode)+' from favorites'\" @click=\"removeItem(item.productCode)\">Remove</button></li></ul>\n</section></div>\n<p class=\"pw-favorites-error\" v-if=\"error &amp;&amp; !opened\" role=\"alert\">{{error}}</p>\n</div>\n</template>\n<script>\nexport default {\n    data() { return {ready:false, opened:false, items:[], error:''}; },\n    methods: {\n        refreshFavorites() {\n            this.ready = Boolean(window.PriceWatchFavorites);\n            if (!this.ready) return;\n            try {\n                this.items = window.PriceWatchFavorites.list();\n                this.error = '';\n            } catch (error) {\n                this.error = 'Favorites could not be read. Check browser storage and retry.';\n            }\n        },\n        openList() {\n            this.refreshFavorites();\n            this.opened = true;\n            this.$nextTick(() => this.$refs.favoritesPanel?.focus());\n        },\n        closeList() {\n            this.opened = false;\n            this.$nextTick(() => this.$refs.favoritesTrigger?.focus());\n        },\n        removeItem(code) {\n            try {\n                window.PriceWatchFavorites.remove(code);\n                this.refreshFavorites();\n                this.$nextTick(() => this.$refs.favoritesPanel?.focus());\n            } catch (error) {\n                this.error = 'Could not remove this favorite. Your saved list has been kept.';\n            }\n        },\n        handleKey(event) {\n            if (event.key === 'Escape') { event.preventDefault(); this.closeList(); }\n            if (event.key !== 'Tab') return;\n            const focusable = [...this.$refs.favoritesPanel.querySelectorAll('button:not(:disabled),a[href]')];\n            const first = focusable[0], last = focusable[focusable.length-1];\n            if (event.shiftKey && (document.activeElement === first || document.activeElement === this.$refs.favoritesPanel)) {\n                event.preventDefault(); last?.focus();\n            } else if (!event.shiftKey && document.activeElement === last) {\n                event.preventDefault(); first?.focus();\n            }\n        }\n    },\n    mounted() {\n        window.addEventListener('pricewatch:favorites-changed', this.refreshFavorites);\n        window.addEventListener('storage', this.refreshFavorites);\n        this.refreshFavorites();\n    },\n    unmounted() {\n        window.removeEventListener('pricewatch:favorites-changed', this.refreshFavorites);\n        window.removeEventListener('storage', this.refreshFavorites);\n    }\n};\n</script>\n<style>\n.pw-favorites-trigger{position:fixed;right:14px;top:10px;z-index:2100;background:#fff;color:#334257;border:1px solid #dae2e8;border-radius:6px;padding:9px 12px;font:600 13px/1.5 sans-serif;cursor:pointer}\n.pw-favorites-trigger:disabled{opacity:.6;cursor:wait}\n.pw-favorites-shade{position:fixed;inset:0;z-index:2200;background:#17273680;display:flex;justify-content:flex-end}\n.pw-favorites-panel{background:#fff;color:#334257;width:min(440px,100%);height:100%;padding:22px;overflow:auto;box-sizing:border-box;font:14px/1.6 sans-serif}\n.pw-favorites-panel header{display:flex;justify-content:space-between;align-items:center;gap:16px}\n.pw-favorites-panel h2{font-size:22px;margin:0}\n.pw-favorites-panel ul{list-style:none;padding:0}\n.pw-favorites-panel li{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 0;border-bottom:1px solid #dae2e8}\n.pw-favorites-panel li div{min-width:0;overflow-wrap:anywhere}\n.pw-favorites-panel small{display:block}\n.pw-favorites-panel button{background:#f4f7f9;border:1px solid #cbd6dd;border-radius:5px;padding:8px 10px;color:#334257;cursor:pointer;flex-shrink:0}\n.pw-favorites-global button:focus-visible,.pw-favorites-panel:focus-visible{outline:2px solid #386d83;outline-offset:3px}\n.pw-favorites-error{position:fixed;right:10px;top:60px;max-width:300px;background:#fff3e0;color:#7b3d00;padding:10px;z-index:2101}\n</style>\n",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "widget:ui",
+    "className": "",
+    "x": 650,
+    "y": 1100,
+    "wires": [
+      []
+    ]
+  }
+]

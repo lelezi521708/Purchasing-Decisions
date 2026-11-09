@@ -1,0 +1,5 @@
+*.json text linguist-language=JSON
+*.vue text linguist-language=Vue
+*.md text
+*.png binary
+*.jpg binary
