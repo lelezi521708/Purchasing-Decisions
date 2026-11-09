@@ -154,13 +154,31 @@ Only use these commands with an empty or intentionally prepared local database. 
 ├── docs/
 │   ├── ARCHITECTURE.md
 │   ├── DATA_MODEL.md
-│   └── RUNNING.md
+│   ├── RUNNING.md
+│   └── setup/
+│       ├── START_HERE_MAC.md
+│       └── MANIFEST.json
 ├── flows/
 │   ├── PriceWatch_latest.json
 │   └── B_Category_Insights_View.vue
+├── scripts/
+│   ├── import_update.js
+│   ├── VALIDATION.json
+│   └── ui/
+│       ├── CategoryInsights.vue
+│       ├── Favorites.vue
+│       ├── HistoryAnalysis.js
+│       ├── HistoryQuery.js
+│       └── HistoryTemplate.vue
 └── tests/
     └── update_tests.cjs
 ```
+
+`flows/PriceWatch_latest.json` is the runnable application flow. The files in
+`scripts/ui/` are readable copies of the page-level UI logic, while the flow
+JSON remains the single source to import into Node-RED. `scripts/import_update.js`
+and `scripts/VALIDATION.json` support a separately supplied MongoDB data update;
+the large raw history files are deliberately excluded from this repository.
 
 ## Testing
 

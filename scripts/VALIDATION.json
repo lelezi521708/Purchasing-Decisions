@@ -1,0 +1,142 @@
+{
+  "batches": 15,
+  "records": 369315,
+  "checks": "Source SHA256, product uniqueness, merchant codes and duplicate quotes checked; 9 rows per product; dates are actual collection times, not source update times.",
+  "details": [
+    {
+      "batchId": "2026-10-13T14:01:45.678Z",
+      "products": 2745,
+      "records": 24705,
+      "quoted": 7855,
+      "sourceFile": "pricewatch\\2026-10-13\\20261013_220145.json",
+      "sha256": "9cfabd6caa93e4cef648571ccf089153a7504acb64f1b3a86e505eeb7c85d86b",
+      "sourceLastModified": "Tue, 13 Oct 2026 05:00:01 GMT"
+    },
+    {
+      "batchId": "2026-10-14T14:05:18.456Z",
+      "products": 2745,
+      "records": 24705,
+      "quoted": 7868,
+      "sourceFile": "pricewatch\\2026-10-14\\20261014_220518.json",
+      "sha256": "05da8d38ec6702f068d076df44e0fafc6b1ea71d5cf61ece6dba2d9d0331d101",
+      "sourceLastModified": "Wed, 14 Oct 2026 05:00:01 GMT"
+    },
+    {
+      "batchId": "2026-10-15T14:39:37.304Z",
+      "products": 2741,
+      "records": 24669,
+      "quoted": 7841,
+      "sourceFile": "pricewatch\\2026-10-15\\20261015_223937.json",
+      "sha256": "de403a9a56c7f55c96c6ae7e8e9014d25b96f07d750b039391f94aba2fed66f9",
+      "sourceLastModified": "Thu, 15 Oct 2026 05:00:02 GMT"
+    },
+    {
+      "batchId": "2026-10-16T15:45:13.589Z",
+      "products": 2740,
+      "records": 24660,
+      "quoted": 7817,
+      "sourceFile": "pricewatch\\2026-10-16\\20261016_234513.json",
+      "sha256": "684bc59c3fdccbc0adefe32bac0a46be478fdcd5e7d727681271aebe64c05c9b",
+      "sourceLastModified": "Fri, 16 Oct 2026 05:00:01 GMT"
+    },
+    {
+      "batchId": "2026-10-17T15:55:51.578Z",
+      "products": 2736,
+      "records": 24624,
+      "quoted": 7818,
+      "sourceFile": "pricewatch\\2026-10-17\\20261017_235551.json",
+      "sha256": "614de113e4dd22e2e87bea72875fef1af849b7a31dc0e9f504644619a060b3d0",
+      "sourceLastModified": "Sat, 17 Oct 2026 05:00:02 GMT"
+    },
+    {
+      "batchId": "2026-10-19T02:21:44.840Z",
+      "products": 2736,
+      "records": 24624,
+      "quoted": 7817,
+      "sourceFile": "pricewatch\\2026-10-19\\20261019_102144.json",
+      "sha256": "2bcd43093fdcd6c0a066edf749ffaf24f247cd03e9542502516e4e0f95ccfba6",
+      "sourceLastModified": "Sun, 18 Oct 2026 05:00:02 GMT"
+    },
+    {
+      "batchId": "2026-10-20T05:07:14.750Z",
+      "products": 2735,
+      "records": 24615,
+      "quoted": 7815,
+      "sourceFile": "pricewatch\\2026-10-20\\20261020_130714.json",
+      "sha256": "79fa2b6ad985ee624d4823d6f99f65ae37b8061c59b034266092aeb1102241d8",
+      "sourceLastModified": "Tue, 20 Oct 2026 05:00:02 GMT"
+    },
+    {
+      "batchId": "2026-10-21T08:23:59.839Z",
+      "products": 2735,
+      "records": 24615,
+      "quoted": 7815,
+      "sourceFile": "pricewatch\\2026-10-21\\20261021_162359.json",
+      "sha256": "47392792c50f02be9ca4356178ecdf3f3dbb636230e2784f79548aa62b747bef",
+      "sourceLastModified": "Wed, 21 Oct 2026 05:00:01 GMT"
+    },
+    {
+      "batchId": "2026-10-22T08:53:16.907Z",
+      "products": 2735,
+      "records": 24615,
+      "quoted": 7812,
+      "sourceFile": "pricewatch\\2026-10-22\\20261022_165316.json",
+      "sha256": "68dfe11f69aefc6094efc8a5042ea812f54ac2dbcea23b812f4423f1a4a66426",
+      "sourceLastModified": "Thu, 22 Oct 2026 05:00:02 GMT"
+    },
+    {
+      "batchId": "2026-10-23T14:37:23.212Z",
+      "products": 2735,
+      "records": 24615,
+      "quoted": 7812,
+      "sourceFile": "pricewatch\\2026-10-23\\20261023_223723.json",
+      "sha256": "4df7d233551614a344bb69f3f11e81d5d45cbcaf53179f42e2a6e0fc71eeadc5",
+      "sourceLastModified": "Fri, 23 Oct 2026 05:00:01 GMT"
+    },
+    {
+      "batchId": "2026-10-25T01:18:44.092Z",
+      "products": 2732,
+      "records": 24588,
+      "quoted": 7804,
+      "sourceFile": "pricewatch\\2026-10-25\\20261025_091844.json",
+      "sha256": "b4c73f2dfa4e8095e011b37fdbd8cda4c07a3e589713982ad435c225b9b145fb",
+      "sourceLastModified": "Sat, 24 Oct 2026 05:00:02 GMT"
+    },
+    {
+      "batchId": "2026-10-26T02:22:01.794Z",
+      "products": 2729,
+      "records": 24561,
+      "quoted": 7801,
+      "sourceFile": "pricewatch\\2026-10-26\\20261026_102201.json",
+      "sha256": "5a5ae3fee3fe1feef1ecacebbe20c7b5f5ca29d5e8ea25d511124cebdb775650",
+      "sourceLastModified": "Sun, 25 Oct 2026 05:00:01 GMT"
+    },
+    {
+      "batchId": "2026-10-27T07:36:31.020Z",
+      "products": 2729,
+      "records": 24561,
+      "quoted": 7809,
+      "sourceFile": "pricewatch\\2026-10-27\\20261027_153631.json",
+      "sha256": "efc0ec4a603dde66ef5ca45a3b3ea7a05767acea978559b17b795d776b242b6d",
+      "sourceLastModified": "Tue, 27 Oct 2026 05:00:01 GMT"
+    },
+    {
+      "batchId": "2026-10-28T08:07:03.957Z",
+      "products": 2727,
+      "records": 24543,
+      "quoted": 7804,
+      "sourceFile": "pricewatch\\2026-10-28\\20261028_160703.json",
+      "sha256": "aca0b2adabcf0138e1ab4d7abf94659bdec74d9cfd1962adefcd822abc042de3",
+      "sourceLastModified": "Wed, 28 Oct 2026 05:00:01 GMT"
+    },
+    {
+      "batchId": "2026-10-29T09:38:45.962Z",
+      "products": 2735,
+      "records": 24615,
+      "quoted": 7810,
+      "sourceFile": "pricewatch\\2026-10-29\\20261029_173845.json",
+      "sha256": "4801d8a73005ffde9842c61480008aa185080db8c898a481f5efc22e1b4b100f",
+      "sourceLastModified": "Thu, 29 Oct 2026 05:00:01 GMT"
+    }
+  ]
+}

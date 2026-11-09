@@ -1,0 +1,74 @@
+{
+  "A_pricewatch_v12.json": {
+    "bytes": 68119,
+    "sha256": "2a2cc48b4a4a8bca861c4f4b9163382acbcf7d9876c0b3decff36da3ad9431b9"
+  },
+  "data/pricewatch_batches.json": {
+    "bytes": 778,
+    "sha256": "00416ef565d269685d0f43ef5fe0e245d666ea6e5aa6c183f8504670382e0adf"
+  },
+  "data/pricewatch_history.json": {
+    "bytes": 49804871,
+    "sha256": "e0705f63a3b9aa67e3882184653289bb72d8e41bf8f4bec7d774acdcf6b40bf5"
+  },
+  "merchant-logos/AEON.png": {
+    "bytes": 7365,
+    "sha256": "6a9ac73f69997ff8dc8d34cf1891f6c7fb8eb9082162e5201ad3803318ca8163"
+  },
+  "merchant-logos/DCHFOOD.png": {
+    "bytes": 29219,
+    "sha256": "352bb358cf1f9e05ec24dc765dc321082adda7b4ec1550a28fdaa415d811c45a"
+  },
+  "merchant-logos/JASONS.png": {
+    "bytes": 3570,
+    "sha256": "08d7e36e8522ea308035c63d4957af9f9bf8b078fce49f611163199756f2bc1c"
+  },
+  "merchant-logos/LUNGFUNG.png": {
+    "bytes": 2371,
+    "sha256": "ee62bf591d04d4e0c826b0001e7f2c7bd4ec745fe3016da5ec20b0d8a0736f0d"
+  },
+  "merchant-logos/MANNINGS.png": {
+    "bytes": 5740,
+    "sha256": "6521ead0ab4cc8ef04539ae073e316b3e05ab4d7df50641358cc3a4c674bb790"
+  },
+  "merchant-logos/PARKNSHOP.png": {
+    "bytes": 5359,
+    "sha256": "87045a813dbaa5179788981c6b2b8f6181f1533c06005967d60e588092a821fa"
+  },
+  "merchant-logos/SASA.png": {
+    "bytes": 14750,
+    "sha256": "4b091da8d8dd1a89e4e86559500585703940cb0062c1b6ae87fba8d32a2f644e"
+  },
+  "merchant-logos/sources.json": {
+    "bytes": 2374,
+    "sha256": "25ddbc682d2aaee966edc85fb28e55ff02f36160c5668c37c2e0b03aa9ee36f2"
+  },
+  "merchant-logos/WATSONS.png": {
+    "bytes": 7209,
+    "sha256": "eeaae820e1233551afa168c6806da838f2b55fc8a7393526d38ba2cc3ff2020c"
+  },
+  "merchant-logos/WELLCOME.png": {
+    "bytes": 5028,
+    "sha256": "d42a7a98a9bdda3eaa6139625fb55666333e0b361e068f94fe8bae8dedbd552f"
+  },
+  "pricewatch-groceries.jpg": {
+    "bytes": 1286839,
+    "sha256": "a979364565327933bc7c795f04ee8fa5649d3edab36b1f9bf0993264fbd82b19"
+  },
+  "PriceWatch_TEAM_AI_GUIDE.md": {
+    "bytes": 28648,
+    "sha256": "d5b7c1989e89404e1762018273e97590ee87cd5c30dca9b8b88cdd2f745a95a9"
+  },
+  "START_HERE_MAC.md": {
+    "bytes": 3894,
+    "sha256": "f2a5ed3e2f4681ef67ead5f126d4364be59eafa31355a2d3685d07736be5b68d"
+  },
+  "verification/V12_DATA_CHECK.json": {
+    "bytes": 880,
+    "sha256": "57fb684defa18cbee97ff0ace46faf9b3d6a2ef98c7347ed12e7eb2c59e8b4ce"
+  },
+  "verification/V12_static_check.txt": {
+    "bytes": 988,
+    "sha256": "6e169ff3215a634017549c8965c522e67ee8d4987e4fa6d42d22f5d70a0c6554"
+  }
+}
